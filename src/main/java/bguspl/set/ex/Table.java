@@ -28,6 +28,7 @@ public class Table {
      * Mapping between a card and the slot it is in (null if none).
      */
     protected final Integer[] cardToSlot; // slot per card (if any)
+    
 
     /**
      * Constructor for testing.
@@ -95,6 +96,7 @@ public class Table {
         slotToCard[slot] = card;
 
         // TODO implement
+        env.ui.placeCard(card, slot);
     }
 
     /**

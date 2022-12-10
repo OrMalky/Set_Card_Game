@@ -36,7 +36,7 @@ public class Dealer implements Runnable {
     /**
      * The time when the dealer needs to reshuffle the deck due to turn timeout.
      */
-    private long reshuffleTime = Long.MAX_VALUE;
+    private long reshuffleTime = 60000;
 
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
@@ -67,6 +67,7 @@ public class Dealer implements Runnable {
     private void timerLoop() {
         while (!terminate && System.currentTimeMillis() < reshuffleTime) {
             sleepUntilWokenOrTimeout();
+            reshuffleTime -= 1;
             updateTimerDisplay(false);
             removeCardsFromTable();
             placeCardsOnTable();
@@ -101,6 +102,11 @@ public class Dealer implements Runnable {
      */
     private void placeCardsOnTable() {
         // TODO implement
+        while(table.countCards() < 12){
+            int card = deck.get(0);
+            table.placeCard(table.countCards(), card);
+            deck.remove(0);
+        }
     }
 
     /**
@@ -115,6 +121,7 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
+        env.ui.setCountdown(reshuffleTime, false);
     }
 
     /**
