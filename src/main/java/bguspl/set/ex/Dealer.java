@@ -2,6 +2,7 @@ package bguspl.set.ex;
 
 import bguspl.set.Env;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
@@ -37,7 +38,7 @@ public class Dealer implements Runnable {
      * The time when the dealer needs to reshuffle the deck due to turn timeout.
      */
     private long reshuffleTime = 15000;
-    private final long startTime = System.currentTimeMillis();
+    private long startTime = System.currentTimeMillis();
     private long currentTime = 0;
 
     public Dealer(Env env, Table table, Player[] players) {
@@ -53,12 +54,11 @@ public class Dealer implements Runnable {
     @Override
     public void run() {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
+        Collections.shuffle(deck);
         while (!shouldFinish()) {
             placeCardsOnTable();
-            currentTime = System.currentTimeMillis() - startTime;
             timerLoop();
-            updateTimerDisplay(false);
-            removeAllCardsFromTable();
+            //updateTimerDisplay(false);
         }
         announceWinners();
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
@@ -68,10 +68,21 @@ public class Dealer implements Runnable {
      * The inner loop of the dealer thread that runs as long as the countdown did not time out.
      */
     private void timerLoop() {
-        while (currentTime > reshuffleTime) {
+        boolean isReady = false;
+        while (currentTime < reshuffleTime) {
             sleepUntilWokenOrTimeout();
-            updateTimerDisplay(false);
+            currentTime = System.currentTimeMillis() - startTime;
             removeCardsFromTable();
+            placeCardsOnTable();
+            if (!isReady) {
+                startTime = System.currentTimeMillis();
+                isReady = true;
+            }
+            updateTimerDisplay(false);
+        }
+        updateTimerDisplay(true);
+        if(!shouldFinish()){
+            removeAllCardsFromTable();
             placeCardsOnTable();
         }
     }
@@ -106,7 +117,7 @@ public class Dealer implements Runnable {
         // TODO implement
         while(table.countCards() < 12){
             int card = deck.get(0);
-            table.placeCard(table.countCards(), card);
+            table.placeCard(card, table.countCards());
             deck.remove(0);
         }
     }
@@ -116,6 +127,9 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException ignored) {};
     }
 
     /**
@@ -123,6 +137,10 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
+        if(reset) {
+            currentTime = 0;
+            startTime = System.currentTimeMillis();
+        }
         long t = reshuffleTime - currentTime;
         env.ui.setCountdown(t, t <= 10000);
     }
@@ -132,6 +150,12 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         // TODO implement
+        for (int i=0; i< 12; i++){
+            Integer c = table.getCard(i);
+            table.removeCard(i);
+            deck.add(c);
+        }
+        Collections.shuffle(deck);
     }
 
     /**

@@ -106,9 +106,13 @@ public class Table {
     public void removeCard(int slot) {
         try {
             Thread.sleep(env.config.tableDelayMillis);
+            env.ui.removeCard(slot);
         } catch (InterruptedException ignored) {}
 
         // TODO implement
+        int c = slotToCard[slot];
+        slotToCard[slot] = null;
+        cardToSlot[c] = null;
     }
 
     /**
@@ -118,6 +122,15 @@ public class Table {
      */
     public void placeToken(int player, int slot) {
         // TODO implement
+    }
+
+    /**
+     * Returns the card in a given slot. Null if no card in that slot.
+     * @param slot - the slot to get the card of.
+     * @return - the card in this slot. Null if no card in that slot.
+     */
+    public Integer getCard(int slot){
+        return slotToCard[slot];
     }
 
     /**
