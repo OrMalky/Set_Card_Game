@@ -1,5 +1,6 @@
 package bguspl.set.ex;
 
+import java.util.Arrays;
 import java.util.logging.Level;
 
 import bguspl.set.Env;
@@ -52,6 +53,11 @@ public class Player implements Runnable {
      */
     private int score;
 
+    private Dealer dealer;
+
+    private Integer[] tokens;
+    private int currentToken;
+
     /**
      * The class constructor.
      *
@@ -63,9 +69,13 @@ public class Player implements Runnable {
      */
     public Player(Env env, Dealer dealer, Table table, int id, boolean human) {
         this.env = env;
+        this.dealer = dealer;
         this.table = table;
         this.id = id;
         this.human = human;
+        this.tokens = new Integer[3];
+        Arrays.fill(tokens, -1);
+        this.currentToken = 0;
     }
 
     /**
@@ -79,6 +89,7 @@ public class Player implements Runnable {
 
         while (!terminate) {
             // TODO implement main player loop
+
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
@@ -108,6 +119,7 @@ public class Player implements Runnable {
      */
     public void terminate() {
         // TODO implement
+        terminate = true;
     }
 
     /**
@@ -117,6 +129,21 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         // TODO implement
+        table.placeToken(id, slot);
+        if(slot != tokens[0] && slot != tokens[1] && slot != tokens[2]){
+            tokens[currentToken] = slot;
+            currentToken++;
+        }
+
+        System.out.println(currentToken);
+        if(currentToken >= 3){
+            dealer.checkSet(id, tokens);
+            for (Integer t : tokens) {
+                env.ui.removeToken(id, t);
+            }
+            Arrays.fill(tokens, -1);
+            currentToken = 0;
+        }
     }
 
     /**

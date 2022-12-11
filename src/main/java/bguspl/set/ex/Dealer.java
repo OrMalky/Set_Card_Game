@@ -57,34 +57,46 @@ public class Dealer implements Runnable {
         Collections.shuffle(deck);
         while (!shouldFinish()) {
             placeCardsOnTable();
+            startTime = System.currentTimeMillis();
             timerLoop();
-            //updateTimerDisplay(false);
+            // updateTimerDisplay(false);
         }
         announceWinners();
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
     }
 
     /**
-     * The inner loop of the dealer thread that runs as long as the countdown did not time out.
+     * The inner loop of the dealer thread that runs as long as the countdown did
+     * not time out.
      */
     private void timerLoop() {
-        boolean isReady = false;
         while (currentTime < reshuffleTime) {
             sleepUntilWokenOrTimeout();
-            currentTime = System.currentTimeMillis() - startTime;
             removeCardsFromTable();
             placeCardsOnTable();
-            if (!isReady) {
-                startTime = System.currentTimeMillis();
-                isReady = true;
-            }
             updateTimerDisplay(false);
         }
         updateTimerDisplay(true);
-        if(!shouldFinish()){
+        if (!shouldFinish()) {
+            removeAllTokensFromTable();
             removeAllCardsFromTable();
             placeCardsOnTable();
         }
+    }
+
+    public boolean checkSet(int player, Integer[] set){
+        int[] cards = new int[3];
+        int p = 0;
+        for (Integer i : set) {
+            cards[p] = table.slotToCard[i];
+            p++;
+        }
+        
+        if(env.util.testSet(cards)){
+            players[player].point();
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -115,7 +127,7 @@ public class Dealer implements Runnable {
      */
     private void placeCardsOnTable() {
         // TODO implement
-        while(table.countCards() < 12){
+        while (table.countCards() < 12) {
             int card = deck.get(0);
             table.placeCard(card, table.countCards());
             deck.remove(0);
@@ -123,7 +135,8 @@ public class Dealer implements Runnable {
     }
 
     /**
-     * Sleep for a fixed amount of time or until the thread is awakened for some purpose.
+     * Sleep for a fixed amount of time or until the thread is awakened for some
+     * purpose.
      */
     private void sleepUntilWokenOrTimeout() {
         // TODO implement
@@ -137,10 +150,11 @@ public class Dealer implements Runnable {
      */
     private void updateTimerDisplay(boolean reset) {
         // TODO implement
-        if(reset) {
+        if (reset) {
             currentTime = 0;
             startTime = System.currentTimeMillis();
         }
+        currentTime = System.currentTimeMillis() - startTime;
         long t = reshuffleTime - currentTime;
         env.ui.setCountdown(t, t <= 10000);
     }
@@ -149,13 +163,16 @@ public class Dealer implements Runnable {
      * Returns all the cards from the table to the deck.
      */
     private void removeAllCardsFromTable() {
-        // TODO implement
-        for (int i=0; i< 12; i++){
+        for (int i = 0; i < 12; i++) {
             Integer c = table.getCard(i);
             table.removeCard(i);
             deck.add(c);
         }
         Collections.shuffle(deck);
+    }
+
+    public void removeAllTokensFromTable() {
+        table.resetAllTokens();
     }
 
     /**
