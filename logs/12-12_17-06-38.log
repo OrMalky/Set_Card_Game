@@ -1,0 +1,37 @@
+[2022-12-12 17:06:38] [INFO   ] cannot read configuration file config.properties trying from resources.
+[2022-12-12 17:06:38] [INFO   ] configuration file was loaded from resources directory.
+[2022-12-12 17:06:38] [INFO   ] Thread dealer starting.
+[2022-12-12 17:06:38] [INFO   ] Thread Player 1starting.
+[2022-12-12 17:06:38] [INFO   ] Thread Player 0starting.
+[2022-12-12 17:06:38] [SEVERE ] placing card 5 in slot 0
+[2022-12-12 17:06:38] [SEVERE ] placing card 15 in slot 1
+[2022-12-12 17:06:39] [SEVERE ] placing card 39 in slot 2
+[2022-12-12 17:06:39] [SEVERE ] placing card 70 in slot 3
+[2022-12-12 17:06:39] [SEVERE ] placing card 25 in slot 4
+[2022-12-12 17:06:39] [SEVERE ] placing card 30 in slot 5
+[2022-12-12 17:06:39] [SEVERE ] placing card 13 in slot 6
+[2022-12-12 17:06:39] [SEVERE ] placing card 34 in slot 7
+[2022-12-12 17:06:39] [SEVERE ] placing card 56 in slot 8
+[2022-12-12 17:06:39] [SEVERE ] placing card 31 in slot 9
+[2022-12-12 17:06:39] [SEVERE ] placing card 58 in slot 10
+[2022-12-12 17:06:39] [SEVERE ] placing card 17 in slot 11
+[2022-12-12 17:06:41] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-12 17:06:41] [SEVERE ] player 0 placing token on slot 1
+[2022-12-12 17:06:41] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-12 17:06:41] [SEVERE ] player 0 placing token on slot 2
+[2022-12-12 17:06:42] [SEVERE ] Key 82 was pressed by player 0
+[2022-12-12 17:06:42] [SEVERE ] player 0 placing token on slot 3
+[2022-12-12 17:06:42] [SEVERE ] setting player 0 freeze to 1000
+[2022-12-12 17:06:43] [SEVERE ] removing player 0 token from slot 1
+[2022-12-12 17:06:43] [SEVERE ] removing player 0 token from slot 2
+[2022-12-12 17:06:43] [SEVERE ] removing player 0 token from slot 3
+[2022-12-12 17:06:47] [SEVERE ] Key 87 was pressed by player 0
+[2022-12-12 17:06:47] [SEVERE ] player 0 placing token on slot 1
+[2022-12-12 17:06:47] [SEVERE ] Key 69 was pressed by player 0
+[2022-12-12 17:06:47] [SEVERE ] player 0 placing token on slot 2
+[2022-12-12 17:06:47] [SEVERE ] Key 82 was pressed by player 0
+[2022-12-12 17:06:47] [SEVERE ] player 0 placing token on slot 3
+[2022-12-12 17:06:47] [SEVERE ] setting player 0 freeze to 1000
+[2022-12-12 17:06:48] [SEVERE ] removing player 0 token from slot 1
+[2022-12-12 17:06:48] [SEVERE ] removing player 0 token from slot 2
+[2022-12-12 17:06:48] [SEVERE ] removing player 0 token from slot 3

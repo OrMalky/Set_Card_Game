@@ -1,6 +1,7 @@
 package bguspl.set.ex;
 
 import bguspl.set.Env;
+//import sun.jvm.hotspot.runtime.Threads;
 
 import java.util.Collections;
 import java.util.List;
@@ -41,12 +42,14 @@ public class Dealer implements Runnable {
     private long reshuffleTime = 15000;
     private long startTime = System.currentTimeMillis();
     private long currentTime = 0;
+    Thread[] playresThreads;
 
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
         this.table = table;
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
+        this.playresThreads = new Thread[players.length];
     }
 
     /**
@@ -55,6 +58,13 @@ public class Dealer implements Runnable {
     @Override
     public void run() {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
+        for (Player player : players) {
+            Thread playerThread = new Thread(player, "Player " + player.id);
+            player.setPlayerThread(playerThread);
+            playerThread.start();
+            playresThreads[player.id] = playerThread;
+        }
+
         Collections.shuffle(deck);
         while (!shouldFinish()) {
             placeCardsOnTable();
@@ -99,8 +109,14 @@ public class Dealer implements Runnable {
             players[player].point();
             return true;
         }
-        return false;
-    }
+        else { //if the set is not valid
+            long millies = 1000;
+            env.ui.setFreeze(player, millies);
+            players[player].penalty(); //penalize the player
+            return false;
+            }
+        }
+
 
     /**
      * Called when the game should be terminated due to an external event.
@@ -186,5 +202,6 @@ public class Dealer implements Runnable {
      */
     private void announceWinners() {
         // TODO implement
+
     }
 }

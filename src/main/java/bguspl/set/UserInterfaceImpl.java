@@ -243,6 +243,7 @@ public class UserInterfaceImpl extends JFrame implements UserInterface {
 
         private void setFreeze(int player, long millies) {
             logger.log(Level.SEVERE, "setting player " + player + " freeze to " + millies);
+            System.out.println("setting player " + player + " freeze to " + millies);
             if (millies > 0) {
                 this.playersTable[0][player].setText(config.playerNames[player] + " (" + millies / 1000 + ")");
                 this.playersTable[0][player].setForeground(Color.RED);
