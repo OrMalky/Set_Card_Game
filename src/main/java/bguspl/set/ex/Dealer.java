@@ -37,7 +37,7 @@ public class Dealer implements Runnable {
     /**
      * The time when the dealer needs to reshuffle the deck due to turn timeout.
      */
-    private long reshuffleTime = 15000;
+    private long reshuffleTime = 60000;
     private long startTime = System.currentTimeMillis();
     private long currentTime = 0;
     Thread[] playresThreads;
@@ -100,6 +100,7 @@ public class Dealer implements Runnable {
     }
 
     public boolean checkSet(int player, List<Integer> set){
+        //Turn set to Array for checking
         int[] cards = new int[3];
         int p = 0;
         for (Integer i : set) {
@@ -107,17 +108,15 @@ public class Dealer implements Runnable {
             p++;
         }
         
+        //Check if set is legit
         if(env.util.testSet(cards)){
             players[player].point();
             return true;
-        }
-        else { //if the set is not valid
-            long millies = 1000;
-            env.ui.setFreeze(player, millies);
+        } else { //if the set is not valid
             players[player].penalty(); //penalize the player
             return false;
-            }
         }
+    }
 
 
     /**
@@ -147,11 +146,22 @@ public class Dealer implements Runnable {
      * Check if any cards can be removed from the deck and placed on the table.
      */
     private void placeCardsOnTable() {
+        //Acquire table's semaphore permit
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //Place cards from the deck on the table
         while (table.countCards() < 12) {
             int card = deck.get(0);
             table.placeCard(card, table.countCards());
             deck.remove(0);
         }
+
+        //Release table's semaphore
+        table.semaphore.release();
     }
 
     /**
@@ -181,19 +191,36 @@ public class Dealer implements Runnable {
      * Returns all the cards from the table to the deck.
      */
     private void removeAllCardsFromTable() {
+        //Acquire table's semaphore permit
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //Remove cards from table to the deck
         for (int i = 0; i < 12; i++) {
             Integer c = table.getCard(i);
             table.removeCard(i);
             deck.add(c);
         }
-        Collections.shuffle(deck);
+        Collections.shuffle(deck);  //Shuffle the deck
+
+        //Release table's semaphore
+        table.semaphore.release();
     }
 
     public void removeAllTokensFromTable() {
-        table.resetAllTokens();
-        for (Player player : players) {
-            player.resetTokens();
+        //Acquire table's semaphore permit
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        
+        //Remove all tokens from the table & release semaphore
+        table.resetAllTokens();
+        table.semaphore.release();
     }
 
     /**
