@@ -1,6 +1,8 @@
 package bguspl.set.ex;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 
 import bguspl.set.Env;
@@ -55,7 +57,7 @@ public class Player implements Runnable {
 
     private Dealer dealer;
 
-    private Integer[] tokens;
+    private List<Integer> tokens;
     private int currentToken;
 
     /**
@@ -73,9 +75,7 @@ public class Player implements Runnable {
         this.table = table;
         this.id = id;
         this.human = human;
-        this.tokens = new Integer[3];
-        Arrays.fill(tokens, -1);
-        this.currentToken = 0;
+        this.tokens = new ArrayList<Integer>();
     }
 
     /**
@@ -128,22 +128,30 @@ public class Player implements Runnable {
      * @param slot - the slot corresponding to the key pressed.
      */
     public void keyPressed(int slot) {
-        // TODO implement
-        table.placeToken(id, slot);
-        if(slot != tokens[0] && slot != tokens[1] && slot != tokens[2]){
-            tokens[currentToken] = slot;
-            currentToken++;
-        }
-
-        System.out.println(currentToken);
-        if(currentToken >= 3){
-            dealer.checkSet(id, tokens);
-            for (Integer t : tokens) {
-                env.ui.removeToken(id, t);
+        synchronized(dealer){
+            System.out.println(id +" Placing token at " +slot);
+            if(tokens.contains(slot)){
+                tokens.remove(Integer.valueOf(slot));
+                table.removeToken(id, slot);
+                System.out.println("token removed");
+                env.ui.removeToken(id, slot);
+            } else {
+                System.out.println("token placed");
+                tokens.add(slot);
+                env.ui.placeToken(id, slot);
+                if(tokens.size() == 3){
+                    dealer.checkSet(id, tokens);
+                    resetTokens();
+                }
             }
-            Arrays.fill(tokens, -1);
-            currentToken = 0;
         }
+    }
+
+    public void resetTokens(){
+        for (Integer t : tokens) {
+            env.ui.removeToken(id, t);
+        }
+        tokens.clear();
     }
 
     /**

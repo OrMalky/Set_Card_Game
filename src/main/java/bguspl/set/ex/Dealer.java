@@ -4,6 +4,7 @@ import bguspl.set.Env;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -78,13 +79,15 @@ public class Dealer implements Runnable {
         }
         updateTimerDisplay(true);
         if (!shouldFinish()) {
-            removeAllTokensFromTable();
-            removeAllCardsFromTable();
-            placeCardsOnTable();
+            synchronized(this){
+                removeAllTokensFromTable();
+                removeAllCardsFromTable();
+                placeCardsOnTable();
+            }
         }
     }
 
-    public boolean checkSet(int player, Integer[] set){
+    public boolean checkSet(int player, List<Integer> set){
         int[] cards = new int[3];
         int p = 0;
         for (Integer i : set) {
@@ -173,6 +176,9 @@ public class Dealer implements Runnable {
 
     public void removeAllTokensFromTable() {
         table.resetAllTokens();
+        for (Player player : players) {
+            player.resetTokens();
+        }
     }
 
     /**

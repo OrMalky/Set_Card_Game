@@ -31,7 +31,7 @@ public class Table {
      */
     protected final Integer[] cardToSlot; // slot per card (if any)
 
-    private List<Integer>[] tokens;
+    private List<List<Integer>> tokens;
 
     /**
      * Constructor for testing.
@@ -43,7 +43,6 @@ public class Table {
      *                   none).
      */
     public Table(Env env, Integer[] slotToCard, Integer[] cardToSlot) {
-
         this.env = env;
         this.slotToCard = slotToCard;
         this.cardToSlot = cardToSlot;
@@ -136,7 +135,7 @@ public class Table {
      */
     public void placeToken(int player, int slot) {
         //Place token
-        tokens[player].add(slot);
+        tokens.get(player).add(slot);
         env.ui.placeToken(player, slot);
     }
 
@@ -151,18 +150,17 @@ public class Table {
     }
 
     public void resetAllTokens() {
-        tokens = new List[env.config.players];
-        for (int i = 0; i < tokens.length; i++) {
-            tokens[i] = new ArrayList<Integer>();
+        tokens = new ArrayList<List<Integer>>();
+        for (int i=0; i < env.config.players; i++){
+            tokens.add(new ArrayList<Integer>());
         }
-        env.ui.removeTokens();
     }
 
     public void removePlayerTokens(int player){
-        for (Integer s : tokens[player]) {
-            env.ui.removeToken(player, s);
+        for (Integer token : tokens.get(player)) {
+            env.ui.removeToken(player, token);
         }
-        tokens[player] = new ArrayList<Integer>();
+        tokens.get(player).clear();
     }
 
     /**
@@ -173,13 +171,11 @@ public class Table {
      * @return - true iff a token was successfully removed.
      */
     public boolean removeToken(int player, int slot) {
-        // TODO implement
-        for (int i = 0; i < 3; i++) {
-            if (tokens[player].get(i) == slot) {
-                tokens[player].remove(i);
-                env.ui.removeToken(player, slot);
-                return true;
-            }
+        int p = tokens.get(player).indexOf(slot);
+        if(p > -1){
+            tokens.remove(p);
+            env.ui.removeToken(player, slot);
+            return true;
         }
         return false;
     }
