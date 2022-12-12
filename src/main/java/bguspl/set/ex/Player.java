@@ -95,7 +95,7 @@ public class Player implements Runnable {
         if (!human) createArtificialIntelligence();
 
         while (!terminate) {
-            if(sleepEnd > System.currentTimeMillis()) {
+            if(wait || sleepEnd > System.currentTimeMillis()) {
                 if(!wait)
                     env.ui.setFreeze(id, sleepEnd - System.currentTimeMillis());
                 sleep();
@@ -144,13 +144,11 @@ public class Player implements Runnable {
      * @param slot - the slot corresponding to the key pressed.
      */
     public void keyPressed(int slot) {
-        synchronized(dealer){
-            if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
-            toPlace.add(slot);
-        }
+        if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
+        toPlace.add(slot);
     }
 
-    public void resetTokens(){
+    public synchronized void resetTokens(){
         for (Integer t : tokens) {
             env.ui.removeToken(id, t);
         }
@@ -192,17 +190,21 @@ public class Player implements Runnable {
 
     private void sleep(){
         try {
+            System.out.println(Thread.currentThread().getName());
             Thread.sleep(10);
             if(!wait){
                 if(System.currentTimeMillis() >= sleepEnd){
                     env.ui.setFreeze(id, 0);
                 }
+            } else {
+                sleep(10);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
+    //this should be synced to table - i think fair semaphore is a good solution
     private void placeTokens(){
         while(!toPlace.isEmpty()){
             int slot = toPlace.poll();
