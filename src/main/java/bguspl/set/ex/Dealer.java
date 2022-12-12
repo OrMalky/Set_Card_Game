@@ -1,11 +1,9 @@
 package bguspl.set.ex;
 
 import bguspl.set.Env;
-//import sun.jvm.hotspot.runtime.Threads;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -60,9 +58,8 @@ public class Dealer implements Runnable {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
         for (Player player : players) {
             Thread playerThread = new Thread(player, "Player " + player.id);
-            player.setPlayerThread(playerThread);
-            playerThread.start();
             playresThreads[player.id] = playerThread;
+            playerThread.start();
         }
 
         Collections.shuffle(deck);
@@ -70,7 +67,6 @@ public class Dealer implements Runnable {
             placeCardsOnTable();
             startTime = System.currentTimeMillis();
             timerLoop();
-            // updateTimerDisplay(false);
         }
         announceWinners();
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
@@ -90,9 +86,15 @@ public class Dealer implements Runnable {
         updateTimerDisplay(true);
         if (!shouldFinish()) {
             synchronized(this){
+                for (Player player : players) {
+                    player.sleepUntilWoken();
+                }
                 removeAllTokensFromTable();
                 removeAllCardsFromTable();
                 placeCardsOnTable();
+                for (Player player : players) {
+                    player.wake();
+                }
             }
         }
     }
@@ -145,7 +147,6 @@ public class Dealer implements Runnable {
      * Check if any cards can be removed from the deck and placed on the table.
      */
     private void placeCardsOnTable() {
-        // TODO implement
         while (table.countCards() < 12) {
             int card = deck.get(0);
             table.placeCard(card, table.countCards());
@@ -158,7 +159,6 @@ public class Dealer implements Runnable {
      * purpose.
      */
     private void sleepUntilWokenOrTimeout() {
-        // TODO implement
         try {
             Thread.sleep(10);
         } catch (InterruptedException ignored) {};
@@ -168,7 +168,6 @@ public class Dealer implements Runnable {
      * Reset and/or update the countdown and the countdown display.
      */
     private void updateTimerDisplay(boolean reset) {
-        // TODO implement
         if (reset) {
             currentTime = 0;
             startTime = System.currentTimeMillis();

@@ -3,6 +3,8 @@ package bguspl.set.ex;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.logging.Level;
 
 import bguspl.set.Env;
@@ -58,9 +60,11 @@ public class Player implements Runnable {
     private final Dealer dealer;
 
     private List<Integer> tokens;
-    private int currentToken;
 
-    public boolean freeze = false;
+    private Queue<Integer> toPlace;
+
+    private long sleepEnd;
+    private boolean wait = false;
 
     /**
      * The class constructor.
@@ -78,6 +82,7 @@ public class Player implements Runnable {
         this.id = id;
         this.human = human;
         this.tokens = new ArrayList<Integer>();
+        toPlace = new ConcurrentLinkedQueue<Integer>();
     }
 
     /**
@@ -85,20 +90,20 @@ public class Player implements Runnable {
      */
     @Override
     public void run() {
-        playerThread = dealer.playresThreads[id];
+        playerThread = Thread.currentThread();
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + "starting.");
         if (!human) createArtificialIntelligence();
 
         while (!terminate) {
-            // TODO implement main player loop
-            if(freeze) {
-                synchronized (this) {
-                    try {
-                        wait(2000); // wait for 2 second
-                        freeze = false; // unfreeze
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+            if(sleepEnd > System.currentTimeMillis()) {
+                if(!wait)
+                    env.ui.setFreeze(id, sleepEnd - System.currentTimeMillis());
+                sleep();
+            } else {
+                placeTokens();
+                if(tokens.size() == 3){
+                    dealer.checkSet(id, tokens);
+                    resetTokens();
                 }
             }
         }
@@ -140,23 +145,8 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         synchronized(dealer){
-            if(freeze) return; // if the player is frozen, do nothing
-            System.out.println("my thread name is: " + Thread.currentThread().getName() + " and I am awake");
-            System.out.println(id +" Placing token at " +slot);
-            if(tokens.contains(slot)){
-                tokens.remove(Integer.valueOf(slot));
-                table.removeToken(id, slot);
-                System.out.println("token removed");
-                env.ui.removeToken(id, slot);
-            } else {
-                System.out.println("token placed");
-                tokens.add(slot);
-                env.ui.placeToken(id, slot);
-                if(tokens.size() == 3){
-                    dealer.checkSet(id, tokens);
-                    resetTokens();
-                }
-            }
+            if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
+            toPlace.add(slot);
         }
     }
 
@@ -183,20 +173,51 @@ public class Player implements Runnable {
     /**
      * Penalize a player and perform other related actions.
      */
-    public synchronized void penalty() {
-        // TODO implement
-        //THE penalty is to make the player thread wait for 1 second
-        this.setFreeze();
-        System.out.println("my thread name is: "+this.playerThread.getName());
+    public void penalty() {
+        sleep(3000);
     }
+
+    public void sleep(long millies){
+        sleepEnd = System.currentTimeMillis() + millies;
+    }
+
+    public void sleepUntilWoken(){
+        wait = true;
+        sleep(10);
+    }
+
+    public void wake(){
+        wait = false;
+    }
+
+    private void sleep(){
+        try {
+            Thread.sleep(10);
+            if(!wait){
+                if(System.currentTimeMillis() >= sleepEnd){
+                    env.ui.setFreeze(id, 0);
+                }
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void placeTokens(){
+        while(!toPlace.isEmpty()){
+            int slot = toPlace.poll();
+            if(tokens.contains(slot)){
+                tokens.remove(Integer.valueOf(slot));
+                table.removeToken(id, slot);
+                env.ui.removeToken(id, slot);
+            } else {
+                tokens.add(slot);
+                env.ui.placeToken(id, slot);
+            }
+        }
+    }
+
     public int getScore() {
         return score;
-    }
-    private synchronized void setFreeze(){
-            freeze = true;
-        }
-
-    public void setPlayerThread(Thread playerThread) {
-        this.playerThread = playerThread;
     }
 }
