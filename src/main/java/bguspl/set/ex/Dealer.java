@@ -132,6 +132,7 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         // TODO implement
+
     }
 
     /**
@@ -236,6 +237,7 @@ public class Dealer implements Runnable {
         
         //Remove all tokens from the table & release semaphore
         table.resetAllTokens();
+        env.ui.removeTokens();
         table.semaphore.release();
     }
 
@@ -244,6 +246,27 @@ public class Dealer implements Runnable {
      */
     private void announceWinners() {
         // TODO implement
+        int temp = 0;
+        for(Player p : players){
+            if(p.getScore() > temp){
+                temp = p.getScore();
+            }
+        }
+        int numOfPlayers = 0;
+        for(Player p : players){
+            if(p.getScore() == temp){
+                numOfPlayers++;
+            }
+        }
+        int[] winners = new int[numOfPlayers];
+        for(Player p : players){
+            for(int i = 0; i < numOfPlayers; i++){
+                if(p.getScore() == temp){
+                    winners[i] = p.id;
+                }
+            }
+        }
+        env.ui.announceWinner(winners);
 
     }
 }
