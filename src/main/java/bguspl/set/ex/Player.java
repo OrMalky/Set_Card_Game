@@ -204,7 +204,8 @@ public class Player implements Runnable {
         List<Integer> tokens = new ArrayList<>();
         while(!toPlace.isEmpty()){
             int slot = toPlace.poll();
-            tokens = table.placeToken(id, slot);
+            if(table.getCard(slot) != null)
+                tokens = table.placeToken(id, slot);
         }
 
         //If 3 tokens placed check for valid set and remove tokens
