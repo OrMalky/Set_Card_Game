@@ -40,9 +40,15 @@ public class Dealer implements Runnable {
     /**
      * The time when the dealer needs to reshuffle the deck due to turn timeout.
      */
-    private long reshuffleTime = 60000;
-    private long startTime = System.currentTimeMillis();
-    private long currentTime = 0;
+    private long reshuffleTime;
+    private long warningTime;
+    private long startTime;
+    private long currentTime;
+    private boolean timerMode;
+    private boolean displayTimer;
+
+    private int tableSize;
+
     private Thread[] playresThreads;
     private Queue<Integer> toRemove;
 
@@ -51,8 +57,15 @@ public class Dealer implements Runnable {
         this.table = table;
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
+
         this.playresThreads = new Thread[players.length];
         this.toRemove = new ConcurrentLinkedQueue<Integer>();
+
+        this.reshuffleTime = env.config.turnTimeoutMillis;
+        this.warningTime = env.config.turnTimeoutWarningMillis;
+        this.timerMode = reshuffleTime == 0;
+        this.displayTimer = reshuffleTime >= 0;
+        this.tableSize = env.config.tableSize;
     }
 
     /**
@@ -69,39 +82,58 @@ public class Dealer implements Runnable {
 
         Collections.shuffle(deck);
         while (!shouldFinish()) {
+            acquireSemaphore();
             placeCardsOnTable();
+            table.semaphore.release();
             startTime = System.currentTimeMillis();
             timerLoop();
         }
         announceWinners();
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
     }
-
+    
     /**
      * The inner loop of the dealer thread that runs as long as the countdown did
      * not time out.
      */
     private void timerLoop() {
-        while (!shouldFinish() && currentTime < reshuffleTime) {
+        while (!shouldFinish() && (currentTime < reshuffleTime || reshuffleTime <= 0)) {
             sleepUntilWokenOrTimeout();
+            acquireSemaphore();
             removeCardsFromTable();
             placeCardsOnTable();
+            while(timerMode && !table.checkForSets()){
+                removeAllCardsFromTable();
+                placeCardsOnTable();
+            }
+            table.semaphore.release();
             updateTimerDisplay(false);
-            //table.hints(); //for debug
+            table.hints(); //for debug
         }
         updateTimerDisplay(true);
         if (!shouldFinish()) {
-            synchronized(this){
-                for (Player player : players) {
-                    player.sleepUntilWoken();
-                }
+            acquireSemaphore();
+            for (Player player : players) {
+                player.sleepUntilWoken();
+            }
+            do{
                 removeAllTokensFromTable();
                 removeAllCardsFromTable();
                 placeCardsOnTable();
-                for (Player player : players) {
-                    player.wake();
-                }
+            } while(timerMode && !table.checkForSets());
+            for (Player player : players) {
+                player.wake();
             }
+            table.semaphore.release();
+        }
+    }
+
+    //Acquire table's semaphore permit
+    private void acquireSemaphore(){
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -114,7 +146,7 @@ public class Dealer implements Runnable {
         }
 
         //Get the player's set from the table
-        List<Integer> set = table.getTokens(player);
+        List<Integer> set = table.getPlayerTokens(player);
         
         //Turn set to Array for checking
         int[] cards = new int[3];
@@ -123,18 +155,17 @@ public class Dealer implements Runnable {
             cards[p] = table.slotToCard[i];
             p++;
         }
-
-        //Remove the tokens from the table and release the table's semaphore
-        table.removePlayerTokens(player);
-        table.semaphore.release();
         
         //If set is valid add a point to the player and remove the cards
         if(env.util.testSet(cards)){
             players[player].point();
-            players[player].sleep(1000);
             toRemove.addAll(set);
+            table.removePlayerTokens(player);
+            table.semaphore.release();
             return true;
         } else { //if the set is not valid penalize the player 
+            table.removePlayerTokens(player);
+            table.semaphore.release();
             players[player].penalty();
             return false;
         }
@@ -146,9 +177,6 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         terminate = true;
-        for (Player player : players) {
-            player.terminate();
-        }
     }
 
     /**
@@ -174,16 +202,9 @@ public class Dealer implements Runnable {
      * Check if any cards can be removed from the deck and placed on the table.
      */
     private void placeCardsOnTable() {
-        //Acquire table's semaphore permit
-        try {
-            table.semaphore.acquire();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         //Place cards from the deck on the table
         int slot = 0;
-        while (slot < 12 && !deck.isEmpty()) {
+        while (slot < tableSize && !deck.isEmpty()) {
             if(table.getCard(slot) == null){
                 int card = deck.remove(0);
                 table.placeCard(card, slot);
@@ -211,50 +232,37 @@ public class Dealer implements Runnable {
      * Reset and/or update the countdown and the countdown display.
      */
     private void updateTimerDisplay(boolean reset) {
+        if(!displayTimer) return;
         if (reset) {
             currentTime = 0;
             startTime = System.currentTimeMillis();
         }
         currentTime = System.currentTimeMillis() - startTime;
         long t = reshuffleTime - currentTime;
-        env.ui.setCountdown(t, t <= 10000);
+        if(timerMode){
+            env.ui.setElapsed(System.currentTimeMillis() - startTime);
+        } else {
+            env.ui.setCountdown(t, t <= warningTime);
+        }
     }
 
     /**
      * Returns all the cards from the table to the deck.
      */
     private void removeAllCardsFromTable() {
-        //Acquire table's semaphore permit
-        try {
-            table.semaphore.acquire();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         //Remove cards from table to the deck
-        for (int i = 0; i < 12; i++) {
-            Integer c = table.getCard(i);
-            table.removeCard(i);
+        while (table.countCards() > 0) {
+            Integer c = table.getCard(table.countCards() - 1);
+            table.removeCard(table.countCards() - 1);
             deck.add(c);
         }
         Collections.shuffle(deck);  //Shuffle the deck
-
-        //Release table's semaphore
-        table.semaphore.release();
     }
 
     public void removeAllTokensFromTable() {
-        //Acquire table's semaphore permit
-        try {
-            table.semaphore.acquire();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        
         //Remove all tokens from the table & release semaphore
         table.resetAllTokens();
         env.ui.removeTokens();
-        table.semaphore.release();
     }
 
     /**

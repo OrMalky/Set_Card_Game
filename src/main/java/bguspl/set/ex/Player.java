@@ -130,7 +130,6 @@ public class Player implements Runnable {
     public void terminate() {
         // TODO implement
         terminate = true;
-        dealer.terminate();
     }
 
     /**
@@ -151,18 +150,16 @@ public class Player implements Runnable {
      * @post - the player's score is updated in the ui.
      */
     public void point() {
-        // TODO implement
-
         int ignored = table.countCards(); // this part is just for demonstration in the unit tests
         env.ui.setScore(id, ++score);
-
+        sleep(env.config.pointFreezeMillis);
     }
 
     /**
      * Penalize a player and perform other related actions.
      */
     public void penalty() {
-        sleep(3000);
+        sleep(env.config.penaltyFreezeMillis);
     }
 
     public void sleep(long millies){

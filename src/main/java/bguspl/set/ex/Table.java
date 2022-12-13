@@ -7,6 +7,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
+
+import javax.management.relation.Relation;
+
 import java.util.concurrent.*;
 
 /**
@@ -70,6 +73,12 @@ public class Table {
      * table.
      */
     public void hints() {
+        try {
+            semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         List<Integer> deck = Arrays.stream(slotToCard).filter(Objects::nonNull).collect(Collectors.toList());
         env.util.findSets(deck, Integer.MAX_VALUE).forEach(set -> {
             StringBuilder sb = new StringBuilder().append("Hint: Set found: ");
@@ -79,6 +88,8 @@ public class Table {
             System.out.println(
                     sb.append("slots: ").append(slots).append(" features: ").append(Arrays.deepToString(features)));
         });
+
+        semaphore.release();
     }
 
     /**
@@ -105,13 +116,10 @@ public class Table {
     public void placeCard(int card, int slot) {
         try {
             Thread.sleep(env.config.tableDelayMillis);
-        } catch (InterruptedException ignored) {
-        }
+        } catch (InterruptedException ignored) {}
 
         cardToSlot[card] = slot;
         slotToCard[slot] = card;
-
-        // TODO implement
         env.ui.placeCard(card, slot);
     }
 
@@ -126,7 +134,6 @@ public class Table {
             env.ui.removeCard(slot);
         } catch (InterruptedException ignored) {}
 
-        // TODO implement
         int c = slotToCard[slot];
         slotToCard[slot] = null;
         cardToSlot[c] = null;
@@ -159,7 +166,7 @@ public class Table {
      * 
      * @return - a list of integers represnting the slots on the table the player has tokens on.
      */
-    public List<Integer> getTokens(int player){
+    public List<Integer> getPlayerTokens(int player){
         return tokens.get(player);
     }
 
