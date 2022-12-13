@@ -133,18 +133,33 @@ public class Table {
     }
 
     /**
-     * Places a player token on a grid slot.
+     * Places a player's token on a grid slot.
      * 
      * @param player - the player the token belongs to.
      * @param slot   - the slot on which to place the token.
+     * 
+     * @return - true iff the player has 3 tokens on the table.
      */
-    public List<Integer> placeToken(int player, int slot) {
+    public boolean placeToken(int player, int slot) {
         if(tokens.get(player).contains(slot)){
             removeToken(player, slot);
+            System.out.println(player + " removed token at " + slot);
         } else {
             tokens.get(player).add(slot);
             env.ui.placeToken(player, slot);
+            System.out.println(player + " placed token at " + slot);
         }
+        return tokens.get(player).size() == 3;
+    }
+
+    /**
+     * Returns the given player placed tokens.
+     * 
+     * @param player - the player the tokens belong to.
+     * 
+     * @return - a list of integers represnting the slots on the table the player has tokens on.
+     */
+    public List<Integer> getTokens(int player){
         return tokens.get(player);
     }
 
@@ -186,5 +201,21 @@ public class Table {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Checks if there are any valid sets on the table.
+     * 
+     * @return - true iff there is at least one valid set on the table.
+     */
+    public boolean checkForSets(){
+        //Generate a list of cards on table
+        List<Integer> cards = new ArrayList<Integer>();
+        for (Integer i : slotToCard) {
+            cards.add(i);
+        }
+
+        //checks if there is at least one set on the table
+        return env.util.findSets(cards, 1).size() > 0;
     }
 }

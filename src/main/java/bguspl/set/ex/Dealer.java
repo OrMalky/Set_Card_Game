@@ -2,6 +2,7 @@ package bguspl.set.ex;
 
 import bguspl.set.Env;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
@@ -81,12 +82,12 @@ public class Dealer implements Runnable {
      * not time out.
      */
     private void timerLoop() {
-        while (currentTime < reshuffleTime) {
+        while (!shouldFinish() && currentTime < reshuffleTime) {
             sleepUntilWokenOrTimeout();
             removeCardsFromTable();
             placeCardsOnTable();
             updateTimerDisplay(false);
-            table.hints(); //for debug
+            //table.hints(); //for debug
         }
         updateTimerDisplay(true);
         if (!shouldFinish()) {
@@ -104,7 +105,17 @@ public class Dealer implements Runnable {
         }
     }
 
-    public boolean checkSet(int player, List<Integer> set){
+    public boolean checkSet(int player){
+        //Acquire tables semaphre permit
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //Get the player's set from the table
+        List<Integer> set = table.getTokens(player);
+        
         //Turn set to Array for checking
         int[] cards = new int[3];
         int p = 0;
@@ -112,27 +123,32 @@ public class Dealer implements Runnable {
             cards[p] = table.slotToCard[i];
             p++;
         }
+
+        //Remove the tokens from the table and release the table's semaphore
+        table.removePlayerTokens(player);
+        table.semaphore.release();
         
         //If set is valid add a point to the player and remove the cards
         if(env.util.testSet(cards)){
             players[player].point();
-            for (Integer i : set) {
-                toRemove.add(i);
-            }
+            players[player].sleep(1000);
+            toRemove.addAll(set);
             return true;
-        } else { //if the set is not valid
-            players[player].penalty(); //penalize the player
+        } else { //if the set is not valid penalize the player 
+            players[player].penalty();
             return false;
         }
     }
-
-
+    
+    
     /**
      * Called when the game should be terminated due to an external event.
      */
     public void terminate() {
-        // TODO implement
-
+        terminate = true;
+        for (Player player : players) {
+            player.terminate();
+        }
     }
 
     /**
@@ -141,7 +157,7 @@ public class Dealer implements Runnable {
      * @return true iff the game should be finished.
      */
     private boolean shouldFinish() {
-        return terminate || env.util.findSets(deck, 1).size() == 0;
+        return terminate || (env.util.findSets(deck, 1).size() == 0 && !table.checkForSets());
     }
 
     /**
@@ -171,14 +187,14 @@ public class Dealer implements Runnable {
             if(table.getCard(slot) == null){
                 int card = deck.remove(0);
                 table.placeCard(card, slot);
+                System.out.println(deck.size() + " Cards left in deck");
             }
             slot++;
         }
-
+        
         //Release table's semaphore
         table.semaphore.release();
-
-        System.out.println(deck.size() + " Cards left in deck");
+        
     }
 
     /**
@@ -245,28 +261,20 @@ public class Dealer implements Runnable {
      * Check who is/are the winner/s and displays them.
      */
     private void announceWinners() {
-        // TODO implement
-        int temp = 0;
+        int bestScore = 0;
+        List<Integer> winnerList = new ArrayList<Integer>();
         for(Player p : players){
-            if(p.getScore() > temp){
-                temp = p.getScore();
-            }
-        }
-        int numOfPlayers = 0;
-        for(Player p : players){
-            if(p.getScore() == temp){
-                numOfPlayers++;
-            }
-        }
-        int[] winners = new int[numOfPlayers];
-        for(Player p : players){
-            for(int i = 0; i < numOfPlayers; i++){
-                if(p.getScore() == temp){
-                    winners[i] = p.id;
+            int score = p.getScore();
+            if(score >= bestScore){
+                if(score > bestScore){
+                    bestScore = p.getScore();
+                    winnerList.clear();
                 }
+                winnerList.add(p.id);
             }
         }
-        env.ui.announceWinner(winners);
 
+        int[] winners = winnerList.stream().mapToInt(Integer::intValue).toArray();
+        env.ui.announceWinner(winners);
     }
 }

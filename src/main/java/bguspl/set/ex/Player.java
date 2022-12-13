@@ -130,6 +130,7 @@ public class Player implements Runnable {
     public void terminate() {
         // TODO implement
         terminate = true;
+        dealer.terminate();
     }
 
     /**
@@ -139,7 +140,8 @@ public class Player implements Runnable {
      */
     public void keyPressed(int slot) {
         if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
-        toPlace.add(slot);
+        if(toPlace.size() < 3)
+            toPlace.add(slot);
     }
 
     /**
@@ -178,7 +180,6 @@ public class Player implements Runnable {
 
     private void sleep(){
         try {
-            System.out.println(Thread.currentThread().getName());
             Thread.sleep(10);
             if(!wait){
                 if(System.currentTimeMillis() >= sleepEnd){
@@ -202,21 +203,20 @@ public class Player implements Runnable {
         }
 
         //Place tokens on table
-        List<Integer> tokens = new ArrayList<>();
+        boolean isSet = false;
         while(!toPlace.isEmpty()){
             int slot = toPlace.poll();
             if(table.getCard(slot) != null)
-                tokens = table.placeToken(id, slot);
+                isSet = table.placeToken(id, slot);
         }
-
-        //If 3 tokens placed check for valid set and remove tokens
-        if(tokens.size() == 3){
-            dealer.checkSet(id, tokens);
-            table.removePlayerTokens(id);
-        }
-
+        
         //Release table's semaphore
         table.semaphore.release();
+
+        //If 3 tokens placed check for valid set and remove tokens
+        if(isSet){
+            dealer.checkSet(id);
+        }
     }
 
     public int getScore() {
