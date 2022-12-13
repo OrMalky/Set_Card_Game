@@ -4,6 +4,8 @@ import bguspl.set.Env;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -40,7 +42,8 @@ public class Dealer implements Runnable {
     private long reshuffleTime = 60000;
     private long startTime = System.currentTimeMillis();
     private long currentTime = 0;
-    Thread[] playresThreads;
+    private Thread[] playresThreads;
+    private Queue<Integer> toRemove;
 
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
@@ -48,6 +51,7 @@ public class Dealer implements Runnable {
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
         this.playresThreads = new Thread[players.length];
+        this.toRemove = new ConcurrentLinkedQueue<Integer>();
     }
 
     /**
@@ -82,6 +86,7 @@ public class Dealer implements Runnable {
             removeCardsFromTable();
             placeCardsOnTable();
             updateTimerDisplay(false);
+            table.hints(); //for debug
         }
         updateTimerDisplay(true);
         if (!shouldFinish()) {
@@ -108,9 +113,12 @@ public class Dealer implements Runnable {
             p++;
         }
         
-        //Check if set is legit
+        //If set is valid add a point to the player and remove the cards
         if(env.util.testSet(cards)){
             players[player].point();
+            for (Integer i : set) {
+                toRemove.add(i);
+            }
             return true;
         } else { //if the set is not valid
             players[player].penalty(); //penalize the player
@@ -139,7 +147,10 @@ public class Dealer implements Runnable {
      * Checks cards should be removed from the table and removes them.
      */
     private void removeCardsFromTable() {
-        // TODO implement
+        while(!toRemove.isEmpty()){
+            int card = toRemove.poll();
+            table.removeCard(card);
+        }
     }
 
     /**
@@ -154,14 +165,19 @@ public class Dealer implements Runnable {
         }
 
         //Place cards from the deck on the table
-        while (table.countCards() < 12) {
-            int card = deck.get(0);
-            table.placeCard(card, table.countCards());
-            deck.remove(0);
+        int slot = 0;
+        while (slot < 12 && !deck.isEmpty()) {
+            if(table.getCard(slot) == null){
+                int card = deck.remove(0);
+                table.placeCard(card, slot);
+            }
+            slot++;
         }
 
         //Release table's semaphore
         table.semaphore.release();
+
+        System.out.println(deck.size() + " Cards left in deck");
     }
 
     /**
