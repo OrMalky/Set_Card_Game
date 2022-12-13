@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 
 import bguspl.set.Env;
@@ -59,8 +60,6 @@ public class Player implements Runnable {
 
     private final Dealer dealer;
 
-    private List<Integer> tokens;
-
     private Queue<Integer> toPlace;
 
     private long sleepEnd;
@@ -81,7 +80,6 @@ public class Player implements Runnable {
         this.table = table;
         this.id = id;
         this.human = human;
-        this.tokens = new ArrayList<Integer>();
         toPlace = new ConcurrentLinkedQueue<Integer>();
     }
 
@@ -101,11 +99,7 @@ public class Player implements Runnable {
                 sleep();
             } else {
                 placeTokens();
-                if(tokens.size() == 3){
-                    dealer.checkSet(id, tokens);
-                    resetTokens();
                 }
-            }
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
@@ -146,13 +140,6 @@ public class Player implements Runnable {
     public void keyPressed(int slot) {
         if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
         toPlace.add(slot);
-    }
-
-    public synchronized void resetTokens(){
-        for (Integer t : tokens) {
-            env.ui.removeToken(id, t);
-        }
-        tokens.clear();
     }
 
     /**
@@ -206,17 +193,28 @@ public class Player implements Runnable {
 
     //this should be synced to table - i think fair semaphore is a good solution
     private void placeTokens(){
+        //Acquire the table's semaphore permit to play to table
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //Place tokens on table
+        List<Integer> tokens = new ArrayList<>();
         while(!toPlace.isEmpty()){
             int slot = toPlace.poll();
-            if(tokens.contains(slot)){
-                tokens.remove(Integer.valueOf(slot));
-                table.removeToken(id, slot);
-                env.ui.removeToken(id, slot);
-            } else {
-                tokens.add(slot);
-                env.ui.placeToken(id, slot);
-            }
+            tokens = table.placeToken(id, slot);
         }
+
+        //If 3 tokens placed check for valid set and remove tokens
+        if(tokens.size() == 3){
+            dealer.checkSet(id, tokens);
+            table.removePlayerTokens(id);
+        }
+
+        //Release table's semaphore
+        table.semaphore.release();
     }
 
     public int getScore() {
