@@ -49,7 +49,6 @@ public class Dealer implements Runnable {
 
     private int tableSize;
 
-    private Thread[] playresThreads;
     private Queue<Integer> toRemove;
 
     public Dealer(Env env, Table table, Player[] players) {
@@ -58,7 +57,6 @@ public class Dealer implements Runnable {
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
 
-        this.playresThreads = new Thread[players.length];
         this.toRemove = new ConcurrentLinkedQueue<Integer>();
 
         this.reshuffleTime = env.config.turnTimeoutMillis;
@@ -76,7 +74,6 @@ public class Dealer implements Runnable {
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
         for (Player player : players) {
             Thread playerThread = new Thread(player, "Player " + player.id);
-            playresThreads[player.id] = playerThread;
             playerThread.start();
         }
 
@@ -108,7 +105,7 @@ public class Dealer implements Runnable {
             }
             table.semaphore.release();
             updateTimerDisplay(false);
-            table.hints(); //for debug
+            //table.hints(); //for debug
         }
         updateTimerDisplay(true);
         if (!shouldFinish()) {
@@ -177,6 +174,9 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         terminate = true;
+        for (int i = players.length - 1; i >= 0; i--) {
+            players[i].terminate();
+        }
     }
 
     /**
