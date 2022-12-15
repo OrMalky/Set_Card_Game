@@ -142,10 +142,16 @@ public class Table {
             env.ui.removeCard(slot);
         } catch (InterruptedException ignored) {}
 
+        for (List<Integer> t : tokens) {
+            if(t.contains(slot)){
+                t.remove(Integer.valueOf(slot));
+            }
+        }
         int c = slotToCard[slot];
         slotToCard[slot] = null;
         cardToSlot[c] = null;
         usedSlots.remove(Integer.valueOf(slot));
+        env.ui.removeTokens(slot);
     }
 
     /**

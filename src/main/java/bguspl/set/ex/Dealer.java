@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -174,20 +175,11 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         terminate = true;
-        try {
-            table.semaphore.acquire();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        acquireSemaphore();
         for (int i = players.length - 1; i >= 0; i--) {
-            if(players[i].isHuman()){
-                players[i].terminate();
-            }
-            if(players[i].isSleep()){
-                players[i].wake();
-            }
             players[i].terminate();
         }
+        table.semaphore.release();
     }
 
     /**
@@ -204,8 +196,11 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         while(!toRemove.isEmpty()){
-            int card = toRemove.poll();
-            table.removeCard(card);
+            int slot = toRemove.poll();
+            for (Player player : players) {
+                player.removeFromQueue(slot);
+            }
+            table.removeCard(slot);
         }
     }
 

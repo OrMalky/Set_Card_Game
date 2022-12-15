@@ -1,5 +1,6 @@
 package bguspl.set.ex;
 
+import java.lang.Thread.State;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -99,6 +100,8 @@ public class Player implements Runnable {
             if(wait || sleepEnd > System.currentTimeMillis()) {
                 if(!wait)
                     env.ui.setFreeze(id, sleepEnd - System.currentTimeMillis());
+                else
+                    env.ui.setFreeze(id, 0);
                 sleep();
             } else {
                 placeTokens();
@@ -117,7 +120,7 @@ public class Player implements Runnable {
         aiThread = new Thread(() -> {
             env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
             while (!terminate) {
-                generateKeyPresses();
+                generateKeyPress();
                 try {
                     if(!wait)
                         Thread.sleep(aiDelay);
@@ -129,14 +132,13 @@ public class Player implements Runnable {
     }
 
     //Generate random key presses (for AI)
-    private void generateKeyPresses(){
+    private void generateKeyPress(){
             try {
                 table.semaphore.acquire();
             } catch (InterruptedException e) {}
             
             List<Integer> options = table.getUsedSlots();
             if(options.size() > 0){
-                System.out.println("db");
                 Random random = new Random();
                 int choice = options.get(random.nextInt(options.size()));
                 keyPressed(choice);
@@ -150,10 +152,10 @@ public class Player implements Runnable {
     public void terminate() {
         terminate = true;
         if(!human) {
-            try {
-                aiThread.sleep(100);
-            } catch (InterruptedException e) {
-            }
+            if(aiThread.getState() == State.TIMED_WAITING)
+                try {
+                    Thread.sleep(aiDelay);
+                } catch (InterruptedException e) {}
             aiThread.interrupt();
         }
         playerThread.interrupt();
@@ -218,6 +220,12 @@ public class Player implements Runnable {
         }
     }
 
+    public void removeFromQueue(int slot){
+        if(toPlace.contains(slot)){
+            toPlace.remove(Integer.valueOf(slot));
+        }
+    }
+
     //this should be synced to table - i think fair semaphore is a good solution
     private void placeTokens(){
         //Acquire the table's semaphore permit to play to table
@@ -247,10 +255,6 @@ public class Player implements Runnable {
 
     public int getScore() {
         return score;
-    }
-
-    public boolean isSleep() {
-        return wait;
     }
 
     public boolean isHuman() {
