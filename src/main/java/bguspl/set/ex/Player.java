@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
+import java.util.Random;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
@@ -65,6 +66,8 @@ public class Player implements Runnable {
     private long sleepEnd;
     private boolean wait = false;
 
+    private long aiDelay = 1000;
+
     /**
      * The class constructor.
      *
@@ -99,7 +102,7 @@ public class Player implements Runnable {
                 sleep();
             } else {
                 placeTokens();
-                }
+            }
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
@@ -114,14 +117,30 @@ public class Player implements Runnable {
         aiThread = new Thread(() -> {
             env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
             while (!terminate) {
-                // TODO implement player key press simulator
+                generateKeyPresses();
                 try {
-                    synchronized (this) { wait(); }
-                } catch (InterruptedException ignored) {}
+                    Thread.sleep(aiDelay);
+                } catch (InterruptedException e) {}
             }
             env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
         }, "computer-" + id);
         aiThread.start();
+    }
+
+    //Generate random key presses (for AI)
+    private void generateKeyPresses(){
+            try {
+                table.semaphore.acquire();
+            } catch (InterruptedException e) {}
+            
+            List<Integer> options = table.getUsedSlots();
+            if(options.size() > 0){
+                System.out.println("db");
+                Random random = new Random();
+                int choice = options.get(random.nextInt(options.size()));
+                keyPressed(choice);
+            }
+            table.semaphore.release();
     }
 
     /**
@@ -129,6 +148,8 @@ public class Player implements Runnable {
      */
     public void terminate() {
         terminate = true;
+        if(!human)
+            aiThread.interrupt();
         playerThread.interrupt();
     }
 
@@ -138,6 +159,7 @@ public class Player implements Runnable {
      * @param slot - the slot corresponding to the key pressed.
      */
     public void keyPressed(int slot) {
+        if(!human && Thread.currentThread() != aiThread) return; // ignore keybpard input when its a computer player
         if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
         if(toPlace.size() < 3)
             toPlace.add(slot);
@@ -201,7 +223,7 @@ public class Player implements Runnable {
 
         //Place tokens on table
         boolean isSet = false;
-        while(!toPlace.isEmpty()){
+        while(!toPlace.isEmpty() && table.getPlayerTokens(id).size() < 3){
             int slot = toPlace.poll();
             if(table.getCard(slot) != null)
                 isSet = table.placeToken(id, slot);

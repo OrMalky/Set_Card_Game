@@ -36,6 +36,8 @@ public class Table {
 
     private List<List<Integer>> tokens;
 
+    private List<Integer> usedSlots;
+
     public Semaphore semaphore;
 
     /**
@@ -52,6 +54,7 @@ public class Table {
         this.slotToCard = slotToCard;
         this.cardToSlot = cardToSlot;
         this.semaphore = new Semaphore(1, true);
+        this.usedSlots = new ArrayList<Integer>();
         this.tokens = new ArrayList<List<Integer>>();
         for(int i = 0; i < env.config.players; i++){
             tokens.add(new ArrayList<Integer>());
@@ -105,6 +108,10 @@ public class Table {
         return cards;
     }
 
+    public List<Integer> getUsedSlots(){
+        return usedSlots;
+    }
+
     /**
      * Places a card on the table in a grid slot.
      * 
@@ -120,6 +127,7 @@ public class Table {
 
         cardToSlot[card] = slot;
         slotToCard[slot] = card;
+        usedSlots.add(slot);
         env.ui.placeCard(card, slot);
     }
 
@@ -137,6 +145,7 @@ public class Table {
         int c = slotToCard[slot];
         slotToCard[slot] = null;
         cardToSlot[c] = null;
+        usedSlots.remove(Integer.valueOf(slot));
     }
 
     /**
