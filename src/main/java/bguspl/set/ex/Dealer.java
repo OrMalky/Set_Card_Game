@@ -174,6 +174,11 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         terminate = true;
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         for (int i = players.length - 1; i >= 0; i--) {
             if(players[i].isHuman()){
                 players[i].terminate();

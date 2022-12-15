@@ -66,7 +66,7 @@ public class Player implements Runnable {
     private long sleepEnd;
     private boolean wait = false;
 
-    private long aiDelay = 1000;
+    private long aiDelay = 286;
 
     /**
      * The class constructor.
