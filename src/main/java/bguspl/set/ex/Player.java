@@ -119,7 +119,8 @@ public class Player implements Runnable {
             while (!terminate) {
                 generateKeyPresses();
                 try {
-                    Thread.sleep(aiDelay);
+                    if(!wait)
+                        Thread.sleep(aiDelay);
                 } catch (InterruptedException e) {}
             }
             env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
@@ -148,8 +149,13 @@ public class Player implements Runnable {
      */
     public void terminate() {
         terminate = true;
-        if(!human)
+        if(!human) {
+            try {
+                aiThread.sleep(100);
+            } catch (InterruptedException e) {
+            }
             aiThread.interrupt();
+        }
         playerThread.interrupt();
     }
 
@@ -218,6 +224,7 @@ public class Player implements Runnable {
         try {
             table.semaphore.acquire();
         } catch (InterruptedException e) {
+
             e.printStackTrace();
         }
 
@@ -240,5 +247,13 @@ public class Player implements Runnable {
 
     public int getScore() {
         return score;
+    }
+
+    public boolean isSleep() {
+        return wait;
+    }
+
+    public boolean isHuman() {
+        return this.human;
     }
 }

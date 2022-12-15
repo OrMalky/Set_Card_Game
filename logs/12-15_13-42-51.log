@@ -1,0 +1,146 @@
+[2022-12-15 13:42:51] [INFO   ] cannot read configuration file config.properties trying from resources.
+[2022-12-15 13:42:51] [INFO   ] configuration file was loaded from resources directory.
+[2022-12-15 13:42:52] [INFO   ] Thread dealer starting.
+[2022-12-15 13:42:52] [INFO   ] Thread Player 0starting.
+[2022-12-15 13:42:52] [INFO   ] Thread Player 1starting.
+[2022-12-15 13:42:52] [INFO   ] Thread Player 2starting.
+[2022-12-15 13:42:52] [INFO   ] Thread Player 3starting.
+[2022-12-15 13:42:52] [INFO   ] Thread computer-2 starting.
+[2022-12-15 13:42:52] [INFO   ] Thread computer-1 starting.
+[2022-12-15 13:42:52] [INFO   ] Thread computer-3 starting.
+[2022-12-15 13:42:52] [SEVERE ] placing card 67 in slot 0
+[2022-12-15 13:42:52] [SEVERE ] placing card 9 in slot 1
+[2022-12-15 13:42:52] [SEVERE ] placing card 44 in slot 2
+[2022-12-15 13:42:52] [SEVERE ] placing card 13 in slot 3
+[2022-12-15 13:42:52] [SEVERE ] placing card 50 in slot 4
+[2022-12-15 13:42:53] [SEVERE ] placing card 45 in slot 5
+[2022-12-15 13:42:53] [SEVERE ] placing card 14 in slot 6
+[2022-12-15 13:42:53] [SEVERE ] placing card 69 in slot 7
+[2022-12-15 13:42:53] [SEVERE ] placing card 16 in slot 8
+[2022-12-15 13:42:53] [SEVERE ] placing card 18 in slot 9
+[2022-12-15 13:42:53] [SEVERE ] placing card 36 in slot 10
+[2022-12-15 13:42:53] [SEVERE ] placing card 32 in slot 11
+[2022-12-15 13:42:53] [SEVERE ] player 2 placing token on slot 4
+[2022-12-15 13:42:53] [SEVERE ] player 1 placing token on slot 4
+[2022-12-15 13:42:53] [SEVERE ] player 3 placing token on slot 4
+[2022-12-15 13:42:54] [SEVERE ] player 3 placing token on slot 2
+[2022-12-15 13:42:54] [SEVERE ] player 1 placing token on slot 10
+[2022-12-15 13:42:54] [SEVERE ] player 2 placing token on slot 6
+[2022-12-15 13:42:55] [SEVERE ] player 2 placing token on slot 10
+[2022-12-15 13:42:55] [SEVERE ] removing player 3 token from slot 4
+[2022-12-15 13:42:55] [SEVERE ] player 1 placing token on slot 9
+[2022-12-15 13:42:55] [SEVERE ] removing player 2 token from slot 4
+[2022-12-15 13:42:55] [SEVERE ] removing player 2 token from slot 6
+[2022-12-15 13:42:55] [SEVERE ] removing player 2 token from slot 10
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 3000
+[2022-12-15 13:42:55] [SEVERE ] removing player 1 token from slot 4
+[2022-12-15 13:42:55] [SEVERE ] removing player 1 token from slot 10
+[2022-12-15 13:42:55] [SEVERE ] removing player 1 token from slot 9
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 3000
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2985
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2983
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2969
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2969
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2953
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2952
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2937
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2936
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2921
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2921
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2905
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2905
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2889
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2889
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2874
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2874
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2858
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2858
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2843
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2843
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2827
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2827
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2811
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2811
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2795
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2795
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2779
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2779
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2764
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2764
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2748
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2748
+[2022-12-15 13:42:55] [SEVERE ] setting player 1 freeze to 2732
+[2022-12-15 13:42:55] [SEVERE ] setting player 2 freeze to 2732
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2716
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2716
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2700
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2700
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2684
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2684
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2668
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2668
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2652
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2652
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2636
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2636
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2620
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2620
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2604
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2604
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2588
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2588
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2572
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2572
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2556
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2556
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2541
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2541
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2525
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2525
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2509
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2509
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2494
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2494
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2479
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2479
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2463
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2463
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2448
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2448
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2432
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2432
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2417
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2417
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2401
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2401
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2385
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2385
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2369
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2369
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2353
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2353
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2338
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2338
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2322
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2322
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2307
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2307
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2291
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2291
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2279
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2275
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2259
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2258
+[2022-12-15 13:42:56] [SEVERE ] setting player 2 freeze to 2243
+[2022-12-15 13:42:56] [SEVERE ] setting player 1 freeze to 2243
+[2022-12-15 13:42:56] [SEVERE ] Exit button pressed
+[2022-12-15 13:42:56] [INFO   ] Thread Player 3 terminated.
+[2022-12-15 13:42:56] [INFO   ] Thread computer-3 terminated.
+[2022-12-15 13:42:56] [INFO   ] Thread computer-2 terminated.
+[2022-12-15 13:42:56] [INFO   ] Thread computer-1 terminated.
+[2022-12-15 13:42:56] [INFO   ] Thread Player 1 terminated.
+[2022-12-15 13:42:56] [INFO   ] Thread Player 0 terminated.
+[2022-12-15 13:42:56] [INFO   ] Thread Player 2 terminated.
+[2022-12-15 13:42:56] [SEVERE ] announcing winners: [0, 1, 2, 3]
+[2022-12-15 13:42:56] [INFO   ] Thread dealer terminated.
+[2022-12-15 13:42:56] [INFO   ] Thread main terminated.

@@ -4,7 +4,10 @@ import bguspl.set.ex.Dealer;
 import bguspl.set.ex.Player;
 import bguspl.set.ex.Table;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -38,12 +41,26 @@ public class Main {
         for (int i = 0; i < players.length; i++)
             players[i] = new Player(env, dealer, table, i, i < env.config.humanPlayers);
         ui.addKeyListener(new InputManager(env, players));
+//        ui.addWindowListener(new WindowAdapter() {
+//            @Override
+//            public void windowClosing(WindowEvent e) {
+//                // Ask for confirmation before terminating the program.
+//                int option = JOptionPane.showConfirmDialog(
+//                        ui,
+//                        "Are you sure you want to close the application?",
+//                        "Close Confirmation",
+//                        JOptionPane.YES_NO_OPTION,
+//                        JOptionPane.QUESTION_MESSAGE);
+//                if (option == JOptionPane.YES_OPTION) {
+//                    System.exit(0);
+//                }
+//            }
+//        });
         ui.addWindowListener(new WindowManager(env, dealer));
 
         // start the dealer thread
         Thread dealerThread = new Thread(dealer, "dealer");
         dealerThread.start();
-
         try {dealerThread.join();} catch (InterruptedException ignored) {}
         env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
         for(Handler h:env.logger.getHandlers())

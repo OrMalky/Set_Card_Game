@@ -280,7 +280,7 @@ public class UserInterfaceImpl extends JFrame implements UserInterface {
                 winnerAnnouncement.setText("IT IS A DRAW: " + text + " WON!!!");
             }
         }
-    }
+        }
 
     @Override
     public void placeCard(int card, int slot) {

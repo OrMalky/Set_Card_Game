@@ -1,0 +1,17 @@
+[2022-12-13 20:03:35] [INFO   ] cannot read configuration file config.properties trying from resources.
+[2022-12-13 20:03:35] [INFO   ] configuration file was loaded from resources directory.
+[2022-12-13 20:03:36] [INFO   ] Thread dealer starting.
+[2022-12-13 20:03:36] [INFO   ] Thread Player 0starting.
+[2022-12-13 20:03:36] [INFO   ] Thread Player 1starting.
+[2022-12-13 20:03:36] [SEVERE ] placing card 68 in slot 0
+[2022-12-13 20:03:36] [SEVERE ] placing card 5 in slot 1
+[2022-12-13 20:03:36] [SEVERE ] placing card 6 in slot 2
+[2022-12-13 20:03:36] [SEVERE ] placing card 18 in slot 3
+[2022-12-13 20:03:36] [SEVERE ] placing card 55 in slot 4
+[2022-12-13 20:03:36] [SEVERE ] placing card 36 in slot 5
+[2022-12-13 20:03:36] [SEVERE ] placing card 65 in slot 6
+[2022-12-13 20:03:37] [SEVERE ] placing card 16 in slot 7
+[2022-12-13 20:03:37] [SEVERE ] placing card 44 in slot 8
+[2022-12-13 20:03:37] [SEVERE ] placing card 11 in slot 9
+[2022-12-13 20:03:37] [SEVERE ] placing card 25 in slot 10
+[2022-12-13 20:03:37] [SEVERE ] placing card 59 in slot 11

@@ -175,6 +175,12 @@ public class Dealer implements Runnable {
     public void terminate() {
         terminate = true;
         for (int i = players.length - 1; i >= 0; i--) {
+            if(players[i].isHuman()){
+                players[i].terminate();
+            }
+            if(players[i].isSleep()){
+                players[i].wake();
+            }
             players[i].terminate();
         }
     }
