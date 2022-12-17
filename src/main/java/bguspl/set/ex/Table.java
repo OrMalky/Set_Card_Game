@@ -147,6 +147,7 @@ public class Table {
         cardToSlot[c] = null;
         usedSlots.remove(Integer.valueOf(slot));
         env.ui.removeTokens(slot);
+        env.ui.removeCard(slot);
     }
 
     /**
@@ -197,6 +198,7 @@ public class Table {
         for(List<Integer> t : tokens){
             t.clear();
         }
+        env.ui.removeTokens();
     }
 
     /**

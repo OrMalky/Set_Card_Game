@@ -142,10 +142,12 @@ public class Player implements Runnable {
 
         List<Integer> options = table.getUsedSlots();
         if(options.size() > 0){
-            if(table.getPlayerTokens(id).size()==3){
+            if(table.getPlayerTokens(id).size() == 3){
                 options = table.getPlayerTokens(id);
             }
+            System.out.println(options.size());
             Random random = new Random();
+            System.out.println(options.size());
             int choice = options.get(random.nextInt(options.size()));
             keyPressed(choice);
         }
@@ -175,8 +177,14 @@ public class Player implements Runnable {
     public void keyPressed(int slot) {
         if(!human && Thread.currentThread() != aiThread) return; // ignore keybpard input when its a computer player
         if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
-        if(toPlace.size() < 3)
-            toPlace.add(slot);
+        if(table.getPlayerTokens(id).size () < 3){
+            if(toPlace.size() < 3)
+                toPlace.add(slot);
+        } else {
+            if (table.getPlayerTokens(id).contains(slot)){
+                toPlace.add(slot);
+            }
+        }
     }
 
     /**
@@ -275,7 +283,9 @@ public class Player implements Runnable {
 
         //If 3 tokens placed check for valid set and remove tokens
         if(isSet){
-            dealer.checkSet(id);
+            synchronized(dealer){
+                dealer.toCheck.add(id);
+            }
         }
     }
 

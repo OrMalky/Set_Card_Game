@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -49,6 +50,7 @@ public class Dealer implements Runnable {
     private int tableSize;
 
     private Queue<Integer> toRemove;
+    public Queue<Integer> toCheck;
 
 
     public Dealer(Env env, Table table, Player[] players) {
@@ -57,6 +59,7 @@ public class Dealer implements Runnable {
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
         this.toRemove = new ConcurrentLinkedQueue<Integer>();
+        this.toCheck = new ArrayBlockingQueue<Integer>(4);
 
         this.reshuffleTime = env.config.turnTimeoutMillis;
         this.warningTime = env.config.turnTimeoutWarningMillis;
@@ -84,7 +87,7 @@ public class Dealer implements Runnable {
             startTime = System.currentTimeMillis();
             timerLoop();
             updateTimerDisplay(false);
-            removeAllCardsFromTable();
+            //removeAllCardsFromTable();
         }
         announceWinners();
         env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
@@ -97,9 +100,12 @@ public class Dealer implements Runnable {
         while (!shouldFinish() && (currentTime < reshuffleTime || reshuffleTime <= 0)) {
             sleepUntilWokenOrTimeout();
             acquireSemaphore();
+            while(!toCheck.isEmpty()){
+                checkSet(toCheck.poll());
+            }
             removeCardsFromTable();
             placeCardsOnTable();
-            while(timerMode && !table.checkForSets()){
+            while((!displayTimer || timerMode) && !table.checkForSets()){
                 removeAllCardsFromTable();
                 placeCardsOnTable();
             }
@@ -117,7 +123,7 @@ public class Dealer implements Runnable {
                 removeAllTokensFromTable();
                 removeAllCardsFromTable();
                 placeCardsOnTable();
-            } while(timerMode && !table.checkForSets());
+            } while((!displayTimer || timerMode) && !table.checkForSets());
             for (Player player : players) {
                 player.wake();
             }
@@ -132,7 +138,8 @@ public class Dealer implements Runnable {
             e.printStackTrace();
         }
     }
-    public boolean checkSet(int player){
+
+    private boolean checkSet(int player){
         //Acquire tables semaphre permit
         try {
             table.semaphore.acquire();
@@ -264,9 +271,7 @@ public class Dealer implements Runnable {
      * removes all tokens from the table
      */
     public void removeAllTokensFromTable() {
-        //Remove all tokens from the table & release semaphore
         table.resetAllTokens();
-        env.ui.removeTokens();
     }
     /**
      * Check who is/are the winner/s and displays them.
