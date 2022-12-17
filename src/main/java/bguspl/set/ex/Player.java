@@ -118,11 +118,15 @@ public class Player implements Runnable {
         aiThread = new Thread(() -> {
             env.logger.info("Thread " + Thread.currentThread().getName() + " starting.");
             while (!terminate) {
-                generateKeyPress();
-                try {
-                    if(!wait)
-                        Thread.sleep(aiDelay);
-                } catch (InterruptedException e) {}
+                if(wait || sleepEnd > System.currentTimeMillis()) {
+                    sleep();
+                } else {
+                    generateKeyPress();
+                    try {
+                        if(!wait)
+                            Thread.sleep(aiDelay);
+                    } catch (InterruptedException e) {}
+                }
 //                try {
 //                    synchronized (this) { wait(); }
 //                } catch (InterruptedException ignored) {}
@@ -138,16 +142,16 @@ public class Player implements Runnable {
     private void generateKeyPress(){
         try {
             table.semaphore.acquire();
-        } catch (InterruptedException e) {}
-
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
         List<Integer> options = table.getUsedSlots();
         if(options.size() > 0){
             if(table.getPlayerTokens(id).size() == 3){
                 options = table.getPlayerTokens(id);
             }
-            System.out.println(options.size());
             Random random = new Random();
-            System.out.println(options.size());
             int choice = options.get(random.nextInt(options.size()));
             keyPressed(choice);
         }
