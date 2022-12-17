@@ -7,8 +7,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.Semaphore;
-import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -34,14 +32,14 @@ public class Dealer implements Runnable {
     private final List<Integer> deck;
 
     /**
-     * True iff game should be terminated due to an external event.
+     * True iff game should be terminated.
      */
     private volatile boolean terminate;
 
     /**
      * The time when the dealer needs to reshuffle the deck due to turn timeout.
      */
-    private long reshuffleTime;
+    private long reshuffleTime = Long.MAX_VALUE;
     private long warningTime;
     private long startTime;
     private long currentTime;
@@ -52,12 +50,12 @@ public class Dealer implements Runnable {
 
     private Queue<Integer> toRemove;
 
+
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
         this.table = table;
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
-
         this.toRemove = new ConcurrentLinkedQueue<Integer>();
 
         this.reshuffleTime = env.config.turnTimeoutMillis;
@@ -65,6 +63,7 @@ public class Dealer implements Runnable {
         this.timerMode = reshuffleTime == 0;
         this.displayTimer = reshuffleTime >= 0;
         this.tableSize = env.config.tableSize;
+
     }
 
     /**
@@ -72,12 +71,11 @@ public class Dealer implements Runnable {
      */
     @Override
     public void run() {
-        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
+        env.logger.info("Thread " + Thread.currentThread().getName() + " starting.");
         for (Player player : players) {
             Thread playerThread = new Thread(player, "Player " + player.id);
             playerThread.start();
         }
-
         Collections.shuffle(deck);
         while (!shouldFinish()) {
             acquireSemaphore();
@@ -85,14 +83,15 @@ public class Dealer implements Runnable {
             table.semaphore.release();
             startTime = System.currentTimeMillis();
             timerLoop();
+            updateTimerDisplay(false);
+            removeAllCardsFromTable();
         }
         announceWinners();
-        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
+        env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
     }
-    
+
     /**
-     * The inner loop of the dealer thread that runs as long as the countdown did
-     * not time out.
+     * The inner loop of the dealer thread that runs as long as the countdown did not time out.
      */
     private void timerLoop() {
         while (!shouldFinish() && (currentTime < reshuffleTime || reshuffleTime <= 0)) {
@@ -125,7 +124,6 @@ public class Dealer implements Runnable {
             table.semaphore.release();
         }
     }
-
     //Acquire table's semaphore permit
     private void acquireSemaphore(){
         try {
@@ -134,7 +132,6 @@ public class Dealer implements Runnable {
             e.printStackTrace();
         }
     }
-
     public boolean checkSet(int player){
         //Acquire tables semaphre permit
         try {
@@ -145,7 +142,7 @@ public class Dealer implements Runnable {
 
         //Get the player's set from the table
         List<Integer> set = table.getPlayerTokens(player);
-        
+
         //Turn set to Array for checking
         int[] cards = new int[3];
         int p = 0;
@@ -153,7 +150,7 @@ public class Dealer implements Runnable {
             cards[p] = table.slotToCard[i];
             p++;
         }
-        
+
         //If set is valid add a point to the player and remove the cards
         if(env.util.testSet(cards)){
             players[player].point();
@@ -161,17 +158,15 @@ public class Dealer implements Runnable {
             table.removePlayerTokens(player);
             table.semaphore.release();
             return true;
-        } else { //if the set is not valid penalize the player 
-            table.removePlayerTokens(player);
+        } else { //if the set is not valid penalize the player
+//            table.removePlayerTokens(player);
             table.semaphore.release();
             players[player].penalty();
             return false;
         }
     }
-    
-    
     /**
-     * Called when the game should be terminated due to an external event.
+     * Called when the game should be terminated.
      */
     public void terminate() {
         terminate = true;
@@ -189,6 +184,7 @@ public class Dealer implements Runnable {
      */
     private boolean shouldFinish() {
         return terminate || (env.util.findSets(deck, 1).size() == 0 && !table.checkForSets());
+
     }
 
     /**
@@ -218,15 +214,14 @@ public class Dealer implements Runnable {
             }
             slot++;
         }
-        
+
         //Release table's semaphore
         table.semaphore.release();
-        
+
     }
 
     /**
-     * Sleep for a fixed amount of time or until the thread is awakened for some
-     * purpose.
+     * Sleep for a fixed amount of time or until the thread is awakened for some purpose.
      */
     private void sleepUntilWokenOrTimeout() {
         try {
@@ -265,12 +260,14 @@ public class Dealer implements Runnable {
         Collections.shuffle(deck);  //Shuffle the deck
     }
 
+    /**
+     * removes all tokens from the table
+     */
     public void removeAllTokensFromTable() {
         //Remove all tokens from the table & release semaphore
         table.resetAllTokens();
         env.ui.removeTokens();
     }
-
     /**
      * Check who is/are the winner/s and displays them.
      */
@@ -278,10 +275,10 @@ public class Dealer implements Runnable {
         int bestScore = 0;
         List<Integer> winnerList = new ArrayList<Integer>();
         for(Player p : players){
-            int score = p.getScore();
+            int score = p.score();
             if(score >= bestScore){
                 if(score > bestScore){
-                    bestScore = p.getScore();
+                    bestScore = p.score();
                     winnerList.clear();
                 }
                 winnerList.add(p.id);

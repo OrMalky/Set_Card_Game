@@ -6,11 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.Semaphore;
 import java.util.stream.Collectors;
-
-import javax.management.relation.Relation;
-
-import java.util.concurrent.*;
 
 /**
  * This class contains the data that is visible to the player.
@@ -40,16 +37,16 @@ public class Table {
 
     public Semaphore semaphore;
 
+
     /**
      * Constructor for testing.
      *
      * @param env        - the game environment objects.
-     * @param slotToCard - mapping between a slot and the card placed in it (null if
-     *                   none).
-     * @param cardToSlot - mapping between a card and the slot it is in (null if
-     *                   none).
+     * @param slotToCard - mapping between a slot and the card placed in it (null if none).
+     * @param cardToSlot - mapping between a card and the slot it is in (null if none).
      */
     public Table(Env env, Integer[] slotToCard, Integer[] cardToSlot) {
+
         this.env = env;
         this.slotToCard = slotToCard;
         this.cardToSlot = cardToSlot;
@@ -72,8 +69,7 @@ public class Table {
     }
 
     /**
-     * This method prints all possible legal sets of cards that are currently on the
-     * table.
+     * This method prints all possible legal sets of cards that are currently on the table.
      */
     public void hints() {
         try {
@@ -81,18 +77,16 @@ public class Table {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         List<Integer> deck = Arrays.stream(slotToCard).filter(Objects::nonNull).collect(Collectors.toList());
         env.util.findSets(deck, Integer.MAX_VALUE).forEach(set -> {
             StringBuilder sb = new StringBuilder().append("Hint: Set found: ");
-            List<Integer> slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).sorted()
-                    .collect(Collectors.toList());
+            List<Integer> slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).sorted().collect(Collectors.toList());
             int[][] features = env.util.cardsToFeatures(set);
-            System.out.println(
-                    sb.append("slots: ").append(slots).append(" features: ").append(Arrays.deepToString(features)));
+            System.out.println(sb.append("slots: ").append(slots).append(" features: ").append(Arrays.deepToString(features)));
         });
 
         semaphore.release();
+
     }
 
     /**
@@ -107,14 +101,16 @@ public class Table {
                 ++cards;
         return cards;
     }
-
+    /**
+     * Find the cards currently on the table.
+     *
+     * @return - the places of cards on the table.
+     */
     public List<Integer> getUsedSlots(){
         return usedSlots;
     }
-
     /**
      * Places a card on the table in a grid slot.
-     * 
      * @param card - the card id to place in the slot.
      * @param slot - the slot in which the card should be placed.
      *
@@ -127,19 +123,18 @@ public class Table {
 
         cardToSlot[card] = slot;
         slotToCard[slot] = card;
+
         usedSlots.add(slot);
         env.ui.placeCard(card, slot);
     }
 
     /**
      * Removes a card from a grid slot on the table.
-     * 
      * @param slot - the slot from which to remove the card.
      */
     public void removeCard(int slot) {
         try {
             Thread.sleep(env.config.tableDelayMillis);
-            env.ui.removeCard(slot);
         } catch (InterruptedException ignored) {}
 
         for (List<Integer> t : tokens) {
@@ -155,12 +150,11 @@ public class Table {
     }
 
     /**
-     * Places a player's token on a grid slot.
-     * 
+     * Places a player token on a grid slot.
+     *
      * @param player - the player the token belongs to.
      * @param slot   - the slot on which to place the token.
-     * 
-     * @return - true iff the player has 3 tokens on the table.
+     * @return
      */
     public boolean placeToken(int player, int slot) {
         if(tokens.get(player).contains(slot)){
@@ -176,24 +170,28 @@ public class Table {
 
     /**
      * Returns the given player placed tokens.
-     * 
+     *
      * @param player - the player the tokens belong to.
-     * 
+     *
      * @return - a list of integers represnting the slots on the table the player has tokens on.
      */
     public List<Integer> getPlayerTokens(int player){
         return tokens.get(player);
     }
 
+
     /**
-     * Returns the card in a given slot. Null if no card in that slot.
-     * 
-     * @param slot - the slot to get the card of.
-     * @return - the card in this slot. Null if no card in that slot.
+     * Getter for the card in a slot.
+     * @param slot the place I want to check
+     * @return the card in the slot as the integer represent it
      */
     public Integer getCard(int slot) {
         return slotToCard[slot];
     }
+
+    /**
+     * removes all the tokens from the table
+     */
 
     public void resetAllTokens() {
         for(List<Integer> t : tokens){
@@ -201,19 +199,21 @@ public class Table {
         }
     }
 
+    /**
+     * Removes all player tokens from a grid slot.
+     * @param player - the player the token belongs to.
+     */
     public void removePlayerTokens(int player){
         for (Integer token : tokens.get(player)) {
             env.ui.removeToken(player, token);
         }
         tokens.get(player).clear();
     }
-
     /**
      * Removes a token of a player from a grid slot.
-     * 
      * @param player - the player the token belongs to.
      * @param slot   - the slot from which to remove the token.
-     * @return - true iff a token was successfully removed.
+     * @return       - true iff a token was successfully removed.
      */
     public boolean removeToken(int player, int slot) {
         int p = tokens.get(player).indexOf(slot);
@@ -227,7 +227,7 @@ public class Table {
 
     /**
      * Checks if there are any valid sets on the table.
-     * 
+     *
      * @return - true iff there is at least one valid set on the table.
      */
     public boolean checkForSets(){

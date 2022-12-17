@@ -4,10 +4,6 @@ import bguspl.set.ex.Dealer;
 import bguspl.set.ex.Player;
 import bguspl.set.ex.Table;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -20,6 +16,20 @@ import java.util.logging.*;
  */
 public class Main {
 
+    private static Dealer dealer;
+    private static Thread thread;
+
+    private static boolean xButtonPressed = false;
+    private static Logger logger;
+
+    public static void xButtonPressed() {
+        if (logger != null) logger.severe("exit button pressed");
+        xButtonPressed = true;
+        if (dealer != null) dealer.terminate();
+        thread.interrupt();
+        try { thread.join(); } catch (InterruptedException ignored) {}
+    }
+
     /**
      * The game's main function. Creates all data structures and initializes the threads.
      *
@@ -27,76 +37,83 @@ public class Main {
      */
     public static void main(String[] args) {
 
+        thread = Thread.currentThread();
+
         // create the game environment objects
-        Logger logger = initLogger(args.length > 0);
+        logger = initLogger();
+        ThreadLogger.logStart(logger, Thread.currentThread().getName());
         Config config = new Config(logger, "config.properties");
-        UserInterfaceImpl ui = new UserInterfaceImpl(logger, config);
-        EventQueue.invokeLater(() -> ui.setVisible(true));
-        Env env = new Env(logger, config, ui, new UtilImpl(config));
+        Util util = new UtilImpl(config);
+
+        Player[] players = new Player[config.players];
+        UserInterface ui = null;
+        try {
+            ui = new UserInterfaceSwing(logger, config, players);
+        } catch (UnsupportedOperationException | IllegalArgumentException e) {
+            logger.severe("error creating swing user interface: " + e.getMessage());
+            logger.severe("will try to run without user interface");
+            if (config.humanPlayers > 0)
+                logger.severe("warning: running with human players with no user interface");
+        }
+        ui = new UserInterfaceDecorator(logger, util, ui);
+
+        Env env = new Env(logger, config, ui, util);
 
         // create the game entities
-        Player[] players = new Player[env.config.players];
         Table table = new Table(env);
-        Dealer dealer = new Dealer(env, table, players);
+        dealer = new Dealer(env, table, players);
         for (int i = 0; i < players.length; i++)
             players[i] = new Player(env, dealer, table, i, i < env.config.humanPlayers);
-        ui.addKeyListener(new InputManager(env, players));
-//        ui.addWindowListener(new WindowAdapter() {
-//            @Override
-//            public void windowClosing(WindowEvent e) {
-//                // Ask for confirmation before terminating the program.
-//                int option = JOptionPane.showConfirmDialog(
-//                        ui,
-//                        "Are you sure you want to close the application?",
-//                        "Close Confirmation",
-//                        JOptionPane.YES_NO_OPTION,
-//                        JOptionPane.QUESTION_MESSAGE);
-//                if (option == JOptionPane.YES_OPTION) {
-//                    System.exit(0);
-//                }
-//            }
-//        });
-        ui.addWindowListener(new WindowManager(env, dealer));
 
         // start the dealer thread
-        Thread dealerThread = new Thread(dealer, "dealer");
-        dealerThread.start();
-        try {dealerThread.join();} catch (InterruptedException ignored) {}
-        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
-        for(Handler h:env.logger.getHandlers())
-            h.close();
+        ThreadLogger dealerThread = new ThreadLogger(dealer, "dealer", logger);
+        dealerThread.startWithLog();
+
+        try {
+            // shutdown stuff
+            dealerThread.joinWithLog();
+            if (!xButtonPressed && config.endGamePauseMillies > 0) Thread.sleep(config.endGamePauseMillies);
+            env.ui.dispose();
+        } catch (InterruptedException ignored) {
+        } finally {
+            logger.severe("thanks for playing... it was fun!");
+            System.out.println("Thanks for playing... it was fun!");
+            ThreadLogger.logStop(logger, Thread.currentThread().getName());
+            for (Handler h : logger.getHandlers()) h.close();
+        }
     }
 
-    private static Logger initLogger(boolean disableTimestamp) {
+    private static Logger initLogger() {
 
-        FileHandler fh;
         //just to make our log file nicer :)
         SimpleDateFormat format = new SimpleDateFormat("M-d_HH-mm-ss");
+        FileHandler handler;
         try {
             //noinspection ResultOfMethodCallIgnored
             new File("./logs/").mkdirs();
-            fh = new FileHandler("./logs/" + format.format(Calendar.getInstance().getTime()) + ".log");
+            handler = new FileHandler("./logs/" + format.format(Calendar.getInstance().getTime()) + ".log");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         java.util.logging.Logger logger = java.util.logging.Logger.getLogger("SetGameLogger");
         logger.setUseParentHandlers(false);
-        fh.setFormatter(new SimpleFormatter() {
-            private static final String formatWithTimestamp = "[%1$tF %1$tT] [%2$-7s] %3$s%n";
-            private static final String formatWithoutTimestamp = "[%2$-7s] %3$s%n";
+        logger.addHandler(handler);
+        setLoggerLevelAndFormat(logger, Level.ALL, "[%1$tT.%1$tL] [%2$-7s] %3$s%n");
 
+        return logger;
+    }
+
+    public static void setLoggerLevelAndFormat(Logger logger, Level level, String format) {
+        logger.getHandlers()[0].setFormatter(new SimpleFormatter() {
+            // default format (with timestamp)  = "[%1$tF %1$tT] [%2$-7s] %3$s%n";
             @Override
             public synchronized String format(LogRecord lr) {
-                return String.format(disableTimestamp ? formatWithoutTimestamp : formatWithTimestamp,
-                        new Date(lr.getMillis()),
-                        lr.getLevel().getLocalizedName(),
-                        lr.getMessage()
+                return String.format(format, new Date(lr.getMillis()),
+                        lr.getLevel().getLocalizedName(), lr.getMessage()
                 );
             }
         });
-        logger.addHandler(fh);
-
-        return logger;
+        logger.setLevel(level);
     }
 }

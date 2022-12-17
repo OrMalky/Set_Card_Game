@@ -1,16 +1,14 @@
 package bguspl.set.ex;
 
-import java.lang.Thread.State;
+import bguspl.set.Env;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.Semaphore;
-import java.util.logging.Level;
 
-import bguspl.set.Env;
+import static java.lang.Thread.sleep;
 
 /**
  * This class manages the players' threads and data
@@ -51,7 +49,7 @@ public class Player implements Runnable {
     private final boolean human;
 
     /**
-     * True iff game should be terminated due to an external event.
+     * True iff game should be terminated.
      */
     private volatile boolean terminate;
 
@@ -80,10 +78,10 @@ public class Player implements Runnable {
      */
     public Player(Env env, Dealer dealer, Table table, int id, boolean human) {
         this.env = env;
-        this.dealer = dealer;
         this.table = table;
         this.id = id;
         this.human = human;
+        this.dealer = dealer;
         toPlace = new ConcurrentLinkedQueue<Integer>();
     }
 
@@ -93,7 +91,7 @@ public class Player implements Runnable {
     @Override
     public void run() {
         playerThread = Thread.currentThread();
-        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + "starting.");
+        env.logger.info("Thread " + Thread.currentThread().getName() + " starting.");
         if (!human) createArtificialIntelligence();
 
         while (!terminate) {
@@ -108,7 +106,7 @@ public class Player implements Runnable {
             }
         }
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
-        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
+        env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
     }
 
     /**
@@ -116,43 +114,51 @@ public class Player implements Runnable {
      * key presses. If the queue of key presses is full, the thread waits until it is not full.
      */
     private void createArtificialIntelligence() {
-        // note: this is a very very smart AI (!)
+        // note: this is a very, very smart AI (!)
         aiThread = new Thread(() -> {
-            env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
+            env.logger.info("Thread " + Thread.currentThread().getName() + " starting.");
             while (!terminate) {
                 generateKeyPress();
                 try {
                     if(!wait)
                         Thread.sleep(aiDelay);
                 } catch (InterruptedException e) {}
+//                try {
+//                    synchronized (this) { wait(); }
+//                } catch (InterruptedException ignored) {}
             }
-            env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
+            env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
         }, "computer-" + id);
         aiThread.start();
     }
 
-    //Generate random key presses (for AI)
+    /**
+     * Generates a key press (a random number between 0 and 12).
+     */
     private void generateKeyPress(){
-            try {
-                table.semaphore.acquire();
-            } catch (InterruptedException e) {}
-            
-            List<Integer> options = table.getUsedSlots();
-            if(options.size() > 0){
-                Random random = new Random();
-                int choice = options.get(random.nextInt(options.size()));
-                keyPressed(choice);
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {}
+
+        List<Integer> options = table.getUsedSlots();
+        if(options.size() > 0){
+            if(table.getPlayerTokens(id).size()==3){
+                options = table.getPlayerTokens(id);
             }
-            table.semaphore.release();
+            Random random = new Random();
+            int choice = options.get(random.nextInt(options.size()));
+            keyPressed(choice);
+        }
+        table.semaphore.release();
     }
 
     /**
-     * Called when the game should be terminated due to an external event.
+     * Called when the game should be terminated.
      */
     public void terminate() {
         terminate = true;
         if(!human) {
-            if(aiThread.getState() == State.TIMED_WAITING)
+            if(aiThread.getState() == Thread.State.TIMED_WAITING)
                 try {
                     Thread.sleep(aiDelay);
                 } catch (InterruptedException e) {}
@@ -192,19 +198,32 @@ public class Player implements Runnable {
         sleep(env.config.penaltyFreezeMillis);
     }
 
+    /**
+     * send the player to sleep for a given amount of time
+     * @param millies
+     */
     public void sleep(long millies){
         sleepEnd = System.currentTimeMillis() + millies;
     }
 
+    /**
+     * Send the player to sleep forever, or till someone wakes him up
+     */
     public void sleepUntilWoken(){
         wait = true;
         sleep(10);
     }
 
+    /**
+     * Wake the player up
+     */
     public void wake(){
         wait = false;
     }
 
+    /**
+     * Call the Sleep method from the Thread class and sets that up in the UI
+     */
     private void sleep(){
         try {
             Thread.sleep(10);
@@ -220,13 +239,20 @@ public class Player implements Runnable {
         }
     }
 
+    /**
+     * remove the top card from the deck and place it on the table
+     * @param slot - the slot the card in
+     */
     public void removeFromQueue(int slot){
         if(toPlace.contains(slot)){
             toPlace.remove(Integer.valueOf(slot));
         }
     }
 
-    //this should be synced to table - i think fair semaphore is a good solution
+    /**
+     * Place the tokens on the table
+     */
+
     private void placeTokens(){
         //Acquire the table's semaphore permit to play to table
         try {
@@ -238,12 +264,12 @@ public class Player implements Runnable {
 
         //Place tokens on table
         boolean isSet = false;
-        while(!toPlace.isEmpty() && table.getPlayerTokens(id).size() < 3){
+        while(!toPlace.isEmpty()){
             int slot = toPlace.poll();
             if(table.getCard(slot) != null)
                 isSet = table.placeToken(id, slot);
         }
-        
+
         //Release table's semaphore
         table.semaphore.release();
 
@@ -253,11 +279,10 @@ public class Player implements Runnable {
         }
     }
 
-    public int getScore() {
+    /**
+     * @return - the player's score.
+     */
+    public int score() {
         return score;
-    }
-
-    public boolean isHuman() {
-        return this.human;
     }
 }
