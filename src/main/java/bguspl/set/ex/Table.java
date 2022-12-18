@@ -242,4 +242,8 @@ public class Table {
         //checks if there is at least one set on the table
         return env.util.findSets(cards, 1).size() > 0;
     }
+
+    public void setUsedSlots(ArrayList<Integer> usedSlots) {
+        this.usedSlots = usedSlots;
+    }
 }

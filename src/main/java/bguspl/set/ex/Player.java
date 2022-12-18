@@ -238,6 +238,7 @@ public class Player implements Runnable {
      */
     private void sleep(){
         try {
+
             Thread.sleep(10);
             if(!wait){
                 if(System.currentTimeMillis() >= sleepEnd){
@@ -298,5 +299,9 @@ public class Player implements Runnable {
      */
     public int score() {
         return score;
+    }
+
+    public int getId() {
+        return id;
     }
 }

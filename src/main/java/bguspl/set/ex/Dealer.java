@@ -25,7 +25,7 @@ public class Dealer implements Runnable {
      * Game entities.
      */
     private final Table table;
-    private final Player[] players;
+    private Player[] players;
 
     /**
      * The list of card ids that are left in the dealer's deck.
@@ -292,5 +292,13 @@ public class Dealer implements Runnable {
 
         int[] winners = winnerList.stream().mapToInt(Integer::intValue).toArray();
         env.ui.announceWinner(winners);
+    }
+
+    public Player[] getPlayers(){
+        return players;
+    }
+
+    public void setPlayers(Player[] players) {
+        this.players = players;
     }
 }
