@@ -83,6 +83,9 @@ public class Dealer implements Runnable {
         while (!shouldFinish()) {
             acquireSemaphore();
             placeCardsOnTable();
+            if(env.config.hints){
+                table.hints();
+            }
             table.semaphore.release();
             startTime = System.currentTimeMillis();
             timerLoop();
@@ -163,6 +166,9 @@ public class Dealer implements Runnable {
             players[player].point();
             toRemove.addAll(set);
             table.removePlayerTokens(player);
+            if(env.config.hints){
+                table.hints();
+            }
             table.semaphore.release();
             return true;
         } else { //if the set is not valid penalize the player

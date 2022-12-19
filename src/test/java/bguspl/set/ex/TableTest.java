@@ -15,8 +15,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -153,8 +152,8 @@ class TableTest {
 
         fillSomeSlots();
         table.removeCard(1);
-        assertEquals(null, slotToCard[1]);
-        assertEquals(null, cardToSlot[3]);
+        assertNull(slotToCard[1]);
+        assertNull(cardToSlot[3]);
         assertEquals(1, usedSlots.size());
         assertEquals(2, (int) usedSlots.get(0));
     }
@@ -165,20 +164,20 @@ class TableTest {
         for (int i = 0; i < slotToCard.length; i++) {
             table.removeCard(i);
         }
-        assertEquals(null, slotToCard[1]);
-        assertEquals(null, cardToSlot[3]);
+        assertNull(slotToCard[1]);
+        assertNull(cardToSlot[3]);
         assertEquals(0, usedSlots.size());
     }
 
     @Test
-    void placeToken_SomeSlotsAreFilled() throws InterruptedException {
+    void placeToken_SomeSlotsAreFilled() {
         fillSomeSlots();
         table.placeToken(0, 2);
         assertEquals(1,table.getPlayerTokens(0).size());
     }
 
     @Test
-    void placeToken_AllSlotsAreFilled() throws InterruptedException {
+    void placeToken_AllSlotsAreFilled() {
         fillAllSlots();
         table.placeToken(0, 2);
         assertNotEquals(0,table.getPlayerTokens(0).size());
