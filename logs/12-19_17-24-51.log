@@ -1,0 +1,28 @@
+[17:24:51.132] [INFO   ] thread main starting.
+[17:24:51.144] [SEVERE ] cannot read configuration file config.properties trying from resources.
+[17:24:51.147] [SEVERE ] configuration file was loaded from resources directory.
+[17:24:51.878] [INFO   ] thread dealer starting.
+[17:24:51.882] [INFO   ] Thread dealer starting.
+[17:24:51.888] [INFO   ] Thread Player 1 starting.
+[17:24:51.892] [INFO   ] Thread Player 3 starting.
+[17:24:51.895] [INFO   ] Thread Player 0 starting.
+[17:24:51.917] [INFO   ] Thread Player 2 starting.
+[17:24:51.929] [INFO   ] Thread computer-1 starting.
+[17:24:51.930] [INFO   ] Thread computer-3 starting.
+[17:24:51.932] [INFO   ] Thread computer-2 starting.
+[17:24:52.031] [SEVERE ] placing card 18 in slot 1
+[17:24:52.141] [SEVERE ] placing card 65 in slot 3
+[17:24:52.249] [SEVERE ] placing card 3 in slot 11
+[17:24:52.357] [SEVERE ] placing card 61 in slot 8
+[17:24:52.466] [SEVERE ] placing card 1 in slot 5
+[17:24:52.572] [SEVERE ] placing card 15 in slot 7
+[17:24:52.682] [SEVERE ] placing card 57 in slot 6
+[17:24:52.791] [SEVERE ] placing card 48 in slot 10
+[17:24:52.900] [SEVERE ] placing card 36 in slot 9
+[17:24:53.009] [SEVERE ] placing card 5 in slot 2
+[17:24:53.119] [SEVERE ] placing card 23 in slot 4
+[17:24:53.228] [SEVERE ] placing card 63 in slot 0
+[17:24:53.229] [INFO   ] thread dealer terminated.
+[17:24:58.239] [SEVERE ] disposing of user interface elements
+[17:24:58.265] [SEVERE ] thanks for playing... it was fun!
+[17:24:58.266] [INFO   ] thread main terminated.

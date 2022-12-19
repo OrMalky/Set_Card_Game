@@ -246,4 +246,12 @@ public class Table {
     public void setUsedSlots(ArrayList<Integer> usedSlots) {
         this.usedSlots = usedSlots;
     }
+
+    public Integer[] getSlotToCard() {
+        return slotToCard;
+    }
+
+    public Integer[] getCardToSlot() {
+        return cardToSlot;
+    }
 }

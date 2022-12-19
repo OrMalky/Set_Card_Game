@@ -266,7 +266,7 @@ public class Player implements Runnable {
      * Place the tokens on the table
      */
 
-    private void placeTokens(){
+    void placeTokens(){
         //Acquire the table's semaphore permit to play to table
         try {
             table.semaphore.acquire();
@@ -303,5 +303,13 @@ public class Player implements Runnable {
 
     public int getId() {
         return id;
+    }
+
+    public Queue<Integer> getToPlace(){
+        return toPlace;
+    }
+
+    public void setToPlace(Queue<Integer> toPlace){
+        this.toPlace = toPlace;
     }
 }

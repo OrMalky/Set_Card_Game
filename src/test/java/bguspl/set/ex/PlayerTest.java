@@ -11,10 +11,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.Semaphore;
 import java.util.logging.Logger;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -33,6 +37,7 @@ class PlayerTest {
     private Dealer dealer;
     @Mock
     private Logger logger;
+    private Queue<Integer> toPlace;
 
     void assertInvariants() {
         assertTrue(player.id >= 0);
@@ -43,7 +48,11 @@ class PlayerTest {
     void setUp() {
         // purposely do not find the configuration files (use defaults here).
         Env env = new Env(logger, new Config(logger, ""), ui, util);
-        player = new Player(env, dealer, table, 0, false);
+        player = new Player(env, dealer, table, 0, true);
+        table.semaphore = new Semaphore(1);
+        this.toPlace = new ConcurrentLinkedQueue<>();
+        toPlace.add(0);
+        player.setToPlace(toPlace);
         assertInvariants();
     }
 
@@ -69,5 +78,31 @@ class PlayerTest {
 
         // check that ui.setScore was called with the player's id and the correct score
         verify(ui).setScore(eq(player.id), eq(expectedScore));
+    }
+
+    @Test
+    void keyPressed(){
+        //call the method we are testing
+        player.keyPressed(0);
+
+        //check that the table was called with the correct player
+        assertEquals(2, player.getToPlace().size());
+
+    }
+
+    @Test
+    void removeFromQueue_Valid(){
+        //call the method we are testing
+        player.removeFromQueue(0);
+        //check that the table was called with the correct player
+        assertEquals(0, player.getToPlace().size());
+    }
+
+    @Test
+    void removeFromQueue_Invalid(){
+        //call the method we are testing
+        player.removeFromQueue(1);
+        //check that the table was called with the correct player
+        assertEquals(1, player.getToPlace().size());
     }
 }

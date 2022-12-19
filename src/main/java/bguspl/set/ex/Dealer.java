@@ -139,7 +139,7 @@ public class Dealer implements Runnable {
         }
     }
 
-    private boolean checkSet(int player){
+    boolean checkSet(int player){
         //Acquire tables semaphre permit
         try {
             table.semaphore.acquire();
@@ -154,7 +154,7 @@ public class Dealer implements Runnable {
         int[] cards = new int[3];
         int p = 0;
         for (Integer i : set) {
-            cards[p] = table.slotToCard[i];
+            cards[p] = table.getSlotToCard()[i];
             p++;
         }
 
@@ -189,8 +189,8 @@ public class Dealer implements Runnable {
      *
      * @return true iff the game should be finished.
      */
-    private boolean shouldFinish() {
-        return terminate || (env.util.findSets(deck, 1).size() == 0 && !table.checkForSets());
+    boolean shouldFinish() {
+        return terminate || (env.util.findSets(this.getDeck(), 1).size() == 0 && !table.checkForSets());
 
     }
 
@@ -213,13 +213,21 @@ public class Dealer implements Runnable {
     private void placeCardsOnTable() {
         //Place cards from the deck on the table
         int slot = 0;
-        while (slot < tableSize && !deck.isEmpty()) {
-            if(table.getCard(slot) == null){
+        ArrayList<Integer> validSlots = new ArrayList<Integer>();
+        for (int i = 0; i < tableSize; i++) {
+            validSlots.add(i);
+        }
+        int usedSlots = 0;
+        while (usedSlots < tableSize && !deck.isEmpty()) {
+            Collections.shuffle(validSlots);
+            if(table.getCard(validSlots.get(slot)) == null){
                 int card = deck.remove(0);
-                table.placeCard(card, slot);
+                table.placeCard(card, validSlots.get(slot));
                 System.out.println(deck.size() + " Cards left in deck");
+
             }
-            slot++;
+            validSlots.remove(slot);
+            usedSlots++;
         }
 
         //Release table's semaphore
@@ -259,10 +267,16 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         //Remove cards from table to the deck
+        ArrayList<Integer> cards = new ArrayList<>();
+        for (int i = 0; i < table.countCards(); i++) {
+            cards.add(i);
+        }
         while (table.countCards() > 0) {
-            Integer c = table.getCard(table.countCards() - 1);
-            table.removeCard(table.countCards() - 1);
+            Collections.shuffle(cards);
+            Integer c = table.getCard(cards.get(0));
+            table.removeCard(cards.get(0));
             deck.add(c);
+            cards.remove(0);
         }
         Collections.shuffle(deck);  //Shuffle the deck
     }
@@ -300,5 +314,9 @@ public class Dealer implements Runnable {
 
     public void setPlayers(Player[] players) {
         this.players = players;
+    }
+
+    public List<Integer> getDeck() {
+        return deck;
     }
 }
