@@ -106,17 +106,13 @@ public class Dealer implements Runnable {
             while(!toCheck.isEmpty()){
                 int id = toCheck.poll();
                 checkSet(id);
-//                players[id].wake();
             }
-            removeCardsFromTable();
-            placeCardsOnTable();
             while((!displayTimer || timerMode) && !table.checkForSets()){
                 removeAllCardsFromTable();
                 placeCardsOnTable();
             }
             table.semaphore.release();
             updateTimerDisplay(false);
-            //table.hints(); //for debug
         }
         updateTimerDisplay(true);
         if (!shouldFinish()) {
@@ -133,6 +129,9 @@ public class Dealer implements Runnable {
                 player.wake();
             }
             table.semaphore.release();
+        }
+        else{
+            announceWinners();
         }
     }
     //Acquire table's semaphore permit
@@ -168,6 +167,8 @@ public class Dealer implements Runnable {
             players[player].point();
             toRemove.addAll(set);
             table.removePlayerTokens(player);
+            removeCardsFromTable();
+            placeCardsOnTable();
             players[player].wake();
             if(env.config.hints){
                 table.hints();
@@ -211,10 +212,7 @@ public class Dealer implements Runnable {
         while(!toRemove.isEmpty()){
             int slot = toRemove.poll();
             for (Player player : players) {
-//                if(player.isWait()){
-//                    player.wake();
-//                }
-                player.removeFromQueue(slot);
+                player.removeFromToPlace(slot);
                 if(table.getPlayerTokens(player.getId()).contains(slot)){
                     this.toCheck.remove(player.getId());
                     table.removeToken(player.getId(), slot);

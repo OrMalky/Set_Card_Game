@@ -2,10 +2,7 @@ package bguspl.set.ex;
 
 import bguspl.set.Env;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.Semaphore;
 import java.util.stream.Collectors;
 
@@ -31,7 +28,7 @@ public class Table {
      */
     protected final Integer[] cardToSlot; // slot per card (if any)
 
-    private List<List<Integer>> tokens;
+    private volatile List<List<Integer>> tokens;
 
     private List<Integer> usedSlots;
 
@@ -96,13 +93,12 @@ public class Table {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
+        Random random = new Random();
         List<Integer> deck = Arrays.stream(slotToCard).filter(Objects::nonNull).collect(Collectors.toList());
         List<int[]> sets = env.util.findSets(deck, Integer.MAX_VALUE);
         List<Integer> slots = new ArrayList<Integer>();
-        System.out.println("sets1: " + sets);
         if(sets.size() > 0){
-            int[] set = sets.get(0);
-            System.out.println("sets2: " + sets);
+            int[] set = sets.get(random.nextInt(sets.size()));
             slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).sorted().collect(Collectors.toList());
         }
 
@@ -250,6 +246,7 @@ public class Table {
         int p = tokens.get(player).indexOf(slot);
         if(p > -1){
             tokens.get(player).remove(p);
+            System.out.println("tokens" + tokens.get(player));
             env.ui.removeToken(player, slot);
             return true;
         }
@@ -265,10 +262,13 @@ public class Table {
         //Generate a list of cards on table
         List<Integer> cards = new ArrayList<Integer>();
         for (Integer i : slotToCard) {
-            cards.add(i);
+            if(i != null){
+                cards.add(i);
+            }
         }
 
         //checks if there is at least one set on the table
+        System.out.println("Cards: " + cards);
         return env.util.findSets(cards, 1).size() > 0;
     }
 

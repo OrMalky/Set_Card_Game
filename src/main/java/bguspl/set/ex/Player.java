@@ -4,7 +4,6 @@ import bguspl.set.Env;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.stream.Collectors;
 
 import static java.lang.Thread.sleep;
 
@@ -145,20 +144,26 @@ public class Player implements Runnable {
         }
 
         List<Integer> options = new ArrayList<>();
-
-        if(table.getPlayerTokens(id).size() == env.config.featureSize){
-            options = table.getPlayerTokens(id);
+        List<Integer> tokensP = table.getPlayerTokens(id);
+        while(tokensP.contains(null)){
+            tokensP.remove(null);
+        }
+        if(tokensP.size() == env.config.featureSize) {
+            options.addAll(tokensP);
+            System.out.println("options1: " + options);
         }
         else if(env.config.hints && table.hintsAI().size()>0){
-            options = table.hintsAI();
+            options.addAll(table.hintsAI());
         }
         else{
-            options = table.getUsedSlots();
+            options.addAll(table.getUsedSlots());
         }
         if(options.size() > 0){
-        Random random = new Random();
-        int choice = options.get(random.nextInt(options.size()));
-        keyPressed(choice);
+            Random random = new Random();
+            int choice = options.get(random.nextInt(options.size()));
+            if(!toPlace.contains(choice))
+                keyPressed(choice);
+
         }
 
         table.semaphore.release();
@@ -263,7 +268,7 @@ public class Player implements Runnable {
      * remove the top card from the deck and place it on the table
      * @param slot - the slot the card in
      */
-    public void removeFromQueue(int slot){
+    public void removeFromToPlace(int slot){
         if(toPlace.contains(slot)){
             toPlace.remove(Integer.valueOf(slot));
         }

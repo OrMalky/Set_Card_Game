@@ -1,0 +1,1970 @@
+[16:25:21.874] [INFO   ] thread main starting.
+[16:25:21.885] [SEVERE ] cannot read configuration file config.properties trying from resources.
+[16:25:21.888] [SEVERE ] configuration file was loaded from resources directory.
+[16:25:22.577] [INFO   ] thread dealer starting.
+[16:25:22.578] [INFO   ] Thread dealer starting.
+[16:25:22.579] [INFO   ] Thread Player 0 starting.
+[16:25:22.585] [INFO   ] Thread Player 1 starting.
+[16:25:22.586] [INFO   ] Thread Player 2 starting.
+[16:25:22.624] [INFO   ] Thread computer-2 starting.
+[16:25:22.628] [INFO   ] Thread computer-1 starting.
+[16:25:22.723] [SEVERE ] placing card 57 in slot 5
+[16:25:22.832] [SEVERE ] placing card 38 in slot 8
+[16:25:22.943] [SEVERE ] placing card 18 in slot 11
+[16:25:23.069] [SEVERE ] placing card 43 in slot 3
+[16:25:23.181] [SEVERE ] placing card 39 in slot 7
+[16:25:23.292] [SEVERE ] placing card 5 in slot 6
+[16:25:23.402] [SEVERE ] placing card 37 in slot 2
+[16:25:23.514] [SEVERE ] placing card 23 in slot 0
+[16:25:23.625] [SEVERE ] placing card 19 in slot 10
+[16:25:23.735] [SEVERE ] placing card 32 in slot 4
+[16:25:23.845] [SEVERE ] placing card 54 in slot 9
+[16:25:23.953] [SEVERE ] placing card 74 in slot 1
+[16:25:23.971] [SEVERE ] player 3 placing token on slot 3
+[16:25:23.971] [SEVERE ] player 2 placing token on slot 8
+[16:25:23.975] [SEVERE ] removing player 3 token from slot 3
+[16:25:23.984] [SEVERE ] updating elapsed time to 13
+[16:25:24.000] [SEVERE ] updating elapsed time to 29
+[16:25:24.016] [SEVERE ] updating elapsed time to 45
+[16:25:24.032] [SEVERE ] updating elapsed time to 61
+[16:25:24.048] [SEVERE ] updating elapsed time to 77
+[16:25:24.077] [SEVERE ] updating elapsed time to 106
+[16:25:24.091] [SEVERE ] player 3 placing token on slot 0
+[16:25:24.096] [SEVERE ] updating elapsed time to 125
+[16:25:24.112] [SEVERE ] updating elapsed time to 141
+[16:25:24.138] [SEVERE ] updating elapsed time to 167
+[16:25:24.139] [SEVERE ] player 2 placing token on slot 9
+[16:25:24.140] [SEVERE ] removing player 3 token from slot 0
+[16:25:24.143] [SEVERE ] player 2 placing token on slot 3
+[16:25:24.144] [SEVERE ] player 3 placing token on slot 10
+[16:25:24.144] [SEVERE ] setting player 2 freeze to 0
+[16:25:24.165] [SEVERE ] updating elapsed time to 194
+[16:25:24.171] [SEVERE ] removing player 3 token from slot 10
+[16:25:24.174] [SEVERE ] setting player 2 freeze to 0
+[16:25:24.189] [SEVERE ] setting player 2 freeze to 0
+[16:25:24.189] [SEVERE ] updating elapsed time to 218
+[16:25:24.192] [SEVERE ] removing player 2 token from slot 3
+[16:25:24.205] [SEVERE ] updating elapsed time to 234
+[16:25:24.208] [SEVERE ] player 3 placing token on slot 7
+[16:25:24.220] [SEVERE ] updating elapsed time to 249
+[16:25:24.236] [SEVERE ] updating elapsed time to 265
+[16:25:24.251] [SEVERE ] updating elapsed time to 280
+[16:25:24.266] [SEVERE ] updating elapsed time to 295
+[16:25:24.281] [SEVERE ] updating elapsed time to 310
+[16:25:24.286] [SEVERE ] player 2 placing token on slot 0
+[16:25:24.287] [SEVERE ] setting player 2 freeze to 0
+[16:25:24.291] [SEVERE ] player 3 placing token on slot 3
+[16:25:24.297] [SEVERE ] updating elapsed time to 326
+[16:25:24.312] [SEVERE ] setting player 2 freeze to 0
+[16:25:24.313] [SEVERE ] updating elapsed time to 342
+[16:25:24.313] [SEVERE ] removing player 2 token from slot 9
+[16:25:24.313] [SEVERE ] player 3 placing token on slot 8
+[16:25:24.314] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.325] [SEVERE ] removing player 2 token from slot 8
+[16:25:24.328] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.328] [SEVERE ] setting player 3 score to 1
+[16:25:24.329] [SEVERE ] removing player 3 token from slot 7
+[16:25:24.329] [SEVERE ] removing player 3 token from slot 3
+[16:25:24.329] [SEVERE ] removing player 3 token from slot 8
+[16:25:24.343] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.359] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.375] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.391] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.407] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.423] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.439] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.439] [SEVERE ] removing tokens from slot 7
+[16:25:24.439] [SEVERE ] removing card from slot 7
+[16:25:24.455] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.471] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.487] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.503] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.519] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.535] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.551] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.551] [SEVERE ] removing tokens from slot 3
+[16:25:24.551] [SEVERE ] removing card from slot 3
+[16:25:24.567] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.583] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.598] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.613] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.629] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.645] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.661] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.661] [SEVERE ] removing tokens from slot 8
+[16:25:24.661] [SEVERE ] removing card from slot 8
+[16:25:24.677] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.693] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.708] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.722] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.738] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.754] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.769] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.769] [SEVERE ] placing card 49 in slot 3
+[16:25:24.784] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.800] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.815] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.830] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.846] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.862] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.878] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.878] [SEVERE ] placing card 9 in slot 8
+[16:25:24.893] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.909] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.924] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.939] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.954] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.970] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.986] [SEVERE ] setting player 3 freeze to 0
+[16:25:24.986] [SEVERE ] placing card 48 in slot 7
+[16:25:24.990] [SEVERE ] player 2 placing token on slot 2
+[16:25:25.002] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.003] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.005] [SEVERE ] player 3 placing token on slot 8
+[16:25:25.013] [SEVERE ] removing player 2 token from slot 0
+[16:25:25.018] [SEVERE ] player 3 placing token on slot 3
+[16:25:25.028] [SEVERE ] player 2 placing token on slot 10
+[16:25:25.049] [SEVERE ] player 3 placing token on slot 9
+[16:25:25.050] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.052] [SEVERE ] removing player 2 token from slot 10
+[16:25:25.058] [SEVERE ] removing player 2 token from slot 2
+[16:25:25.063] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.079] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.081] [SEVERE ] player 2 placing token on slot 0
+[16:25:25.086] [SEVERE ] player 2 placing token on slot 7
+[16:25:25.089] [SEVERE ] player 2 placing token on slot 2
+[16:25:25.090] [SEVERE ] removing player 2 token from slot 7
+[16:25:25.095] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.095] [SEVERE ] removing tokens from slot 2
+[16:25:25.096] [SEVERE ] removing card from slot 2
+[16:25:25.096] [SEVERE ] player 2 placing token on slot 4
+[16:25:25.101] [SEVERE ] player 2 placing token on slot 11
+[16:25:25.102] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.111] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.127] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.127] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.143] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.143] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.159] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.159] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.175] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.175] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.191] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.191] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.202] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.207] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.207] [SEVERE ] removing tokens from slot 8
+[16:25:25.207] [SEVERE ] removing card from slot 8
+[16:25:25.223] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.223] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.239] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.239] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.254] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.254] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.269] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.269] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.280] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.285] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.301] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.301] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.317] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.317] [SEVERE ] removing tokens from slot 1
+[16:25:25.317] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.317] [SEVERE ] removing card from slot 1
+[16:25:25.328] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.332] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.347] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.347] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.363] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.363] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.379] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.379] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.395] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.395] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.411] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.411] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.427] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.427] [SEVERE ] removing tokens from slot 9
+[16:25:25.427] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.427] [SEVERE ] removing card from slot 9
+[16:25:25.437] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.442] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.458] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.458] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.473] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.473] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.484] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.489] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.504] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.504] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.519] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.519] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.535] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.535] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.535] [SEVERE ] removing tokens from slot 4
+[16:25:25.535] [SEVERE ] removing card from slot 4
+[16:25:25.546] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.550] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.566] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.566] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.582] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.582] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.598] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.598] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.614] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.614] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.630] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.630] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.646] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.646] [SEVERE ] removing tokens from slot 11
+[16:25:25.646] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.646] [SEVERE ] removing card from slot 11
+[16:25:25.657] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.662] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.678] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.678] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.694] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.694] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.710] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.710] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.726] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.726] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.742] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.742] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.758] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.758] [SEVERE ] removing tokens from slot 0
+[16:25:25.758] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.758] [SEVERE ] removing card from slot 0
+[16:25:25.769] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.774] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.790] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.790] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.800] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.805] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.821] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.821] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.837] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.837] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.853] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.853] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.869] [SEVERE ] removing tokens from slot 5
+[16:25:25.869] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.869] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.869] [SEVERE ] removing card from slot 5
+[16:25:25.885] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.885] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.901] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.901] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.917] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.917] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.933] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.933] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.949] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.949] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.965] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.965] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.981] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.981] [SEVERE ] setting player 3 freeze to 0
+[16:25:25.981] [SEVERE ] removing tokens from slot 10
+[16:25:25.981] [SEVERE ] removing card from slot 10
+[16:25:25.992] [SEVERE ] setting player 2 freeze to 0
+[16:25:25.997] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.013] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.013] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.029] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.029] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.045] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.045] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.061] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.061] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.077] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.077] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.093] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.093] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.093] [SEVERE ] removing tokens from slot 6
+[16:25:26.093] [SEVERE ] removing card from slot 6
+[16:25:26.104] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.109] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.125] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.125] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.141] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.141] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.156] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.156] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.171] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.171] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.186] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.186] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.202] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.202] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.202] [SEVERE ] removing tokens from slot 7
+[16:25:26.202] [SEVERE ] removing card from slot 7
+[16:25:26.213] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.218] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.234] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.234] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.250] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.250] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.266] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.266] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.282] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.282] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.298] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.298] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.314] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.314] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.314] [SEVERE ] removing tokens from slot 3
+[16:25:26.314] [SEVERE ] removing card from slot 3
+[16:25:26.325] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.330] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.346] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.346] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.362] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.362] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.378] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.378] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.394] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.394] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.410] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.410] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.426] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.426] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.426] [SEVERE ] placing card 70 in slot 11
+[16:25:26.437] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.442] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.458] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.458] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.474] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.474] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.485] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.490] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.506] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.506] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.522] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.522] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.538] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.538] [SEVERE ] placing card 73 in slot 8
+[16:25:26.538] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.550] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.554] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.569] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.569] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.580] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.585] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.601] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.601] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.617] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.617] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.632] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.632] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.647] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.647] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.647] [SEVERE ] placing card 63 in slot 5
+[16:25:26.658] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.663] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.679] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.679] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.695] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.695] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.711] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.711] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.727] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.727] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.743] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.743] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.759] [SEVERE ] placing card 53 in slot 4
+[16:25:26.759] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.759] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.775] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.775] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.791] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.791] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.807] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.807] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.823] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.823] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.839] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.839] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.855] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.855] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.870] [SEVERE ] placing card 57 in slot 7
+[16:25:26.870] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.870] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.886] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.886] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.901] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.901] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.916] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.916] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.932] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.932] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.948] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.948] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.964] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.964] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.980] [SEVERE ] placing card 52 in slot 9
+[16:25:26.980] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.980] [SEVERE ] setting player 3 freeze to 0
+[16:25:26.991] [SEVERE ] setting player 2 freeze to 0
+[16:25:26.996] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.012] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.012] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.028] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.028] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.044] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.044] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.060] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.060] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.075] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.075] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.091] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.091] [SEVERE ] placing card 28 in slot 3
+[16:25:27.091] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.102] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.106] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.122] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.122] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.138] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.138] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.154] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.154] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.170] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.170] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.186] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.186] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.202] [SEVERE ] placing card 59 in slot 2
+[16:25:27.202] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.202] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.218] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.218] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.234] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.234] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.250] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.250] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.266] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.266] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.282] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.282] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.297] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.297] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.313] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.313] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.313] [SEVERE ] placing card 6 in slot 1
+[16:25:27.324] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.324] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.335] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.345] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.360] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.360] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.371] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.375] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.391] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.391] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.402] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.407] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.423] [SEVERE ] placing card 11 in slot 10
+[16:25:27.423] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.423] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.434] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.439] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.455] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.455] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.471] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.471] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.487] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.487] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.503] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.503] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.519] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.519] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.535] [SEVERE ] placing card 61 in slot 6
+[16:25:27.535] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.535] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.546] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.551] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.567] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.567] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.583] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.583] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.599] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.599] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.615] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.615] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.631] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.631] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.647] [SEVERE ] placing card 4 in slot 0
+[16:25:27.647] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.647] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.647] [SEVERE ] updating elapsed time to 3676
+[16:25:27.658] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.662] [SEVERE ] setting player 3 score to 2
+[16:25:27.662] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.662] [SEVERE ] setting player 2 score to 1
+[16:25:27.663] [SEVERE ] updating elapsed time to 3692
+[16:25:27.678] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.678] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.678] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.679] [SEVERE ] player 3 placing token on slot 7
+[16:25:27.678] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.678] [SEVERE ] updating elapsed time to 3707
+[16:25:27.679] [SEVERE ] player 2 placing token on slot 3
+[16:25:27.688] [SEVERE ] player 3 placing token on slot 10
+[16:25:27.690] [SEVERE ] player 2 placing token on slot 10
+[16:25:27.693] [SEVERE ] player 3 placing token on slot 4
+[16:25:27.694] [SEVERE ] updating elapsed time to 3723
+[16:25:27.694] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.696] [SEVERE ] removing player 2 token from slot 10
+[16:25:27.699] [SEVERE ] player 2 placing token on slot 4
+[16:25:27.700] [SEVERE ] player 2 placing token on slot 9
+[16:25:27.700] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.710] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.710] [SEVERE ] updating elapsed time to 3739
+[16:25:27.712] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.712] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.712] [SEVERE ] removing player 2 token from slot 9
+[16:25:27.713] [SEVERE ] player 2 placing token on slot 1
+[16:25:27.713] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.721] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.721] [SEVERE ] updating elapsed time to 3750
+[16:25:27.726] [SEVERE ] setting player 2 freeze to 0
+[16:25:27.726] [SEVERE ] setting player 3 freeze to 0
+[16:25:27.726] [SEVERE ] removing player 3 token from slot 7
+[16:25:27.728] [SEVERE ] player 3 placing token on slot 0
+[16:25:27.729] [SEVERE ] removing player 3 token from slot 10
+[16:25:27.731] [SEVERE ] removing player 3 token from slot 0
+[16:25:27.742] [SEVERE ] updating elapsed time to 3771
+[16:25:27.757] [SEVERE ] updating elapsed time to 3786
+[16:25:27.772] [SEVERE ] updating elapsed time to 3801
+[16:25:27.788] [SEVERE ] updating elapsed time to 3817
+[16:25:27.803] [SEVERE ] updating elapsed time to 3832
+[16:25:27.818] [SEVERE ] updating elapsed time to 3847
+[16:25:27.834] [SEVERE ] updating elapsed time to 3863
+[16:25:27.850] [SEVERE ] updating elapsed time to 3879
+[16:25:27.866] [SEVERE ] updating elapsed time to 3895
+[16:25:27.882] [SEVERE ] updating elapsed time to 3911
+[16:25:27.898] [SEVERE ] updating elapsed time to 3927
+[16:25:27.914] [SEVERE ] updating elapsed time to 3943
+[16:25:27.930] [SEVERE ] updating elapsed time to 3959
+[16:25:27.946] [SEVERE ] updating elapsed time to 3975
+[16:25:27.962] [SEVERE ] updating elapsed time to 3991
+[16:25:27.978] [SEVERE ] updating elapsed time to 4007
+[16:25:27.994] [SEVERE ] updating elapsed time to 4023
+[16:25:28.010] [SEVERE ] updating elapsed time to 4039
+[16:25:28.026] [SEVERE ] updating elapsed time to 4055
+[16:25:28.040] [SEVERE ] updating elapsed time to 4069
+[16:25:28.055] [SEVERE ] updating elapsed time to 4084
+[16:25:28.071] [SEVERE ] updating elapsed time to 4100
+[16:25:28.087] [SEVERE ] updating elapsed time to 4116
+[16:25:28.103] [SEVERE ] updating elapsed time to 4132
+[16:25:28.118] [SEVERE ] updating elapsed time to 4147
+[16:25:28.133] [SEVERE ] updating elapsed time to 4162
+[16:25:28.149] [SEVERE ] updating elapsed time to 4178
+[16:25:28.165] [SEVERE ] updating elapsed time to 4194
+[16:25:28.181] [SEVERE ] updating elapsed time to 4210
+[16:25:28.197] [SEVERE ] updating elapsed time to 4226
+[16:25:28.213] [SEVERE ] updating elapsed time to 4242
+[16:25:28.229] [SEVERE ] updating elapsed time to 4258
+[16:25:28.245] [SEVERE ] updating elapsed time to 4274
+[16:25:28.261] [SEVERE ] updating elapsed time to 4290
+[16:25:28.277] [SEVERE ] updating elapsed time to 4306
+[16:25:28.293] [SEVERE ] updating elapsed time to 4322
+[16:25:28.309] [SEVERE ] updating elapsed time to 4338
+[16:25:28.325] [SEVERE ] updating elapsed time to 4354
+[16:25:28.341] [SEVERE ] updating elapsed time to 4370
+[16:25:28.357] [SEVERE ] updating elapsed time to 4386
+[16:25:28.373] [SEVERE ] updating elapsed time to 4402
+[16:25:28.389] [SEVERE ] updating elapsed time to 4418
+[16:25:28.405] [SEVERE ] updating elapsed time to 4434
+[16:25:28.420] [SEVERE ] updating elapsed time to 4449
+[16:25:28.435] [SEVERE ] updating elapsed time to 4464
+[16:25:28.451] [SEVERE ] updating elapsed time to 4480
+[16:25:28.466] [SEVERE ] updating elapsed time to 4495
+[16:25:28.481] [SEVERE ] updating elapsed time to 4510
+[16:25:28.497] [SEVERE ] updating elapsed time to 4526
+[16:25:28.512] [SEVERE ] updating elapsed time to 4541
+[16:25:28.528] [SEVERE ] updating elapsed time to 4557
+[16:25:28.544] [SEVERE ] updating elapsed time to 4573
+[16:25:28.560] [SEVERE ] updating elapsed time to 4589
+[16:25:28.576] [SEVERE ] updating elapsed time to 4605
+[16:25:28.592] [SEVERE ] updating elapsed time to 4621
+[16:25:28.608] [SEVERE ] updating elapsed time to 4637
+[16:25:28.624] [SEVERE ] updating elapsed time to 4653
+[16:25:28.640] [SEVERE ] updating elapsed time to 4669
+[16:25:28.656] [SEVERE ] updating elapsed time to 4685
+[16:25:28.672] [SEVERE ] updating elapsed time to 4701
+[16:25:28.688] [SEVERE ] updating elapsed time to 4717
+[16:25:28.704] [SEVERE ] updating elapsed time to 4733
+[16:25:28.720] [SEVERE ] updating elapsed time to 4749
+[16:25:28.736] [SEVERE ] updating elapsed time to 4765
+[16:25:28.752] [SEVERE ] updating elapsed time to 4781
+[16:25:28.768] [SEVERE ] updating elapsed time to 4797
+[16:25:28.784] [SEVERE ] updating elapsed time to 4813
+[16:25:28.799] [SEVERE ] updating elapsed time to 4828
+[16:25:28.815] [SEVERE ] updating elapsed time to 4844
+[16:25:28.831] [SEVERE ] updating elapsed time to 4860
+[16:25:28.847] [SEVERE ] updating elapsed time to 4876
+[16:25:28.863] [SEVERE ] updating elapsed time to 4892
+[16:25:28.879] [SEVERE ] updating elapsed time to 4908
+[16:25:28.895] [SEVERE ] updating elapsed time to 4924
+[16:25:28.911] [SEVERE ] updating elapsed time to 4940
+[16:25:28.927] [SEVERE ] updating elapsed time to 4956
+[16:25:28.943] [SEVERE ] updating elapsed time to 4972
+[16:25:28.959] [SEVERE ] updating elapsed time to 4988
+[16:25:28.975] [SEVERE ] updating elapsed time to 5004
+[16:25:28.991] [SEVERE ] updating elapsed time to 5020
+[16:25:29.007] [SEVERE ] updating elapsed time to 5036
+[16:25:29.023] [SEVERE ] updating elapsed time to 5052
+[16:25:29.039] [SEVERE ] updating elapsed time to 5068
+[16:25:29.055] [SEVERE ] updating elapsed time to 5084
+[16:25:29.071] [SEVERE ] updating elapsed time to 5100
+[16:25:29.087] [SEVERE ] updating elapsed time to 5116
+[16:25:29.103] [SEVERE ] updating elapsed time to 5132
+[16:25:29.119] [SEVERE ] updating elapsed time to 5148
+[16:25:29.135] [SEVERE ] updating elapsed time to 5164
+[16:25:29.151] [SEVERE ] updating elapsed time to 5180
+[16:25:29.166] [SEVERE ] updating elapsed time to 5195
+[16:25:29.182] [SEVERE ] updating elapsed time to 5211
+[16:25:29.197] [SEVERE ] updating elapsed time to 5226
+[16:25:29.213] [SEVERE ] updating elapsed time to 5242
+[16:25:29.228] [SEVERE ] updating elapsed time to 5257
+[16:25:29.244] [SEVERE ] updating elapsed time to 5273
+[16:25:29.260] [SEVERE ] updating elapsed time to 5289
+[16:25:29.276] [SEVERE ] updating elapsed time to 5305
+[16:25:29.291] [SEVERE ] updating elapsed time to 5320
+[16:25:29.306] [SEVERE ] updating elapsed time to 5335
+[16:25:29.322] [SEVERE ] updating elapsed time to 5351
+[16:25:29.338] [SEVERE ] updating elapsed time to 5367
+[16:25:29.354] [SEVERE ] updating elapsed time to 5383
+[16:25:29.370] [SEVERE ] updating elapsed time to 5399
+[16:25:29.386] [SEVERE ] updating elapsed time to 5415
+[16:25:29.402] [SEVERE ] updating elapsed time to 5431
+[16:25:29.418] [SEVERE ] updating elapsed time to 5447
+[16:25:29.434] [SEVERE ] updating elapsed time to 5463
+[16:25:29.450] [SEVERE ] updating elapsed time to 5479
+[16:25:29.466] [SEVERE ] updating elapsed time to 5495
+[16:25:29.482] [SEVERE ] updating elapsed time to 5511
+[16:25:29.498] [SEVERE ] updating elapsed time to 5527
+[16:25:29.514] [SEVERE ] updating elapsed time to 5543
+[16:25:29.530] [SEVERE ] updating elapsed time to 5559
+[16:25:29.545] [SEVERE ] updating elapsed time to 5574
+[16:25:29.561] [SEVERE ] updating elapsed time to 5590
+[16:25:29.577] [SEVERE ] updating elapsed time to 5606
+[16:25:29.593] [SEVERE ] updating elapsed time to 5622
+[16:25:29.609] [SEVERE ] updating elapsed time to 5638
+[16:25:29.625] [SEVERE ] updating elapsed time to 5654
+[16:25:29.640] [SEVERE ] updating elapsed time to 5669
+[16:25:29.656] [SEVERE ] updating elapsed time to 5685
+[16:25:29.671] [SEVERE ] updating elapsed time to 5700
+[16:25:29.687] [SEVERE ] updating elapsed time to 5716
+[16:25:29.703] [SEVERE ] updating elapsed time to 5732
+[16:25:29.719] [SEVERE ] updating elapsed time to 5748
+[16:25:29.735] [SEVERE ] updating elapsed time to 5764
+[16:25:29.751] [SEVERE ] updating elapsed time to 5780
+[16:25:29.767] [SEVERE ] updating elapsed time to 5796
+[16:25:29.783] [SEVERE ] updating elapsed time to 5812
+[16:25:29.799] [SEVERE ] updating elapsed time to 5828
+[16:25:29.815] [SEVERE ] updating elapsed time to 5844
+[16:25:29.831] [SEVERE ] updating elapsed time to 5860
+[16:25:29.847] [SEVERE ] updating elapsed time to 5876
+[16:25:29.863] [SEVERE ] updating elapsed time to 5892
+[16:25:29.879] [SEVERE ] updating elapsed time to 5908
+[16:25:29.895] [SEVERE ] updating elapsed time to 5924
+[16:25:29.910] [SEVERE ] updating elapsed time to 5939
+[16:25:29.926] [SEVERE ] updating elapsed time to 5955
+[16:25:29.942] [SEVERE ] updating elapsed time to 5971
+[16:25:29.958] [SEVERE ] updating elapsed time to 5987
+[16:25:29.974] [SEVERE ] updating elapsed time to 6003
+[16:25:29.990] [SEVERE ] updating elapsed time to 6019
+[16:25:30.006] [SEVERE ] updating elapsed time to 6035
+[16:25:30.022] [SEVERE ] updating elapsed time to 6051
+[16:25:30.038] [SEVERE ] updating elapsed time to 6067
+[16:25:30.054] [SEVERE ] updating elapsed time to 6083
+[16:25:30.070] [SEVERE ] updating elapsed time to 6099
+[16:25:30.086] [SEVERE ] updating elapsed time to 6115
+[16:25:30.102] [SEVERE ] updating elapsed time to 6131
+[16:25:30.118] [SEVERE ] updating elapsed time to 6147
+[16:25:30.134] [SEVERE ] updating elapsed time to 6163
+[16:25:30.150] [SEVERE ] updating elapsed time to 6179
+[16:25:30.166] [SEVERE ] updating elapsed time to 6195
+[16:25:30.182] [SEVERE ] updating elapsed time to 6211
+[16:25:30.200] [SEVERE ] updating elapsed time to 6229
+[16:25:30.214] [SEVERE ] updating elapsed time to 6243
+[16:25:30.230] [SEVERE ] updating elapsed time to 6259
+[16:25:30.246] [SEVERE ] updating elapsed time to 6275
+[16:25:30.262] [SEVERE ] updating elapsed time to 6291
+[16:25:30.278] [SEVERE ] updating elapsed time to 6307
+[16:25:30.293] [SEVERE ] updating elapsed time to 6322
+[16:25:30.309] [SEVERE ] updating elapsed time to 6338
+[16:25:30.325] [SEVERE ] updating elapsed time to 6354
+[16:25:30.341] [SEVERE ] updating elapsed time to 6370
+[16:25:30.357] [SEVERE ] updating elapsed time to 6386
+[16:25:30.373] [SEVERE ] updating elapsed time to 6402
+[16:25:30.389] [SEVERE ] updating elapsed time to 6418
+[16:25:30.405] [SEVERE ] updating elapsed time to 6434
+[16:25:30.421] [SEVERE ] updating elapsed time to 6450
+[16:25:30.437] [SEVERE ] updating elapsed time to 6466
+[16:25:30.453] [SEVERE ] updating elapsed time to 6482
+[16:25:30.469] [SEVERE ] updating elapsed time to 6498
+[16:25:30.484] [SEVERE ] updating elapsed time to 6513
+[16:25:30.500] [SEVERE ] updating elapsed time to 6529
+[16:25:30.515] [SEVERE ] updating elapsed time to 6544
+[16:25:30.530] [SEVERE ] updating elapsed time to 6559
+[16:25:30.546] [SEVERE ] updating elapsed time to 6575
+[16:25:30.561] [SEVERE ] updating elapsed time to 6590
+[16:25:30.577] [SEVERE ] updating elapsed time to 6606
+[16:25:30.593] [SEVERE ] updating elapsed time to 6622
+[16:25:30.609] [SEVERE ] updating elapsed time to 6638
+[16:25:30.625] [SEVERE ] updating elapsed time to 6654
+[16:25:30.641] [SEVERE ] updating elapsed time to 6670
+[16:25:30.655] [SEVERE ] updating elapsed time to 6684
+[16:25:30.670] [SEVERE ] updating elapsed time to 6699
+[16:25:30.686] [SEVERE ] updating elapsed time to 6715
+[16:25:30.702] [SEVERE ] updating elapsed time to 6731
+[16:25:30.718] [SEVERE ] updating elapsed time to 6747
+[16:25:30.734] [SEVERE ] updating elapsed time to 6763
+[16:25:30.750] [SEVERE ] updating elapsed time to 6779
+[16:25:30.766] [SEVERE ] updating elapsed time to 6795
+[16:25:30.782] [SEVERE ] updating elapsed time to 6811
+[16:25:30.798] [SEVERE ] updating elapsed time to 6827
+[16:25:30.814] [SEVERE ] updating elapsed time to 6843
+[16:25:30.830] [SEVERE ] updating elapsed time to 6859
+[16:25:30.846] [SEVERE ] updating elapsed time to 6875
+[16:25:30.862] [SEVERE ] updating elapsed time to 6891
+[16:25:30.878] [SEVERE ] updating elapsed time to 6907
+[16:25:30.894] [SEVERE ] updating elapsed time to 6923
+[16:25:30.910] [SEVERE ] updating elapsed time to 6939
+[16:25:30.926] [SEVERE ] updating elapsed time to 6955
+[16:25:30.942] [SEVERE ] updating elapsed time to 6971
+[16:25:30.958] [SEVERE ] updating elapsed time to 6987
+[16:25:30.974] [SEVERE ] updating elapsed time to 7003
+[16:25:30.990] [SEVERE ] updating elapsed time to 7019
+[16:25:31.006] [SEVERE ] updating elapsed time to 7035
+[16:25:31.022] [SEVERE ] updating elapsed time to 7051
+[16:25:31.037] [SEVERE ] updating elapsed time to 7066
+[16:25:31.053] [SEVERE ] updating elapsed time to 7082
+[16:25:31.069] [SEVERE ] updating elapsed time to 7098
+[16:25:31.084] [SEVERE ] updating elapsed time to 7113
+[16:25:31.099] [SEVERE ] updating elapsed time to 7128
+[16:25:31.115] [SEVERE ] updating elapsed time to 7144
+[16:25:31.131] [SEVERE ] updating elapsed time to 7160
+[16:25:31.146] [SEVERE ] updating elapsed time to 7175
+[16:25:31.162] [SEVERE ] updating elapsed time to 7191
+[16:25:31.177] [SEVERE ] updating elapsed time to 7206
+[16:25:31.193] [SEVERE ] updating elapsed time to 7222
+[16:25:31.209] [SEVERE ] updating elapsed time to 7238
+[16:25:31.225] [SEVERE ] updating elapsed time to 7254
+[16:25:31.240] [SEVERE ] updating elapsed time to 7269
+[16:25:31.255] [SEVERE ] updating elapsed time to 7284
+[16:25:31.271] [SEVERE ] updating elapsed time to 7300
+[16:25:31.287] [SEVERE ] updating elapsed time to 7316
+[16:25:31.303] [SEVERE ] updating elapsed time to 7332
+[16:25:31.319] [SEVERE ] updating elapsed time to 7348
+[16:25:31.335] [SEVERE ] updating elapsed time to 7364
+[16:25:31.351] [SEVERE ] updating elapsed time to 7380
+[16:25:31.367] [SEVERE ] updating elapsed time to 7396
+[16:25:31.383] [SEVERE ] updating elapsed time to 7412
+[16:25:31.399] [SEVERE ] updating elapsed time to 7428
+[16:25:31.414] [SEVERE ] updating elapsed time to 7443
+[16:25:31.430] [SEVERE ] updating elapsed time to 7459
+[16:25:31.446] [SEVERE ] updating elapsed time to 7475
+[16:25:31.462] [SEVERE ] updating elapsed time to 7491
+[16:25:31.478] [SEVERE ] updating elapsed time to 7507
+[16:25:31.494] [SEVERE ] updating elapsed time to 7523
+[16:25:31.510] [SEVERE ] updating elapsed time to 7539
+[16:25:31.526] [SEVERE ] updating elapsed time to 7555
+[16:25:31.542] [SEVERE ] updating elapsed time to 7571
+[16:25:31.558] [SEVERE ] updating elapsed time to 7587
+[16:25:31.574] [SEVERE ] updating elapsed time to 7603
+[16:25:31.590] [SEVERE ] updating elapsed time to 7619
+[16:25:31.606] [SEVERE ] updating elapsed time to 7635
+[16:25:31.622] [SEVERE ] updating elapsed time to 7651
+[16:25:31.638] [SEVERE ] updating elapsed time to 7667
+[16:25:31.654] [SEVERE ] updating elapsed time to 7683
+[16:25:31.670] [SEVERE ] updating elapsed time to 7699
+[16:25:31.686] [SEVERE ] updating elapsed time to 7715
+[16:25:31.702] [SEVERE ] updating elapsed time to 7731
+[16:25:31.718] [SEVERE ] updating elapsed time to 7747
+[16:25:31.734] [SEVERE ] updating elapsed time to 7763
+[16:25:31.750] [SEVERE ] updating elapsed time to 7779
+[16:25:31.766] [SEVERE ] updating elapsed time to 7795
+[16:25:31.781] [SEVERE ] updating elapsed time to 7810
+[16:25:31.797] [SEVERE ] updating elapsed time to 7826
+[16:25:31.813] [SEVERE ] updating elapsed time to 7842
+[16:25:31.829] [SEVERE ] updating elapsed time to 7858
+[16:25:31.845] [SEVERE ] updating elapsed time to 7874
+[16:25:31.861] [SEVERE ] updating elapsed time to 7890
+[16:25:31.877] [SEVERE ] updating elapsed time to 7906
+[16:25:31.893] [SEVERE ] updating elapsed time to 7922
+[16:25:31.909] [SEVERE ] updating elapsed time to 7938
+[16:25:31.925] [SEVERE ] updating elapsed time to 7954
+[16:25:31.941] [SEVERE ] updating elapsed time to 7970
+[16:25:31.957] [SEVERE ] updating elapsed time to 7986
+[16:25:31.973] [SEVERE ] updating elapsed time to 8002
+[16:25:31.989] [SEVERE ] updating elapsed time to 8018
+[16:25:32.005] [SEVERE ] updating elapsed time to 8034
+[16:25:32.021] [SEVERE ] updating elapsed time to 8050
+[16:25:32.037] [SEVERE ] updating elapsed time to 8066
+[16:25:32.053] [SEVERE ] updating elapsed time to 8082
+[16:25:32.069] [SEVERE ] updating elapsed time to 8098
+[16:25:32.085] [SEVERE ] updating elapsed time to 8114
+[16:25:32.101] [SEVERE ] updating elapsed time to 8130
+[16:25:32.117] [SEVERE ] updating elapsed time to 8146
+[16:25:32.132] [SEVERE ] updating elapsed time to 8161
+[16:25:32.148] [SEVERE ] updating elapsed time to 8177
+[16:25:32.162] [SEVERE ] updating elapsed time to 8191
+[16:25:32.178] [SEVERE ] updating elapsed time to 8207
+[16:25:32.194] [SEVERE ] updating elapsed time to 8223
+[16:25:32.210] [SEVERE ] updating elapsed time to 8239
+[16:25:32.226] [SEVERE ] updating elapsed time to 8255
+[16:25:32.242] [SEVERE ] updating elapsed time to 8271
+[16:25:32.258] [SEVERE ] updating elapsed time to 8287
+[16:25:32.274] [SEVERE ] updating elapsed time to 8303
+[16:25:32.290] [SEVERE ] updating elapsed time to 8319
+[16:25:32.306] [SEVERE ] updating elapsed time to 8335
+[16:25:32.322] [SEVERE ] updating elapsed time to 8351
+[16:25:32.338] [SEVERE ] updating elapsed time to 8367
+[16:25:32.354] [SEVERE ] updating elapsed time to 8383
+[16:25:32.370] [SEVERE ] updating elapsed time to 8399
+[16:25:32.386] [SEVERE ] updating elapsed time to 8415
+[16:25:32.402] [SEVERE ] updating elapsed time to 8431
+[16:25:32.418] [SEVERE ] updating elapsed time to 8447
+[16:25:32.434] [SEVERE ] updating elapsed time to 8463
+[16:25:32.450] [SEVERE ] updating elapsed time to 8479
+[16:25:32.466] [SEVERE ] updating elapsed time to 8495
+[16:25:32.482] [SEVERE ] updating elapsed time to 8511
+[16:25:32.498] [SEVERE ] updating elapsed time to 8527
+[16:25:32.514] [SEVERE ] updating elapsed time to 8543
+[16:25:32.529] [SEVERE ] updating elapsed time to 8558
+[16:25:32.545] [SEVERE ] updating elapsed time to 8574
+[16:25:32.561] [SEVERE ] updating elapsed time to 8590
+[16:25:32.577] [SEVERE ] updating elapsed time to 8606
+[16:25:32.593] [SEVERE ] updating elapsed time to 8622
+[16:25:32.609] [SEVERE ] updating elapsed time to 8638
+[16:25:32.625] [SEVERE ] updating elapsed time to 8654
+[16:25:32.641] [SEVERE ] updating elapsed time to 8670
+[16:25:32.656] [SEVERE ] updating elapsed time to 8685
+[16:25:32.672] [SEVERE ] updating elapsed time to 8701
+[16:25:32.687] [SEVERE ] updating elapsed time to 8716
+[16:25:32.703] [SEVERE ] updating elapsed time to 8732
+[16:25:32.719] [SEVERE ] updating elapsed time to 8748
+[16:25:32.735] [SEVERE ] updating elapsed time to 8764
+[16:25:32.751] [SEVERE ] updating elapsed time to 8780
+[16:25:32.767] [SEVERE ] updating elapsed time to 8796
+[16:25:32.783] [SEVERE ] updating elapsed time to 8812
+[16:25:32.799] [SEVERE ] updating elapsed time to 8828
+[16:25:32.815] [SEVERE ] updating elapsed time to 8844
+[16:25:32.831] [SEVERE ] updating elapsed time to 8860
+[16:25:32.847] [SEVERE ] updating elapsed time to 8876
+[16:25:32.863] [SEVERE ] updating elapsed time to 8892
+[16:25:32.879] [SEVERE ] updating elapsed time to 8908
+[16:25:32.895] [SEVERE ] updating elapsed time to 8924
+[16:25:32.910] [SEVERE ] updating elapsed time to 8939
+[16:25:32.926] [SEVERE ] updating elapsed time to 8955
+[16:25:32.942] [SEVERE ] updating elapsed time to 8971
+[16:25:32.958] [SEVERE ] updating elapsed time to 8987
+[16:25:32.974] [SEVERE ] updating elapsed time to 9003
+[16:25:32.990] [SEVERE ] updating elapsed time to 9019
+[16:25:33.006] [SEVERE ] updating elapsed time to 9035
+[16:25:33.022] [SEVERE ] updating elapsed time to 9051
+[16:25:33.038] [SEVERE ] updating elapsed time to 9067
+[16:25:33.054] [SEVERE ] updating elapsed time to 9083
+[16:25:33.070] [SEVERE ] updating elapsed time to 9099
+[16:25:33.086] [SEVERE ] updating elapsed time to 9115
+[16:25:33.102] [SEVERE ] updating elapsed time to 9131
+[16:25:33.118] [SEVERE ] updating elapsed time to 9147
+[16:25:33.134] [SEVERE ] updating elapsed time to 9163
+[16:25:33.150] [SEVERE ] updating elapsed time to 9179
+[16:25:33.166] [SEVERE ] updating elapsed time to 9195
+[16:25:33.182] [SEVERE ] updating elapsed time to 9211
+[16:25:33.198] [SEVERE ] updating elapsed time to 9227
+[16:25:33.213] [SEVERE ] updating elapsed time to 9242
+[16:25:33.229] [SEVERE ] updating elapsed time to 9258
+[16:25:33.244] [SEVERE ] updating elapsed time to 9273
+[16:25:33.260] [SEVERE ] updating elapsed time to 9289
+[16:25:33.275] [SEVERE ] updating elapsed time to 9304
+[16:25:33.291] [SEVERE ] updating elapsed time to 9320
+[16:25:33.307] [SEVERE ] updating elapsed time to 9336
+[16:25:33.323] [SEVERE ] updating elapsed time to 9352
+[16:25:33.339] [SEVERE ] updating elapsed time to 9368
+[16:25:33.355] [SEVERE ] updating elapsed time to 9384
+[16:25:33.371] [SEVERE ] updating elapsed time to 9400
+[16:25:33.387] [SEVERE ] updating elapsed time to 9416
+[16:25:33.403] [SEVERE ] updating elapsed time to 9432
+[16:25:33.419] [SEVERE ] updating elapsed time to 9448
+[16:25:33.435] [SEVERE ] updating elapsed time to 9464
+[16:25:33.451] [SEVERE ] updating elapsed time to 9480
+[16:25:33.467] [SEVERE ] updating elapsed time to 9496
+[16:25:33.483] [SEVERE ] updating elapsed time to 9512
+[16:25:33.499] [SEVERE ] updating elapsed time to 9528
+[16:25:33.515] [SEVERE ] updating elapsed time to 9544
+[16:25:33.531] [SEVERE ] updating elapsed time to 9560
+[16:25:33.547] [SEVERE ] updating elapsed time to 9576
+[16:25:33.563] [SEVERE ] updating elapsed time to 9592
+[16:25:33.579] [SEVERE ] updating elapsed time to 9608
+[16:25:33.595] [SEVERE ] updating elapsed time to 9624
+[16:25:33.611] [SEVERE ] updating elapsed time to 9640
+[16:25:33.627] [SEVERE ] updating elapsed time to 9656
+[16:25:33.643] [SEVERE ] updating elapsed time to 9672
+[16:25:33.657] [SEVERE ] updating elapsed time to 9686
+[16:25:33.672] [SEVERE ] updating elapsed time to 9701
+[16:25:33.688] [SEVERE ] updating elapsed time to 9717
+[16:25:33.704] [SEVERE ] updating elapsed time to 9733
+[16:25:33.720] [SEVERE ] updating elapsed time to 9749
+[16:25:33.736] [SEVERE ] updating elapsed time to 9765
+[16:25:33.752] [SEVERE ] updating elapsed time to 9781
+[16:25:33.768] [SEVERE ] updating elapsed time to 9797
+[16:25:33.784] [SEVERE ] updating elapsed time to 9813
+[16:25:33.800] [SEVERE ] updating elapsed time to 9829
+[16:25:33.816] [SEVERE ] updating elapsed time to 9845
+[16:25:33.832] [SEVERE ] updating elapsed time to 9861
+[16:25:33.848] [SEVERE ] updating elapsed time to 9877
+[16:25:33.864] [SEVERE ] updating elapsed time to 9893
+[16:25:33.880] [SEVERE ] updating elapsed time to 9909
+[16:25:33.896] [SEVERE ] updating elapsed time to 9925
+[16:25:33.912] [SEVERE ] updating elapsed time to 9941
+[16:25:33.928] [SEVERE ] updating elapsed time to 9957
+[16:25:33.944] [SEVERE ] updating elapsed time to 9973
+[16:25:33.960] [SEVERE ] updating elapsed time to 9989
+[16:25:33.976] [SEVERE ] updating elapsed time to 10005
+[16:25:33.992] [SEVERE ] updating elapsed time to 10021
+[16:25:34.007] [SEVERE ] updating elapsed time to 10036
+[16:25:34.022] [SEVERE ] updating elapsed time to 10051
+[16:25:34.037] [SEVERE ] updating elapsed time to 10066
+[16:25:34.053] [SEVERE ] updating elapsed time to 10082
+[16:25:34.069] [SEVERE ] updating elapsed time to 10098
+[16:25:34.085] [SEVERE ] updating elapsed time to 10114
+[16:25:34.101] [SEVERE ] updating elapsed time to 10130
+[16:25:34.117] [SEVERE ] updating elapsed time to 10146
+[16:25:34.133] [SEVERE ] updating elapsed time to 10162
+[16:25:34.149] [SEVERE ] updating elapsed time to 10178
+[16:25:34.165] [SEVERE ] updating elapsed time to 10194
+[16:25:34.181] [SEVERE ] updating elapsed time to 10210
+[16:25:34.197] [SEVERE ] updating elapsed time to 10226
+[16:25:34.213] [SEVERE ] updating elapsed time to 10242
+[16:25:34.229] [SEVERE ] updating elapsed time to 10258
+[16:25:34.245] [SEVERE ] updating elapsed time to 10274
+[16:25:34.261] [SEVERE ] updating elapsed time to 10290
+[16:25:34.277] [SEVERE ] updating elapsed time to 10306
+[16:25:34.293] [SEVERE ] updating elapsed time to 10322
+[16:25:34.309] [SEVERE ] updating elapsed time to 10338
+[16:25:34.325] [SEVERE ] updating elapsed time to 10354
+[16:25:34.341] [SEVERE ] updating elapsed time to 10370
+[16:25:34.357] [SEVERE ] updating elapsed time to 10386
+[16:25:34.373] [SEVERE ] updating elapsed time to 10402
+[16:25:34.389] [SEVERE ] updating elapsed time to 10418
+[16:25:34.404] [SEVERE ] updating elapsed time to 10433
+[16:25:34.420] [SEVERE ] updating elapsed time to 10449
+[16:25:34.435] [SEVERE ] updating elapsed time to 10464
+[16:25:34.451] [SEVERE ] updating elapsed time to 10480
+[16:25:34.466] [SEVERE ] updating elapsed time to 10495
+[16:25:34.482] [SEVERE ] updating elapsed time to 10511
+[16:25:34.498] [SEVERE ] updating elapsed time to 10527
+[16:25:34.514] [SEVERE ] updating elapsed time to 10543
+[16:25:34.530] [SEVERE ] updating elapsed time to 10559
+[16:25:34.546] [SEVERE ] updating elapsed time to 10575
+[16:25:34.562] [SEVERE ] updating elapsed time to 10591
+[16:25:34.578] [SEVERE ] updating elapsed time to 10607
+[16:25:34.594] [SEVERE ] updating elapsed time to 10623
+[16:25:34.610] [SEVERE ] updating elapsed time to 10639
+[16:25:34.626] [SEVERE ] updating elapsed time to 10655
+[16:25:34.642] [SEVERE ] updating elapsed time to 10671
+[16:25:34.658] [SEVERE ] updating elapsed time to 10687
+[16:25:34.674] [SEVERE ] updating elapsed time to 10703
+[16:25:34.690] [SEVERE ] updating elapsed time to 10719
+[16:25:34.706] [SEVERE ] updating elapsed time to 10735
+[16:25:34.722] [SEVERE ] updating elapsed time to 10751
+[16:25:34.738] [SEVERE ] updating elapsed time to 10767
+[16:25:34.754] [SEVERE ] updating elapsed time to 10783
+[16:25:34.769] [SEVERE ] updating elapsed time to 10798
+[16:25:34.785] [SEVERE ] updating elapsed time to 10814
+[16:25:34.801] [SEVERE ] updating elapsed time to 10830
+[16:25:34.817] [SEVERE ] updating elapsed time to 10846
+[16:25:34.833] [SEVERE ] updating elapsed time to 10862
+[16:25:34.849] [SEVERE ] updating elapsed time to 10878
+[16:25:34.865] [SEVERE ] updating elapsed time to 10894
+[16:25:34.881] [SEVERE ] updating elapsed time to 10910
+[16:25:34.897] [SEVERE ] updating elapsed time to 10926
+[16:25:34.913] [SEVERE ] updating elapsed time to 10942
+[16:25:34.929] [SEVERE ] updating elapsed time to 10958
+[16:25:34.945] [SEVERE ] updating elapsed time to 10974
+[16:25:34.961] [SEVERE ] updating elapsed time to 10990
+[16:25:34.977] [SEVERE ] updating elapsed time to 11006
+[16:25:34.992] [SEVERE ] updating elapsed time to 11021
+[16:25:35.007] [SEVERE ] updating elapsed time to 11036
+[16:25:35.022] [SEVERE ] updating elapsed time to 11051
+[16:25:35.038] [SEVERE ] updating elapsed time to 11067
+[16:25:35.054] [SEVERE ] updating elapsed time to 11083
+[16:25:35.070] [SEVERE ] updating elapsed time to 11099
+[16:25:35.085] [SEVERE ] updating elapsed time to 11114
+[16:25:35.100] [SEVERE ] updating elapsed time to 11129
+[16:25:35.115] [SEVERE ] updating elapsed time to 11144
+[16:25:35.131] [SEVERE ] updating elapsed time to 11160
+[16:25:35.145] [SEVERE ] updating elapsed time to 11174
+[16:25:35.161] [SEVERE ] updating elapsed time to 11190
+[16:25:35.177] [SEVERE ] updating elapsed time to 11206
+[16:25:35.193] [SEVERE ] updating elapsed time to 11222
+[16:25:35.209] [SEVERE ] updating elapsed time to 11238
+[16:25:35.225] [SEVERE ] updating elapsed time to 11254
+[16:25:35.241] [SEVERE ] updating elapsed time to 11270
+[16:25:35.257] [SEVERE ] updating elapsed time to 11286
+[16:25:35.273] [SEVERE ] updating elapsed time to 11302
+[16:25:35.289] [SEVERE ] updating elapsed time to 11318
+[16:25:35.305] [SEVERE ] updating elapsed time to 11334
+[16:25:35.321] [SEVERE ] updating elapsed time to 11350
+[16:25:35.337] [SEVERE ] updating elapsed time to 11366
+[16:25:35.353] [SEVERE ] updating elapsed time to 11382
+[16:25:35.368] [SEVERE ] updating elapsed time to 11397
+[16:25:35.383] [SEVERE ] updating elapsed time to 11412
+[16:25:35.399] [SEVERE ] updating elapsed time to 11428
+[16:25:35.415] [SEVERE ] updating elapsed time to 11444
+[16:25:35.431] [SEVERE ] updating elapsed time to 11460
+[16:25:35.447] [SEVERE ] updating elapsed time to 11476
+[16:25:35.463] [SEVERE ] updating elapsed time to 11492
+[16:25:35.479] [SEVERE ] updating elapsed time to 11508
+[16:25:35.495] [SEVERE ] updating elapsed time to 11524
+[16:25:35.511] [SEVERE ] updating elapsed time to 11540
+[16:25:35.526] [SEVERE ] updating elapsed time to 11555
+[16:25:35.542] [SEVERE ] updating elapsed time to 11571
+[16:25:35.558] [SEVERE ] updating elapsed time to 11587
+[16:25:35.574] [SEVERE ] updating elapsed time to 11603
+[16:25:35.590] [SEVERE ] updating elapsed time to 11619
+[16:25:35.606] [SEVERE ] updating elapsed time to 11635
+[16:25:35.622] [SEVERE ] updating elapsed time to 11651
+[16:25:35.638] [SEVERE ] updating elapsed time to 11667
+[16:25:35.654] [SEVERE ] updating elapsed time to 11683
+[16:25:35.670] [SEVERE ] updating elapsed time to 11699
+[16:25:35.686] [SEVERE ] updating elapsed time to 11715
+[16:25:35.702] [SEVERE ] updating elapsed time to 11731
+[16:25:35.718] [SEVERE ] updating elapsed time to 11747
+[16:25:35.734] [SEVERE ] updating elapsed time to 11763
+[16:25:35.750] [SEVERE ] updating elapsed time to 11779
+[16:25:35.766] [SEVERE ] updating elapsed time to 11795
+[16:25:35.782] [SEVERE ] updating elapsed time to 11811
+[16:25:35.798] [SEVERE ] updating elapsed time to 11827
+[16:25:35.814] [SEVERE ] updating elapsed time to 11843
+[16:25:35.830] [SEVERE ] updating elapsed time to 11859
+[16:25:35.846] [SEVERE ] updating elapsed time to 11875
+[16:25:35.862] [SEVERE ] updating elapsed time to 11891
+[16:25:35.878] [SEVERE ] updating elapsed time to 11907
+[16:25:35.893] [SEVERE ] updating elapsed time to 11922
+[16:25:35.909] [SEVERE ] updating elapsed time to 11938
+[16:25:35.925] [SEVERE ] updating elapsed time to 11954
+[16:25:35.941] [SEVERE ] updating elapsed time to 11970
+[16:25:35.957] [SEVERE ] updating elapsed time to 11986
+[16:25:35.973] [SEVERE ] updating elapsed time to 12002
+[16:25:35.989] [SEVERE ] updating elapsed time to 12018
+[16:25:36.005] [SEVERE ] updating elapsed time to 12034
+[16:25:36.021] [SEVERE ] updating elapsed time to 12050
+[16:25:36.037] [SEVERE ] updating elapsed time to 12066
+[16:25:36.053] [SEVERE ] updating elapsed time to 12082
+[16:25:36.069] [SEVERE ] updating elapsed time to 12098
+[16:25:36.085] [SEVERE ] updating elapsed time to 12114
+[16:25:36.101] [SEVERE ] updating elapsed time to 12130
+[16:25:36.117] [SEVERE ] updating elapsed time to 12146
+[16:25:36.133] [SEVERE ] updating elapsed time to 12162
+[16:25:36.149] [SEVERE ] updating elapsed time to 12178
+[16:25:36.165] [SEVERE ] updating elapsed time to 12194
+[16:25:36.180] [SEVERE ] updating elapsed time to 12209
+[16:25:36.195] [SEVERE ] updating elapsed time to 12224
+[16:25:36.211] [SEVERE ] updating elapsed time to 12240
+[16:25:36.227] [SEVERE ] updating elapsed time to 12256
+[16:25:36.243] [SEVERE ] updating elapsed time to 12272
+[16:25:36.259] [SEVERE ] updating elapsed time to 12288
+[16:25:36.274] [SEVERE ] updating elapsed time to 12303
+[16:25:36.290] [SEVERE ] updating elapsed time to 12319
+[16:25:36.306] [SEVERE ] updating elapsed time to 12335
+[16:25:36.322] [SEVERE ] updating elapsed time to 12351
+[16:25:36.338] [SEVERE ] updating elapsed time to 12367
+[16:25:36.354] [SEVERE ] updating elapsed time to 12383
+[16:25:36.382] [SEVERE ] updating elapsed time to 12411
+[16:25:36.402] [SEVERE ] updating elapsed time to 12431
+[16:25:36.418] [SEVERE ] updating elapsed time to 12447
+[16:25:36.434] [SEVERE ] updating elapsed time to 12463
+[16:25:36.450] [SEVERE ] updating elapsed time to 12479
+[16:25:36.465] [SEVERE ] updating elapsed time to 12494
+[16:25:36.480] [SEVERE ] updating elapsed time to 12509
+[16:25:36.496] [SEVERE ] updating elapsed time to 12525
+[16:25:36.512] [SEVERE ] updating elapsed time to 12541
+[16:25:36.528] [SEVERE ] updating elapsed time to 12557
+[16:25:36.544] [SEVERE ] updating elapsed time to 12573
+[16:25:36.560] [SEVERE ] updating elapsed time to 12589
+[16:25:36.576] [SEVERE ] updating elapsed time to 12605
+[16:25:36.592] [SEVERE ] updating elapsed time to 12621
+[16:25:36.608] [SEVERE ] updating elapsed time to 12637
+[16:25:36.624] [SEVERE ] updating elapsed time to 12653
+[16:25:36.639] [SEVERE ] updating elapsed time to 12668
+[16:25:36.655] [SEVERE ] updating elapsed time to 12684
+[16:25:36.671] [SEVERE ] updating elapsed time to 12700
+[16:25:36.686] [SEVERE ] updating elapsed time to 12715
+[16:25:36.701] [SEVERE ] updating elapsed time to 12730
+[16:25:36.717] [SEVERE ] updating elapsed time to 12746
+[16:25:36.733] [SEVERE ] updating elapsed time to 12762
+[16:25:36.749] [SEVERE ] updating elapsed time to 12778
+[16:25:36.765] [SEVERE ] updating elapsed time to 12794
+[16:25:36.781] [SEVERE ] updating elapsed time to 12810
+[16:25:36.797] [SEVERE ] updating elapsed time to 12826
+[16:25:36.813] [SEVERE ] updating elapsed time to 12842
+[16:25:36.829] [SEVERE ] updating elapsed time to 12858
+[16:25:36.845] [SEVERE ] updating elapsed time to 12874
+[16:25:36.861] [SEVERE ] updating elapsed time to 12890
+[16:25:36.877] [SEVERE ] updating elapsed time to 12906
+[16:25:36.893] [SEVERE ] updating elapsed time to 12922
+[16:25:36.909] [SEVERE ] updating elapsed time to 12938
+[16:25:36.924] [SEVERE ] updating elapsed time to 12953
+[16:25:36.939] [SEVERE ] updating elapsed time to 12968
+[16:25:36.955] [SEVERE ] updating elapsed time to 12984
+[16:25:36.970] [SEVERE ] updating elapsed time to 12999
+[16:25:36.985] [SEVERE ] updating elapsed time to 13014
+[16:25:37.001] [SEVERE ] updating elapsed time to 13030
+[16:25:37.016] [SEVERE ] updating elapsed time to 13045
+[16:25:37.032] [SEVERE ] updating elapsed time to 13061
+[16:25:37.048] [SEVERE ] updating elapsed time to 13077
+[16:25:37.063] [SEVERE ] updating elapsed time to 13092
+[16:25:37.079] [SEVERE ] updating elapsed time to 13108
+[16:25:37.094] [SEVERE ] updating elapsed time to 13123
+[16:25:37.110] [SEVERE ] updating elapsed time to 13139
+[16:25:37.126] [SEVERE ] updating elapsed time to 13155
+[16:25:37.142] [SEVERE ] updating elapsed time to 13171
+[16:25:37.158] [SEVERE ] updating elapsed time to 13187
+[16:25:37.174] [SEVERE ] updating elapsed time to 13203
+[16:25:37.190] [SEVERE ] updating elapsed time to 13219
+[16:25:37.206] [SEVERE ] updating elapsed time to 13235
+[16:25:37.222] [SEVERE ] updating elapsed time to 13251
+[16:25:37.245] [SEVERE ] updating elapsed time to 13274
+[16:25:37.272] [SEVERE ] updating elapsed time to 13301
+[16:25:37.289] [SEVERE ] updating elapsed time to 13318
+[16:25:37.308] [SEVERE ] updating elapsed time to 13337
+[16:25:37.348] [SEVERE ] updating elapsed time to 13377
+[16:25:37.362] [SEVERE ] updating elapsed time to 13391
+[16:25:37.378] [SEVERE ] updating elapsed time to 13407
+[16:25:37.393] [SEVERE ] updating elapsed time to 13422
+[16:25:37.409] [SEVERE ] updating elapsed time to 13438
+[16:25:37.425] [SEVERE ] updating elapsed time to 13454
+[16:25:37.440] [SEVERE ] updating elapsed time to 13469
+[16:25:37.455] [SEVERE ] updating elapsed time to 13484
+[16:25:37.471] [SEVERE ] updating elapsed time to 13500
+[16:25:37.487] [SEVERE ] updating elapsed time to 13516
+[16:25:37.503] [SEVERE ] updating elapsed time to 13532
+[16:25:37.519] [SEVERE ] updating elapsed time to 13548
+[16:25:37.535] [SEVERE ] updating elapsed time to 13564
+[16:25:37.551] [SEVERE ] updating elapsed time to 13580
+[16:25:37.567] [SEVERE ] updating elapsed time to 13596
+[16:25:37.582] [SEVERE ] updating elapsed time to 13611
+[16:25:38.314] [SEVERE ] updating elapsed time to 14343
+[16:25:38.560] [SEVERE ] updating elapsed time to 14589
+[16:25:38.888] [SEVERE ] updating elapsed time to 14917
+[16:25:38.995] [SEVERE ] updating elapsed time to 15024
+[16:25:39.042] [SEVERE ] updating elapsed time to 15071
+[16:25:39.059] [SEVERE ] updating elapsed time to 15088
+[16:25:39.093] [SEVERE ] updating elapsed time to 15122
+[16:25:39.121] [SEVERE ] updating elapsed time to 15150
+[16:25:39.136] [SEVERE ] updating elapsed time to 15165
+[16:25:39.152] [SEVERE ] updating elapsed time to 15181
+[16:25:39.177] [SEVERE ] updating elapsed time to 15206
+[16:25:39.209] [SEVERE ] updating elapsed time to 15238
+[16:25:39.233] [SEVERE ] updating elapsed time to 15262
+[16:25:39.245] [SEVERE ] updating elapsed time to 15274
+[16:25:39.265] [SEVERE ] updating elapsed time to 15294
+[16:25:39.290] [SEVERE ] updating elapsed time to 15319
+[16:25:39.306] [SEVERE ] updating elapsed time to 15335
+[16:25:39.322] [SEVERE ] updating elapsed time to 15351
+[16:25:39.342] [SEVERE ] updating elapsed time to 15371
+[16:25:39.354] [SEVERE ] updating elapsed time to 15383
+[16:25:39.370] [SEVERE ] updating elapsed time to 15399
+[16:25:39.386] [SEVERE ] updating elapsed time to 15415
+[16:25:39.402] [SEVERE ] updating elapsed time to 15431
+[16:25:39.420] [SEVERE ] updating elapsed time to 15449
+[16:25:39.450] [SEVERE ] updating elapsed time to 15479
+[16:25:39.464] [SEVERE ] updating elapsed time to 15493
+[16:25:39.480] [SEVERE ] updating elapsed time to 15509
+[16:25:39.502] [SEVERE ] updating elapsed time to 15531
+[16:25:39.542] [SEVERE ] updating elapsed time to 15571
+[16:25:39.576] [SEVERE ] updating elapsed time to 15605
+[16:25:39.594] [SEVERE ] updating elapsed time to 15623
+[16:25:39.610] [SEVERE ] updating elapsed time to 15639
+[16:25:39.627] [SEVERE ] updating elapsed time to 15656
+[16:25:39.637] [SEVERE ] updating elapsed time to 15666
+[16:25:39.652] [SEVERE ] updating elapsed time to 15681
+[16:25:39.669] [SEVERE ] updating elapsed time to 15698
+[16:25:39.683] [SEVERE ] updating elapsed time to 15712
+[16:25:39.699] [SEVERE ] updating elapsed time to 15728
+[16:25:39.715] [SEVERE ] updating elapsed time to 15744
+[16:25:39.731] [SEVERE ] updating elapsed time to 15760
+[16:25:39.747] [SEVERE ] updating elapsed time to 15776
+[16:25:39.763] [SEVERE ] updating elapsed time to 15792
+[16:25:39.779] [SEVERE ] updating elapsed time to 15808
+[16:25:39.795] [SEVERE ] updating elapsed time to 15824
+[16:25:39.811] [SEVERE ] updating elapsed time to 15840
+[16:25:39.827] [SEVERE ] updating elapsed time to 15856
+[16:25:39.843] [SEVERE ] updating elapsed time to 15872
+[16:25:39.859] [SEVERE ] updating elapsed time to 15888
+[16:25:39.876] [SEVERE ] updating elapsed time to 15905
+[16:25:39.891] [SEVERE ] updating elapsed time to 15920
+[16:25:39.907] [SEVERE ] updating elapsed time to 15936
+[16:25:39.928] [SEVERE ] updating elapsed time to 15957
+[16:25:39.954] [SEVERE ] updating elapsed time to 15983
+[16:25:39.970] [SEVERE ] updating elapsed time to 15999
+[16:25:39.985] [SEVERE ] updating elapsed time to 16014
+[16:25:40.001] [SEVERE ] updating elapsed time to 16030
+[16:25:40.015] [SEVERE ] updating elapsed time to 16044
+[16:25:40.030] [SEVERE ] updating elapsed time to 16059
+[16:25:40.046] [SEVERE ] updating elapsed time to 16075
+[16:25:40.062] [SEVERE ] updating elapsed time to 16091
+[16:25:40.078] [SEVERE ] updating elapsed time to 16107
+[16:25:40.094] [SEVERE ] updating elapsed time to 16123
+[16:25:40.110] [SEVERE ] updating elapsed time to 16139
+[16:25:40.125] [SEVERE ] updating elapsed time to 16154
+[16:25:40.140] [SEVERE ] updating elapsed time to 16169
+[16:25:40.155] [SEVERE ] updating elapsed time to 16184
+[16:25:40.171] [SEVERE ] updating elapsed time to 16200
+[16:25:40.186] [SEVERE ] updating elapsed time to 16215
+[16:25:40.202] [SEVERE ] updating elapsed time to 16231
+[16:25:40.218] [SEVERE ] updating elapsed time to 16247
+[16:25:40.234] [SEVERE ] updating elapsed time to 16263
+[16:25:40.250] [SEVERE ] updating elapsed time to 16279
+[16:25:40.266] [SEVERE ] updating elapsed time to 16295
+[16:25:40.282] [SEVERE ] updating elapsed time to 16311
+[16:25:40.298] [SEVERE ] updating elapsed time to 16327
+[16:25:40.314] [SEVERE ] updating elapsed time to 16343
+[16:25:40.330] [SEVERE ] updating elapsed time to 16359
+[16:25:40.346] [SEVERE ] updating elapsed time to 16375
+[16:25:40.362] [SEVERE ] updating elapsed time to 16391
+[16:25:40.378] [SEVERE ] updating elapsed time to 16407
+[16:25:40.393] [SEVERE ] updating elapsed time to 16422
+[16:25:40.409] [SEVERE ] updating elapsed time to 16438
+[16:25:40.425] [SEVERE ] updating elapsed time to 16454
+[16:25:40.440] [SEVERE ] updating elapsed time to 16469
+[16:25:40.455] [SEVERE ] updating elapsed time to 16484
+[16:25:40.471] [SEVERE ] updating elapsed time to 16500
+[16:25:40.487] [SEVERE ] updating elapsed time to 16516
+[16:25:40.503] [SEVERE ] updating elapsed time to 16532
+[16:25:40.519] [SEVERE ] updating elapsed time to 16548
+[16:25:40.535] [SEVERE ] updating elapsed time to 16564
+[16:25:40.551] [SEVERE ] updating elapsed time to 16580
+[16:25:40.567] [SEVERE ] updating elapsed time to 16596
+[16:25:40.583] [SEVERE ] updating elapsed time to 16612
+[16:25:40.602] [SEVERE ] updating elapsed time to 16631
+[16:25:40.615] [SEVERE ] updating elapsed time to 16644
+[16:25:40.631] [SEVERE ] updating elapsed time to 16660
+[16:25:40.647] [SEVERE ] updating elapsed time to 16676
+[16:25:40.663] [SEVERE ] updating elapsed time to 16692
+[16:25:40.679] [SEVERE ] updating elapsed time to 16708
+[16:25:40.695] [SEVERE ] updating elapsed time to 16724
+[16:25:40.711] [SEVERE ] updating elapsed time to 16740
+[16:25:40.727] [SEVERE ] updating elapsed time to 16756
+[16:25:40.742] [SEVERE ] updating elapsed time to 16771
+[16:25:40.756] [SEVERE ] updating elapsed time to 16785
+[16:25:40.771] [SEVERE ] updating elapsed time to 16800
+[16:25:40.787] [SEVERE ] updating elapsed time to 16816
+[16:25:40.802] [SEVERE ] updating elapsed time to 16831
+[16:25:40.818] [SEVERE ] updating elapsed time to 16847
+[16:25:40.834] [SEVERE ] updating elapsed time to 16863
+[16:25:40.850] [SEVERE ] updating elapsed time to 16879
+[16:25:40.866] [SEVERE ] updating elapsed time to 16895
+[16:25:40.882] [SEVERE ] updating elapsed time to 16911
+[16:25:40.898] [SEVERE ] updating elapsed time to 16927
+[16:25:40.915] [SEVERE ] updating elapsed time to 16944
+[16:25:40.934] [SEVERE ] updating elapsed time to 16963
+[16:25:40.946] [SEVERE ] updating elapsed time to 16975
+[16:25:40.962] [SEVERE ] updating elapsed time to 16991
+[16:25:40.978] [SEVERE ] updating elapsed time to 17007
+[16:25:40.994] [SEVERE ] updating elapsed time to 17023
+[16:25:41.010] [SEVERE ] updating elapsed time to 17039
+[16:25:41.026] [SEVERE ] updating elapsed time to 17055
+[16:25:41.042] [SEVERE ] updating elapsed time to 17071
+[16:25:41.058] [SEVERE ] updating elapsed time to 17087
+[16:25:41.074] [SEVERE ] updating elapsed time to 17103
+[16:25:41.090] [SEVERE ] updating elapsed time to 17119
+[16:25:41.105] [SEVERE ] updating elapsed time to 17134
+[16:25:41.121] [SEVERE ] updating elapsed time to 17150
+[16:25:41.135] [SEVERE ] updating elapsed time to 17164
+[16:25:41.150] [SEVERE ] updating elapsed time to 17179
+[16:25:41.165] [SEVERE ] updating elapsed time to 17194
+[16:25:41.181] [SEVERE ] updating elapsed time to 17210
+[16:25:41.197] [SEVERE ] updating elapsed time to 17226
+[16:25:41.213] [SEVERE ] updating elapsed time to 17242
+[16:25:41.229] [SEVERE ] updating elapsed time to 17258
+[16:25:41.245] [SEVERE ] updating elapsed time to 17274
+[16:25:41.261] [SEVERE ] updating elapsed time to 17290
+[16:25:41.277] [SEVERE ] updating elapsed time to 17306
+[16:25:41.293] [SEVERE ] updating elapsed time to 17322
+[16:25:41.309] [SEVERE ] updating elapsed time to 17338
+[16:25:41.325] [SEVERE ] updating elapsed time to 17354
+[16:25:41.341] [SEVERE ] updating elapsed time to 17370
+[16:25:41.357] [SEVERE ] updating elapsed time to 17386
+[16:25:41.373] [SEVERE ] updating elapsed time to 17402
+[16:25:41.389] [SEVERE ] updating elapsed time to 17418
+[16:25:41.405] [SEVERE ] updating elapsed time to 17434
+[16:25:41.421] [SEVERE ] updating elapsed time to 17450
+[16:25:41.437] [SEVERE ] updating elapsed time to 17466
+[16:25:41.453] [SEVERE ] updating elapsed time to 17482
+[16:25:41.469] [SEVERE ] updating elapsed time to 17498
+[16:25:41.483] [SEVERE ] updating elapsed time to 17512
+[16:25:41.499] [SEVERE ] updating elapsed time to 17528
+[16:25:41.514] [SEVERE ] updating elapsed time to 17543
+[16:25:41.530] [SEVERE ] updating elapsed time to 17559
+[16:25:41.546] [SEVERE ] updating elapsed time to 17575
+[16:25:41.562] [SEVERE ] updating elapsed time to 17591
+[16:25:41.578] [SEVERE ] updating elapsed time to 17607
+[16:25:41.594] [SEVERE ] updating elapsed time to 17623
+[16:25:41.610] [SEVERE ] updating elapsed time to 17639
+[16:25:41.626] [SEVERE ] updating elapsed time to 17655
+[16:25:41.642] [SEVERE ] updating elapsed time to 17671
+[16:25:41.658] [SEVERE ] updating elapsed time to 17687
+[16:25:41.674] [SEVERE ] updating elapsed time to 17703
+[16:25:41.690] [SEVERE ] updating elapsed time to 17719
+[16:25:41.706] [SEVERE ] updating elapsed time to 17735
+[16:25:41.722] [SEVERE ] updating elapsed time to 17751
+[16:25:41.738] [SEVERE ] updating elapsed time to 17767
+[16:25:41.754] [SEVERE ] updating elapsed time to 17783
+[16:25:41.770] [SEVERE ] updating elapsed time to 17799
+[16:25:41.786] [SEVERE ] updating elapsed time to 17815
+[16:25:41.802] [SEVERE ] updating elapsed time to 17831
+[16:25:41.818] [SEVERE ] updating elapsed time to 17847
+[16:25:41.834] [SEVERE ] updating elapsed time to 17863
+[16:25:41.850] [SEVERE ] updating elapsed time to 17879
+[16:25:41.866] [SEVERE ] updating elapsed time to 17895
+[16:25:41.881] [SEVERE ] updating elapsed time to 17910
+[16:25:41.898] [SEVERE ] updating elapsed time to 17927
+[16:25:41.913] [SEVERE ] updating elapsed time to 17942
+[16:25:41.932] [SEVERE ] updating elapsed time to 17961
+[16:25:41.945] [SEVERE ] updating elapsed time to 17974
+[16:25:41.961] [SEVERE ] updating elapsed time to 17990
+[16:25:41.977] [SEVERE ] updating elapsed time to 18006
+[16:25:41.993] [SEVERE ] updating elapsed time to 18022
+[16:25:42.009] [SEVERE ] updating elapsed time to 18038
+[16:25:42.024] [SEVERE ] updating elapsed time to 18053
+[16:25:42.039] [SEVERE ] updating elapsed time to 18068
+[16:25:42.055] [SEVERE ] updating elapsed time to 18084
+[16:25:42.071] [SEVERE ] updating elapsed time to 18100
+[16:25:42.087] [SEVERE ] updating elapsed time to 18116
+[16:25:42.103] [SEVERE ] updating elapsed time to 18132
+[16:25:42.119] [SEVERE ] updating elapsed time to 18148
+[16:25:42.135] [SEVERE ] updating elapsed time to 18164
+[16:25:42.151] [SEVERE ] updating elapsed time to 18180
+[16:25:42.167] [SEVERE ] updating elapsed time to 18196
+[16:25:42.183] [SEVERE ] updating elapsed time to 18212
+[16:25:42.199] [SEVERE ] updating elapsed time to 18228
+[16:25:42.215] [SEVERE ] updating elapsed time to 18244
+[16:25:42.230] [SEVERE ] updating elapsed time to 18259
+[16:25:42.245] [SEVERE ] updating elapsed time to 18274
+[16:25:42.259] [SEVERE ] updating elapsed time to 18288
+[16:25:42.274] [SEVERE ] updating elapsed time to 18303
+[16:25:42.290] [SEVERE ] updating elapsed time to 18319
+[16:25:42.306] [SEVERE ] updating elapsed time to 18335
+[16:25:42.322] [SEVERE ] updating elapsed time to 18351
+[16:25:42.338] [SEVERE ] updating elapsed time to 18367
+[16:25:42.354] [SEVERE ] updating elapsed time to 18383
+[16:25:42.370] [SEVERE ] updating elapsed time to 18399
+[16:25:42.386] [SEVERE ] updating elapsed time to 18415
+[16:25:42.402] [SEVERE ] updating elapsed time to 18431
+[16:25:42.418] [SEVERE ] updating elapsed time to 18447
+[16:25:42.434] [SEVERE ] updating elapsed time to 18463
+[16:25:42.450] [SEVERE ] updating elapsed time to 18479
+[16:25:42.466] [SEVERE ] updating elapsed time to 18495
+[16:25:42.482] [SEVERE ] updating elapsed time to 18511
+[16:25:42.498] [SEVERE ] updating elapsed time to 18527
+[16:25:42.514] [SEVERE ] updating elapsed time to 18543
+[16:25:42.530] [SEVERE ] updating elapsed time to 18559
+[16:25:42.546] [SEVERE ] updating elapsed time to 18575
+[16:25:42.562] [SEVERE ] updating elapsed time to 18591
+[16:25:42.578] [SEVERE ] updating elapsed time to 18607
+[16:25:42.594] [SEVERE ] updating elapsed time to 18623
+[16:25:42.610] [SEVERE ] updating elapsed time to 18639
+[16:25:42.625] [SEVERE ] updating elapsed time to 18654
+[16:25:42.641] [SEVERE ] updating elapsed time to 18670
+[16:25:42.657] [SEVERE ] updating elapsed time to 18686
+[16:25:42.673] [SEVERE ] updating elapsed time to 18702
+[16:25:42.689] [SEVERE ] updating elapsed time to 18718
+[16:25:42.705] [SEVERE ] updating elapsed time to 18734
+[16:25:42.721] [SEVERE ] updating elapsed time to 18750
+[16:25:42.737] [SEVERE ] updating elapsed time to 18766
+[16:25:42.753] [SEVERE ] updating elapsed time to 18782
+[16:25:42.769] [SEVERE ] updating elapsed time to 18798
+[16:25:42.785] [SEVERE ] updating elapsed time to 18814
+[16:25:42.802] [SEVERE ] updating elapsed time to 18831
+[16:25:42.817] [SEVERE ] updating elapsed time to 18846
+[16:25:42.833] [SEVERE ] updating elapsed time to 18862
+[16:25:42.849] [SEVERE ] updating elapsed time to 18878
+[16:25:42.865] [SEVERE ] updating elapsed time to 18894
+[16:25:42.880] [SEVERE ] updating elapsed time to 18909
+[16:25:42.896] [SEVERE ] updating elapsed time to 18925
+[16:25:42.911] [SEVERE ] updating elapsed time to 18940
+[16:25:42.930] [SEVERE ] updating elapsed time to 18959
+[16:25:42.943] [SEVERE ] updating elapsed time to 18972
+[16:25:42.958] [SEVERE ] updating elapsed time to 18987
+[16:25:42.975] [SEVERE ] updating elapsed time to 19004
+[16:25:42.988] [SEVERE ] updating elapsed time to 19017
+[16:25:43.002] [SEVERE ] updating elapsed time to 19031
+[16:25:43.018] [SEVERE ] updating elapsed time to 19047
+[16:25:43.033] [SEVERE ] updating elapsed time to 19062
+[16:25:43.049] [SEVERE ] updating elapsed time to 19078
+[16:25:43.065] [SEVERE ] updating elapsed time to 19094
+[16:25:43.081] [SEVERE ] updating elapsed time to 19110
+[16:25:43.097] [SEVERE ] updating elapsed time to 19126
+[16:25:43.113] [SEVERE ] updating elapsed time to 19142
+[16:25:43.130] [SEVERE ] updating elapsed time to 19159
+[16:25:43.146] [SEVERE ] updating elapsed time to 19175
+[16:25:43.163] [SEVERE ] updating elapsed time to 19192
+[16:25:43.177] [SEVERE ] updating elapsed time to 19206
+[16:25:43.193] [SEVERE ] updating elapsed time to 19222
+[16:25:43.209] [SEVERE ] updating elapsed time to 19238
+[16:25:43.225] [SEVERE ] updating elapsed time to 19254
+[16:25:43.241] [SEVERE ] updating elapsed time to 19270
+[16:25:43.257] [SEVERE ] updating elapsed time to 19286
+[16:25:43.273] [SEVERE ] updating elapsed time to 19302
+[16:25:43.289] [SEVERE ] updating elapsed time to 19318
+[16:25:43.305] [SEVERE ] updating elapsed time to 19334
+[16:25:43.321] [SEVERE ] updating elapsed time to 19350
+[16:25:43.337] [SEVERE ] updating elapsed time to 19366
+[16:25:43.353] [SEVERE ] updating elapsed time to 19382
+[16:25:43.369] [SEVERE ] updating elapsed time to 19398
+[16:25:43.384] [SEVERE ] updating elapsed time to 19413
+[16:25:43.400] [SEVERE ] updating elapsed time to 19429
+[16:25:43.416] [SEVERE ] updating elapsed time to 19445
+[16:25:43.435] [SEVERE ] updating elapsed time to 19464
+[16:25:43.448] [SEVERE ] updating elapsed time to 19477
+[16:25:43.464] [SEVERE ] updating elapsed time to 19493
+[16:25:43.480] [SEVERE ] updating elapsed time to 19509
+[16:25:43.496] [SEVERE ] updating elapsed time to 19525
+[16:25:43.512] [SEVERE ] updating elapsed time to 19541
+[16:25:43.528] [SEVERE ] updating elapsed time to 19557
+[16:25:43.544] [SEVERE ] updating elapsed time to 19573
+[16:25:43.560] [SEVERE ] updating elapsed time to 19589
+[16:25:43.576] [SEVERE ] updating elapsed time to 19605
+[16:25:43.592] [SEVERE ] updating elapsed time to 19621
+[16:25:43.611] [SEVERE ] updating elapsed time to 19640
+[16:25:43.624] [SEVERE ] updating elapsed time to 19653
+[16:25:43.640] [SEVERE ] updating elapsed time to 19669
+[16:25:43.656] [SEVERE ] updating elapsed time to 19685
+[16:25:43.672] [SEVERE ] updating elapsed time to 19701
+[16:25:43.688] [SEVERE ] updating elapsed time to 19717
+[16:25:43.704] [SEVERE ] updating elapsed time to 19733
+[16:25:43.720] [SEVERE ] updating elapsed time to 19749
+[16:25:43.737] [SEVERE ] updating elapsed time to 19766
+[16:25:43.751] [SEVERE ] updating elapsed time to 19780
+[16:25:43.767] [SEVERE ] updating elapsed time to 19796
+[16:25:43.783] [SEVERE ] updating elapsed time to 19812
+[16:25:43.798] [SEVERE ] updating elapsed time to 19827
+[16:25:43.813] [SEVERE ] updating elapsed time to 19842
+[16:25:43.829] [SEVERE ] updating elapsed time to 19858
+[16:25:43.845] [SEVERE ] updating elapsed time to 19874
+[16:25:43.861] [SEVERE ] updating elapsed time to 19890
+[16:25:43.877] [SEVERE ] updating elapsed time to 19906
+[16:25:43.893] [SEVERE ] updating elapsed time to 19922
+[16:25:43.909] [SEVERE ] updating elapsed time to 19938
+[16:25:43.925] [SEVERE ] updating elapsed time to 19954
+[16:25:43.955] [SEVERE ] updating elapsed time to 19984
+[16:25:43.971] [SEVERE ] updating elapsed time to 20000
+[16:25:43.987] [SEVERE ] updating elapsed time to 20016
+[16:25:44.003] [SEVERE ] updating elapsed time to 20032
+[16:25:44.019] [SEVERE ] updating elapsed time to 20048
+[16:25:44.035] [SEVERE ] updating elapsed time to 20064
+[16:25:44.051] [SEVERE ] updating elapsed time to 20080
+[16:25:44.067] [SEVERE ] updating elapsed time to 20096
+[16:25:44.083] [SEVERE ] updating elapsed time to 20112
+[16:25:44.099] [SEVERE ] updating elapsed time to 20128
+[16:25:44.115] [SEVERE ] updating elapsed time to 20144
+[16:25:44.130] [SEVERE ] updating elapsed time to 20159
+[16:25:44.146] [SEVERE ] updating elapsed time to 20175
+[16:25:44.163] [SEVERE ] updating elapsed time to 20192
+[16:25:44.178] [SEVERE ] updating elapsed time to 20207
+[16:25:44.195] [SEVERE ] updating elapsed time to 20224
+[16:25:44.209] [SEVERE ] updating elapsed time to 20238
+[16:25:44.225] [SEVERE ] updating elapsed time to 20254
+[16:25:44.240] [SEVERE ] updating elapsed time to 20269
+[16:25:44.257] [SEVERE ] updating elapsed time to 20286
+[16:25:44.273] [SEVERE ] updating elapsed time to 20302
+[16:25:44.289] [SEVERE ] updating elapsed time to 20318
+[16:25:44.305] [SEVERE ] updating elapsed time to 20334
+[16:25:44.320] [SEVERE ] updating elapsed time to 20349
+[16:25:44.336] [SEVERE ] updating elapsed time to 20365
+[16:25:44.352] [SEVERE ] updating elapsed time to 20381
+[16:25:44.368] [SEVERE ] updating elapsed time to 20397
+[16:25:44.384] [SEVERE ] updating elapsed time to 20413
+[16:25:44.400] [SEVERE ] updating elapsed time to 20429
+[16:25:44.416] [SEVERE ] updating elapsed time to 20445
+[16:25:44.442] [SEVERE ] updating elapsed time to 20471
+[16:25:44.464] [SEVERE ] updating elapsed time to 20493
+[16:25:44.480] [SEVERE ] updating elapsed time to 20509
+[16:25:44.495] [SEVERE ] updating elapsed time to 20524
+[16:25:44.511] [SEVERE ] updating elapsed time to 20540
+[16:25:44.527] [SEVERE ] updating elapsed time to 20556
+[16:25:44.543] [SEVERE ] updating elapsed time to 20572
+[16:25:44.559] [SEVERE ] updating elapsed time to 20588
+[16:25:44.575] [SEVERE ] updating elapsed time to 20604
+[16:25:44.591] [SEVERE ] updating elapsed time to 20620
+[16:25:44.610] [SEVERE ] updating elapsed time to 20639
+[16:25:44.623] [SEVERE ] updating elapsed time to 20652
+[16:25:44.640] [SEVERE ] updating elapsed time to 20669
+[16:25:44.655] [SEVERE ] updating elapsed time to 20684
+[16:25:44.671] [SEVERE ] updating elapsed time to 20700
+[16:25:44.687] [SEVERE ] updating elapsed time to 20716
+[16:25:44.703] [SEVERE ] updating elapsed time to 20732
+[16:25:44.719] [SEVERE ] updating elapsed time to 20748
+[16:25:44.735] [SEVERE ] updating elapsed time to 20764
+[16:25:44.751] [SEVERE ] updating elapsed time to 20780
+[16:25:44.767] [SEVERE ] updating elapsed time to 20796
+[16:25:44.783] [SEVERE ] updating elapsed time to 20812
+[16:25:44.799] [SEVERE ] updating elapsed time to 20828
+[16:25:44.815] [SEVERE ] updating elapsed time to 20844
+[16:25:44.831] [SEVERE ] updating elapsed time to 20860
+[16:25:44.847] [SEVERE ] updating elapsed time to 20876
+[16:25:44.864] [SEVERE ] updating elapsed time to 20893
+[16:25:44.878] [SEVERE ] updating elapsed time to 20907
+[16:25:44.895] [SEVERE ] updating elapsed time to 20924
+[16:25:44.910] [SEVERE ] updating elapsed time to 20939
+[16:25:44.927] [SEVERE ] updating elapsed time to 20956
+[16:25:44.945] [SEVERE ] updating elapsed time to 20974
+[16:25:44.957] [SEVERE ] updating elapsed time to 20986
+[16:25:44.972] [SEVERE ] updating elapsed time to 21001
+[16:25:44.988] [SEVERE ] updating elapsed time to 21017
+[16:25:45.002] [SEVERE ] updating elapsed time to 21031
+[16:25:45.018] [SEVERE ] updating elapsed time to 21047
+[16:25:45.034] [SEVERE ] updating elapsed time to 21063
+[16:25:45.051] [SEVERE ] updating elapsed time to 21080
+[16:25:45.066] [SEVERE ] updating elapsed time to 21095
+[16:25:45.082] [SEVERE ] updating elapsed time to 21111
+[16:25:45.098] [SEVERE ] updating elapsed time to 21127
+[16:25:45.114] [SEVERE ] updating elapsed time to 21143
+[16:25:45.130] [SEVERE ] updating elapsed time to 21159
+[16:25:45.146] [SEVERE ] updating elapsed time to 21175
+[16:25:45.164] [SEVERE ] updating elapsed time to 21193
+[16:25:45.177] [SEVERE ] updating elapsed time to 21206
+[16:25:45.192] [SEVERE ] updating elapsed time to 21221
+[16:25:45.208] [SEVERE ] updating elapsed time to 21237
+[16:25:45.224] [SEVERE ] updating elapsed time to 21253
+[16:25:45.240] [SEVERE ] updating elapsed time to 21269
+[16:25:45.255] [SEVERE ] updating elapsed time to 21284
+[16:25:45.271] [SEVERE ] updating elapsed time to 21300
+[16:25:45.287] [SEVERE ] updating elapsed time to 21316
+[16:25:45.303] [SEVERE ] updating elapsed time to 21332
+[16:25:45.319] [SEVERE ] updating elapsed time to 21348
+[16:25:45.335] [SEVERE ] updating elapsed time to 21364
+[16:25:45.351] [SEVERE ] updating elapsed time to 21380
+[16:25:45.367] [SEVERE ] updating elapsed time to 21396
+[16:25:45.383] [SEVERE ] updating elapsed time to 21412
+[16:25:45.399] [SEVERE ] updating elapsed time to 21428
+[16:25:45.415] [SEVERE ] updating elapsed time to 21444
+[16:25:45.431] [SEVERE ] updating elapsed time to 21460
+[16:25:45.447] [SEVERE ] updating elapsed time to 21476
+[16:25:45.463] [SEVERE ] updating elapsed time to 21492
+[16:25:45.479] [SEVERE ] updating elapsed time to 21508
+[16:25:45.495] [SEVERE ] updating elapsed time to 21524
+[16:25:45.511] [SEVERE ] updating elapsed time to 21540
+[16:25:45.527] [SEVERE ] updating elapsed time to 21556
+[16:25:45.543] [SEVERE ] updating elapsed time to 21572
+[16:25:45.559] [SEVERE ] updating elapsed time to 21588
+[16:25:45.575] [SEVERE ] updating elapsed time to 21604
+[16:25:45.591] [SEVERE ] updating elapsed time to 21620
+[16:25:45.607] [SEVERE ] updating elapsed time to 21636
+[16:25:45.622] [SEVERE ] updating elapsed time to 21651
+[16:25:45.638] [SEVERE ] updating elapsed time to 21667
+[16:25:45.654] [SEVERE ] updating elapsed time to 21683
+[16:25:45.670] [SEVERE ] updating elapsed time to 21699
+[16:25:45.686] [SEVERE ] updating elapsed time to 21715
+[16:25:45.702] [SEVERE ] updating elapsed time to 21731
+[16:25:45.718] [SEVERE ] updating elapsed time to 21747
+[16:25:45.734] [SEVERE ] updating elapsed time to 21763
+[16:25:45.750] [SEVERE ] updating elapsed time to 21779
+[16:25:45.765] [SEVERE ] updating elapsed time to 21794
+[16:25:45.780] [SEVERE ] updating elapsed time to 21809
+[16:25:45.796] [SEVERE ] updating elapsed time to 21825
+[16:25:45.812] [SEVERE ] updating elapsed time to 21841
+[16:25:45.828] [SEVERE ] updating elapsed time to 21857
+[16:25:45.844] [SEVERE ] updating elapsed time to 21873
+[16:25:45.860] [SEVERE ] updating elapsed time to 21889
+[16:25:45.876] [SEVERE ] updating elapsed time to 21905
+[16:25:45.892] [SEVERE ] updating elapsed time to 21921
+[16:25:45.908] [SEVERE ] updating elapsed time to 21937
+[16:25:45.924] [SEVERE ] updating elapsed time to 21953
+[16:25:45.940] [SEVERE ] updating elapsed time to 21969
+[16:25:45.956] [SEVERE ] updating elapsed time to 21985
+[16:25:45.971] [SEVERE ] updating elapsed time to 22000
+[16:25:45.986] [SEVERE ] updating elapsed time to 22015
+[16:25:46.001] [SEVERE ] updating elapsed time to 22030
+[16:25:46.017] [SEVERE ] updating elapsed time to 22046
+[16:25:46.033] [SEVERE ] updating elapsed time to 22062
+[16:25:46.049] [SEVERE ] updating elapsed time to 22078
+[16:25:46.066] [SEVERE ] updating elapsed time to 22095
+[16:25:46.081] [SEVERE ] updating elapsed time to 22110
+[16:25:46.096] [SEVERE ] updating elapsed time to 22125
+[16:25:46.112] [SEVERE ] updating elapsed time to 22141
+[16:25:46.127] [SEVERE ] updating elapsed time to 22156
+[16:25:46.143] [SEVERE ] updating elapsed time to 22172
+[16:25:46.159] [SEVERE ] updating elapsed time to 22188
+[16:25:46.175] [SEVERE ] updating elapsed time to 22204
+[16:25:46.191] [SEVERE ] updating elapsed time to 22220
+[16:25:46.207] [SEVERE ] updating elapsed time to 22236
+[16:25:46.223] [SEVERE ] updating elapsed time to 22252
+[16:25:46.239] [SEVERE ] updating elapsed time to 22268
+[16:25:46.255] [SEVERE ] updating elapsed time to 22284
+[16:25:46.271] [SEVERE ] updating elapsed time to 22300
+[16:25:46.287] [SEVERE ] updating elapsed time to 22316
+[16:25:46.303] [SEVERE ] updating elapsed time to 22332
+[16:25:46.319] [SEVERE ] updating elapsed time to 22348
+[16:25:46.335] [SEVERE ] updating elapsed time to 22364
+[16:25:46.351] [SEVERE ] updating elapsed time to 22380
+[16:25:46.366] [SEVERE ] updating elapsed time to 22395
+[16:25:46.382] [SEVERE ] updating elapsed time to 22411
+[16:25:46.398] [SEVERE ] updating elapsed time to 22427
+[16:25:46.414] [SEVERE ] updating elapsed time to 22443
+[16:25:46.430] [SEVERE ] updating elapsed time to 22459
+[16:25:46.446] [SEVERE ] updating elapsed time to 22475
+[16:25:46.462] [SEVERE ] updating elapsed time to 22491
+[16:25:46.478] [SEVERE ] updating elapsed time to 22507
+[16:25:46.494] [SEVERE ] updating elapsed time to 22523
+[16:25:46.510] [SEVERE ] updating elapsed time to 22539
+[16:25:46.526] [SEVERE ] updating elapsed time to 22555
+[16:25:46.542] [SEVERE ] updating elapsed time to 22571
+[16:25:46.558] [SEVERE ] updating elapsed time to 22587
+[16:25:46.574] [SEVERE ] updating elapsed time to 22603
+[16:25:46.590] [SEVERE ] updating elapsed time to 22619
+[16:25:46.606] [SEVERE ] updating elapsed time to 22635
+[16:25:46.622] [SEVERE ] updating elapsed time to 22651
+[16:25:46.638] [SEVERE ] updating elapsed time to 22667
+[16:25:46.654] [SEVERE ] updating elapsed time to 22683
+[16:25:46.670] [SEVERE ] updating elapsed time to 22699
+[16:25:46.685] [SEVERE ] updating elapsed time to 22714
+[16:25:46.701] [SEVERE ] updating elapsed time to 22730
+[16:25:46.716] [SEVERE ] updating elapsed time to 22745
+[16:25:46.732] [SEVERE ] updating elapsed time to 22761
+[16:25:46.747] [SEVERE ] updating elapsed time to 22776
+[16:25:46.763] [SEVERE ] updating elapsed time to 22792
+[16:25:46.779] [SEVERE ] updating elapsed time to 22808
+[16:25:46.795] [SEVERE ] updating elapsed time to 22824
+[16:25:46.811] [SEVERE ] updating elapsed time to 22840
+[16:25:46.827] [SEVERE ] updating elapsed time to 22856
+[16:25:46.843] [SEVERE ] updating elapsed time to 22872
+[16:25:46.859] [SEVERE ] updating elapsed time to 22888
+[16:25:46.875] [SEVERE ] updating elapsed time to 22904
+[16:25:46.891] [SEVERE ] updating elapsed time to 22920
+[16:25:46.907] [SEVERE ] updating elapsed time to 22936
+[16:25:46.923] [SEVERE ] updating elapsed time to 22952
+[16:25:46.939] [SEVERE ] updating elapsed time to 22968
+[16:25:46.955] [SEVERE ] updating elapsed time to 22984
+[16:25:46.971] [SEVERE ] updating elapsed time to 23000
+[16:25:46.987] [SEVERE ] updating elapsed time to 23016
+[16:25:47.003] [SEVERE ] updating elapsed time to 23032
+[16:25:47.019] [SEVERE ] updating elapsed time to 23048
+[16:25:47.035] [SEVERE ] updating elapsed time to 23064
+[16:25:47.051] [SEVERE ] updating elapsed time to 23080
+[16:25:47.066] [SEVERE ] updating elapsed time to 23095
+[16:25:47.081] [SEVERE ] updating elapsed time to 23110
+[16:25:47.096] [SEVERE ] updating elapsed time to 23125
+[16:25:47.111] [SEVERE ] updating elapsed time to 23140
+[16:25:47.129] [SEVERE ] updating elapsed time to 23158
+[16:25:47.142] [SEVERE ] updating elapsed time to 23171
+[16:25:47.159] [SEVERE ] updating elapsed time to 23188
+[16:25:47.177] [SEVERE ] updating elapsed time to 23206
+[16:25:47.211] [SEVERE ] updating elapsed time to 23240
+[16:25:47.255] [SEVERE ] updating elapsed time to 23284
+[16:25:47.290] [SEVERE ] updating elapsed time to 23319
+[16:25:47.312] [SEVERE ] updating elapsed time to 23341
+[16:25:47.341] [SEVERE ] updating elapsed time to 23370
+[16:25:47.356] [SEVERE ] updating elapsed time to 23385
+[16:25:47.372] [SEVERE ] updating elapsed time to 23401
+[16:25:47.387] [SEVERE ] updating elapsed time to 23416
+[16:25:47.403] [SEVERE ] updating elapsed time to 23432
+[16:25:47.419] [SEVERE ] updating elapsed time to 23448
+[16:25:47.435] [SEVERE ] updating elapsed time to 23464
+[16:25:47.452] [SEVERE ] updating elapsed time to 23481
+[16:25:47.467] [SEVERE ] updating elapsed time to 23496
+[16:25:47.482] [SEVERE ] updating elapsed time to 23511
+[16:25:47.496] [SEVERE ] updating elapsed time to 23525
+[16:25:47.512] [SEVERE ] updating elapsed time to 23541
+[16:25:47.538] [SEVERE ] updating elapsed time to 23567
+[16:25:47.565] [SEVERE ] updating elapsed time to 23594
+[16:25:47.576] [SEVERE ] updating elapsed time to 23605
+[16:25:47.593] [SEVERE ] updating elapsed time to 23622
+[16:25:47.609] [SEVERE ] updating elapsed time to 23638
+[16:25:47.622] [SEVERE ] updating elapsed time to 23651
+[16:25:47.638] [SEVERE ] updating elapsed time to 23667
+[16:25:47.655] [SEVERE ] updating elapsed time to 23684
+[16:25:47.670] [SEVERE ] updating elapsed time to 23699
+[16:25:47.686] [SEVERE ] updating elapsed time to 23715
+[16:25:47.702] [SEVERE ] updating elapsed time to 23731
+[16:25:47.725] [SEVERE ] updating elapsed time to 23754
+[16:25:47.751] [SEVERE ] updating elapsed time to 23780
+[16:25:47.770] [SEVERE ] updating elapsed time to 23799
+[16:25:47.805] [SEVERE ] updating elapsed time to 23834
+[16:25:47.826] [SEVERE ] updating elapsed time to 23855
+[16:25:47.842] [SEVERE ] updating elapsed time to 23871
+[16:25:47.875] [SEVERE ] updating elapsed time to 23904
+[16:25:47.892] [SEVERE ] updating elapsed time to 23921
+[16:25:47.905] [SEVERE ] updating elapsed time to 23934
+[16:25:47.923] [SEVERE ] updating elapsed time to 23952
+[16:25:47.937] [SEVERE ] updating elapsed time to 23966
+[16:25:47.960] [SEVERE ] updating elapsed time to 23989
+[16:25:47.985] [SEVERE ] updating elapsed time to 24014
+[16:25:48.001] [SEVERE ] updating elapsed time to 24030
+[16:25:48.017] [SEVERE ] updating elapsed time to 24046
+[16:25:48.033] [SEVERE ] updating elapsed time to 24062
+[16:25:48.049] [SEVERE ] updating elapsed time to 24078
+[16:25:48.065] [SEVERE ] updating elapsed time to 24094
+[16:25:48.080] [SEVERE ] updating elapsed time to 24109
+[16:25:48.095] [SEVERE ] updating elapsed time to 24124
+[16:25:48.110] [SEVERE ] updating elapsed time to 24139
+[16:25:48.126] [SEVERE ] updating elapsed time to 24155
+[16:25:48.141] [SEVERE ] updating elapsed time to 24170
+[16:25:48.156] [SEVERE ] updating elapsed time to 24185
+[16:25:48.172] [SEVERE ] updating elapsed time to 24201
+[16:25:48.187] [SEVERE ] updating elapsed time to 24216
+[16:25:48.203] [SEVERE ] updating elapsed time to 24232
+[16:25:48.219] [SEVERE ] updating elapsed time to 24248
+[16:25:48.234] [SEVERE ] updating elapsed time to 24263
+[16:25:48.250] [SEVERE ] updating elapsed time to 24279
+[16:25:48.266] [SEVERE ] updating elapsed time to 24295
+[16:25:48.282] [SEVERE ] updating elapsed time to 24311
+[16:25:48.298] [SEVERE ] updating elapsed time to 24327
+[16:25:48.314] [SEVERE ] updating elapsed time to 24343
+[16:25:48.330] [SEVERE ] updating elapsed time to 24359
+[16:25:48.346] [SEVERE ] updating elapsed time to 24375
+[16:25:48.362] [SEVERE ] updating elapsed time to 24391
+[16:25:48.378] [SEVERE ] updating elapsed time to 24407
+[16:25:48.394] [SEVERE ] updating elapsed time to 24423
+[16:25:48.410] [SEVERE ] updating elapsed time to 24439
+[16:25:48.426] [SEVERE ] updating elapsed time to 24455
+[16:25:48.459] [SEVERE ] updating elapsed time to 24488
+[16:25:48.483] [SEVERE ] updating elapsed time to 24512
+[16:25:48.517] [SEVERE ] updating elapsed time to 24546
+[16:25:48.539] [SEVERE ] updating elapsed time to 24568
+[16:25:48.554] [SEVERE ] updating elapsed time to 24583
+[16:25:48.570] [SEVERE ] updating elapsed time to 24599
+[16:25:48.590] [SEVERE ] updating elapsed time to 24619
+[16:25:48.611] [SEVERE ] updating elapsed time to 24640
+[16:25:48.651] [SEVERE ] updating elapsed time to 24680
+[16:25:48.683] [SEVERE ] updating elapsed time to 24712
+[16:25:48.698] [SEVERE ] updating elapsed time to 24727
+[16:25:48.711] [SEVERE ] updating elapsed time to 24740
+[16:25:48.727] [SEVERE ] updating elapsed time to 24756
+[16:25:48.743] [SEVERE ] updating elapsed time to 24772
+[16:25:48.759] [SEVERE ] updating elapsed time to 24788
+[16:25:48.775] [SEVERE ] updating elapsed time to 24804
+[16:25:48.791] [SEVERE ] updating elapsed time to 24820
+[16:25:48.817] [SEVERE ] updating elapsed time to 24846
+[16:25:48.850] [SEVERE ] updating elapsed time to 24879
+[16:25:48.883] [SEVERE ] updating elapsed time to 24912
+[16:25:48.915] [SEVERE ] updating elapsed time to 24944
+[16:25:48.934] [SEVERE ] updating elapsed time to 24963
+[16:25:48.955] [SEVERE ] updating elapsed time to 24984
+[16:25:48.988] [SEVERE ] updating elapsed time to 25017
+[16:25:49.010] [SEVERE ] updating elapsed time to 25039
+[16:25:49.026] [SEVERE ] updating elapsed time to 25055
+[16:25:49.042] [SEVERE ] updating elapsed time to 25071
+[16:25:49.058] [SEVERE ] updating elapsed time to 25087
+[16:25:49.074] [SEVERE ] updating elapsed time to 25103
+[16:25:49.090] [SEVERE ] updating elapsed time to 25119
+[16:25:49.106] [SEVERE ] updating elapsed time to 25135
+[16:25:49.122] [SEVERE ] updating elapsed time to 25151
+[16:25:49.138] [SEVERE ] updating elapsed time to 25167
+[16:25:49.154] [SEVERE ] updating elapsed time to 25183
+[16:25:49.170] [SEVERE ] updating elapsed time to 25199
+[16:25:49.186] [SEVERE ] updating elapsed time to 25215
+[16:25:49.202] [SEVERE ] updating elapsed time to 25231
+[16:25:49.218] [SEVERE ] updating elapsed time to 25247
+[16:25:49.234] [SEVERE ] updating elapsed time to 25263
+[16:25:49.250] [SEVERE ] updating elapsed time to 25279
+[16:25:49.266] [SEVERE ] updating elapsed time to 25295
+[16:25:49.282] [SEVERE ] updating elapsed time to 25311
+[16:25:49.298] [SEVERE ] updating elapsed time to 25327
+[16:25:49.314] [SEVERE ] updating elapsed time to 25343
+[16:25:49.330] [SEVERE ] updating elapsed time to 25359
+[16:25:49.346] [SEVERE ] updating elapsed time to 25375
+[16:25:49.361] [SEVERE ] updating elapsed time to 25390
+[16:25:49.377] [SEVERE ] updating elapsed time to 25406
+[16:25:49.393] [SEVERE ] updating elapsed time to 25422
+[16:25:49.409] [SEVERE ] updating elapsed time to 25438
+[16:25:49.425] [SEVERE ] updating elapsed time to 25454
+[16:25:49.440] [SEVERE ] updating elapsed time to 25469
+[16:25:49.455] [SEVERE ] updating elapsed time to 25484
+[16:25:49.471] [SEVERE ] updating elapsed time to 25500
+[16:25:49.487] [SEVERE ] updating elapsed time to 25516
+[16:25:49.503] [SEVERE ] updating elapsed time to 25532
+[16:25:49.519] [SEVERE ] updating elapsed time to 25548
+[16:25:49.535] [SEVERE ] updating elapsed time to 25564
+[16:25:49.551] [SEVERE ] updating elapsed time to 25580
+[16:25:49.567] [SEVERE ] updating elapsed time to 25596
+[16:25:49.583] [SEVERE ] updating elapsed time to 25612
+[16:25:49.602] [SEVERE ] updating elapsed time to 25631
+[16:25:49.615] [SEVERE ] updating elapsed time to 25644
+[16:25:49.637] [SEVERE ] updating elapsed time to 25666
+[16:25:49.662] [SEVERE ] updating elapsed time to 25691
+[16:25:49.678] [SEVERE ] updating elapsed time to 25707
+[16:25:49.693] [SEVERE ] updating elapsed time to 25722
+[16:25:49.711] [SEVERE ] updating elapsed time to 25740
+[16:25:49.728] [SEVERE ] updating elapsed time to 25757
+[16:25:49.742] [SEVERE ] updating elapsed time to 25771
+[16:25:49.755] [SEVERE ] updating elapsed time to 25784
+[16:25:49.770] [SEVERE ] updating elapsed time to 25799
+[16:25:49.794] [SEVERE ] updating elapsed time to 25823
+[16:25:49.818] [SEVERE ] updating elapsed time to 25847
+[16:25:49.833] [SEVERE ] updating elapsed time to 25862
+[16:25:49.848] [SEVERE ] updating elapsed time to 25877
+[16:25:49.868] [SEVERE ] updating elapsed time to 25897
+[16:25:49.879] [SEVERE ] updating elapsed time to 25908
+[16:25:49.894] [SEVERE ] updating elapsed time to 25923
+[16:25:49.910] [SEVERE ] updating elapsed time to 25939
+[16:25:49.925] [SEVERE ] updating elapsed time to 25954
+[16:25:49.940] [SEVERE ] updating elapsed time to 25969
+[16:25:49.956] [SEVERE ] updating elapsed time to 25985
+[16:25:49.972] [SEVERE ] updating elapsed time to 26001
+[16:25:49.987] [SEVERE ] updating elapsed time to 26016
+[16:25:50.003] [SEVERE ] updating elapsed time to 26032
+[16:25:50.018] [SEVERE ] updating elapsed time to 26047
+[16:25:50.034] [SEVERE ] updating elapsed time to 26063
+[16:25:50.049] [SEVERE ] updating elapsed time to 26078
+[16:25:50.064] [SEVERE ] updating elapsed time to 26093
+[16:25:50.370] [SEVERE ] updating elapsed time to 26399
+[16:25:50.522] [SEVERE ] updating elapsed time to 26551
+[16:25:50.548] [SEVERE ] updating elapsed time to 26577
+[16:25:50.597] [SEVERE ] updating elapsed time to 26626
+[16:25:50.614] [SEVERE ] updating elapsed time to 26643
+[16:25:50.630] [SEVERE ] updating elapsed time to 26659
+[16:25:50.646] [SEVERE ] updating elapsed time to 26675
+[16:25:50.662] [SEVERE ] updating elapsed time to 26691
+[16:25:50.682] [SEVERE ] updating elapsed time to 26711
+[16:25:50.707] [SEVERE ] updating elapsed time to 26736
+[16:25:50.726] [SEVERE ] updating elapsed time to 26755
+[16:25:50.742] [SEVERE ] updating elapsed time to 26771
+[16:25:50.758] [SEVERE ] updating elapsed time to 26787
+[16:25:50.774] [SEVERE ] updating elapsed time to 26803
+[16:25:50.790] [SEVERE ] updating elapsed time to 26819
+[16:25:50.806] [SEVERE ] updating elapsed time to 26835
+[16:25:50.822] [SEVERE ] updating elapsed time to 26851
+[16:25:50.838] [SEVERE ] updating elapsed time to 26867
+[16:25:50.852] [SEVERE ] updating elapsed time to 26881
+[16:25:50.867] [SEVERE ] updating elapsed time to 26896
+[16:25:50.887] [SEVERE ] updating elapsed time to 26916
+[16:25:50.900] [SEVERE ] updating elapsed time to 26929
+[16:25:50.913] [SEVERE ] updating elapsed time to 26942
+[16:25:50.928] [SEVERE ] updating elapsed time to 26957
+[16:25:50.943] [SEVERE ] updating elapsed time to 26972
+[16:25:50.960] [SEVERE ] updating elapsed time to 26989
+[16:25:50.994] [SEVERE ] updating elapsed time to 27023
+[16:25:51.023] [SEVERE ] updating elapsed time to 27052
+[16:25:51.056] [SEVERE ] updating elapsed time to 27085
+[16:25:51.094] [SEVERE ] updating elapsed time to 27123
+[16:25:51.112] [SEVERE ] updating elapsed time to 27141
+[16:25:51.128] [SEVERE ] updating elapsed time to 27157
+[16:25:51.149] [SEVERE ] updating elapsed time to 27178
+[16:25:51.160] [SEVERE ] updating elapsed time to 27189
+[16:25:51.176] [SEVERE ] updating elapsed time to 27205
+[16:25:51.192] [SEVERE ] updating elapsed time to 27221
+[16:25:51.208] [SEVERE ] updating elapsed time to 27237
+[16:25:51.224] [SEVERE ] updating elapsed time to 27253
+[16:25:51.239] [SEVERE ] updating elapsed time to 27268
+[16:25:51.255] [SEVERE ] updating elapsed time to 27284
+[16:25:51.271] [SEVERE ] updating elapsed time to 27300
+[16:25:51.287] [SEVERE ] updating elapsed time to 27316
+[16:25:51.303] [SEVERE ] updating elapsed time to 27332
+[16:25:51.319] [SEVERE ] updating elapsed time to 27348
+[16:25:51.335] [SEVERE ] updating elapsed time to 27364
+[16:25:51.351] [SEVERE ] updating elapsed time to 27380
+[16:25:51.367] [SEVERE ] updating elapsed time to 27396
+[16:25:51.383] [SEVERE ] updating elapsed time to 27412
+[16:25:51.399] [SEVERE ] updating elapsed time to 27428
+[16:25:51.415] [SEVERE ] updating elapsed time to 27444
+[16:25:51.430] [SEVERE ] updating elapsed time to 27459
+[16:25:51.446] [SEVERE ] updating elapsed time to 27475
+[16:25:51.461] [SEVERE ] updating elapsed time to 27490
+[16:25:51.476] [SEVERE ] updating elapsed time to 27505
+[16:25:51.491] [SEVERE ] updating elapsed time to 27520
+[16:25:51.506] [SEVERE ] updating elapsed time to 27535
+[16:25:51.522] [SEVERE ] updating elapsed time to 27551
+[16:25:51.538] [SEVERE ] updating elapsed time to 27567
+[16:25:51.554] [SEVERE ] updating elapsed time to 27583
+[16:25:51.570] [SEVERE ] updating elapsed time to 27599
+[16:25:51.586] [SEVERE ] updating elapsed time to 27615
+[16:25:51.601] [SEVERE ] updating elapsed time to 27630
+[16:25:51.617] [SEVERE ] updating elapsed time to 27646
+[16:25:51.633] [SEVERE ] updating elapsed time to 27662
+[16:25:51.649] [SEVERE ] updating elapsed time to 27678
+[16:25:51.665] [SEVERE ] updating elapsed time to 27694
+[16:25:51.681] [SEVERE ] updating elapsed time to 27710
+[16:25:51.697] [SEVERE ] updating elapsed time to 27726
+[16:25:51.713] [SEVERE ] updating elapsed time to 27742
+[16:25:51.729] [SEVERE ] updating elapsed time to 27758
+[16:25:51.745] [SEVERE ] updating elapsed time to 27774
+[16:25:51.761] [SEVERE ] updating elapsed time to 27790
+[16:25:51.777] [SEVERE ] updating elapsed time to 27806
+[16:25:51.793] [SEVERE ] updating elapsed time to 27822
+[16:25:51.809] [SEVERE ] updating elapsed time to 27838
+[16:25:51.825] [SEVERE ] updating elapsed time to 27854
+[16:25:51.841] [SEVERE ] updating elapsed time to 27870
+[16:25:51.857] [SEVERE ] updating elapsed time to 27886
+[16:25:51.873] [SEVERE ] updating elapsed time to 27902
+[16:25:51.889] [SEVERE ] updating elapsed time to 27918
+[16:25:51.905] [SEVERE ] updating elapsed time to 27934
+[16:25:51.921] [SEVERE ] updating elapsed time to 27950
+[16:25:51.937] [SEVERE ] updating elapsed time to 27966
+[16:25:51.953] [SEVERE ] updating elapsed time to 27982
+[16:25:51.969] [SEVERE ] updating elapsed time to 27998
+[16:25:51.983] [SEVERE ] updating elapsed time to 28012
+[16:25:51.998] [SEVERE ] updating elapsed time to 28027
+[16:25:52.014] [SEVERE ] updating elapsed time to 28043
+[16:25:52.030] [SEVERE ] updating elapsed time to 28059
+[16:25:52.046] [SEVERE ] updating elapsed time to 28075
+[16:25:52.062] [SEVERE ] updating elapsed time to 28091
+[16:25:52.078] [SEVERE ] updating elapsed time to 28107
+[16:25:52.094] [SEVERE ] updating elapsed time to 28123
+[16:25:52.110] [SEVERE ] updating elapsed time to 28139
+[16:25:52.126] [SEVERE ] updating elapsed time to 28155
+[16:25:52.142] [SEVERE ] updating elapsed time to 28171
+[16:25:52.157] [SEVERE ] updating elapsed time to 28186
+[16:25:52.172] [SEVERE ] updating elapsed time to 28201
+[16:25:52.187] [SEVERE ] updating elapsed time to 28216
+[16:25:52.203] [SEVERE ] updating elapsed time to 28232
+[16:25:52.218] [SEVERE ] updating elapsed time to 28247
+[16:25:52.234] [SEVERE ] updating elapsed time to 28263
+[16:25:52.250] [SEVERE ] updating elapsed time to 28279
+[16:25:52.266] [SEVERE ] updating elapsed time to 28295
+[16:25:52.282] [SEVERE ] updating elapsed time to 28311
+[16:25:52.298] [SEVERE ] updating elapsed time to 28327
+[16:25:52.314] [SEVERE ] updating elapsed time to 28343
+[16:25:52.330] [SEVERE ] updating elapsed time to 28359
+[16:25:52.346] [SEVERE ] updating elapsed time to 28375
+[16:25:52.361] [SEVERE ] updating elapsed time to 28390
+[16:25:52.377] [SEVERE ] updating elapsed time to 28406
+[16:25:52.393] [SEVERE ] updating elapsed time to 28422
+[16:25:52.409] [SEVERE ] updating elapsed time to 28438
+[16:25:52.425] [SEVERE ] updating elapsed time to 28454
+[16:25:52.440] [SEVERE ] updating elapsed time to 28469
+[16:25:52.455] [SEVERE ] updating elapsed time to 28484
+[16:25:52.471] [SEVERE ] updating elapsed time to 28500
+[16:25:52.487] [SEVERE ] updating elapsed time to 28516
+[16:25:52.503] [SEVERE ] updating elapsed time to 28532
+[16:25:52.519] [SEVERE ] updating elapsed time to 28548
+[16:25:52.535] [SEVERE ] updating elapsed time to 28564
+[16:25:52.551] [SEVERE ] updating elapsed time to 28580
+[16:25:52.567] [SEVERE ] updating elapsed time to 28596
+[16:25:52.583] [SEVERE ] updating elapsed time to 28612
+[16:25:52.602] [SEVERE ] updating elapsed time to 28631
+[16:25:52.615] [SEVERE ] updating elapsed time to 28644
+[16:25:52.631] [SEVERE ] updating elapsed time to 28660
+[16:25:52.647] [SEVERE ] updating elapsed time to 28676
+[16:25:52.663] [SEVERE ] updating elapsed time to 28692
+[16:25:52.679] [SEVERE ] updating elapsed time to 28708
+[16:25:52.695] [SEVERE ] updating elapsed time to 28724
+[16:25:52.711] [SEVERE ] updating elapsed time to 28740
+[16:25:52.726] [SEVERE ] updating elapsed time to 28755
+[16:25:52.742] [SEVERE ] updating elapsed time to 28771
+[16:25:52.760] [SEVERE ] updating elapsed time to 28789
+[16:25:52.773] [SEVERE ] updating elapsed time to 28802
+[16:25:52.788] [SEVERE ] updating elapsed time to 28817
+[16:25:52.803] [SEVERE ] updating elapsed time to 28832
+[16:25:52.819] [SEVERE ] updating elapsed time to 28848
+[16:25:52.834] [SEVERE ] updating elapsed time to 28863
+[16:25:52.855] [SEVERE ] updating elapsed time to 28884
+[16:25:52.881] [SEVERE ] updating elapsed time to 28910
+[16:25:52.897] [SEVERE ] updating elapsed time to 28926
+[16:25:52.913] [SEVERE ] updating elapsed time to 28942
+[16:25:52.928] [SEVERE ] updating elapsed time to 28957
+[16:25:52.944] [SEVERE ] updating elapsed time to 28973
+[16:25:52.961] [SEVERE ] updating elapsed time to 28990
+[16:25:52.976] [SEVERE ] updating elapsed time to 29005
+[16:25:52.992] [SEVERE ] updating elapsed time to 29021
+[16:25:53.007] [SEVERE ] updating elapsed time to 29036
+[16:25:53.022] [SEVERE ] updating elapsed time to 29051
+[16:25:53.038] [SEVERE ] updating elapsed time to 29067
+[16:25:53.054] [SEVERE ] updating elapsed time to 29083

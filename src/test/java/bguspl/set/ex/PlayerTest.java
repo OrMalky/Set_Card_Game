@@ -11,8 +11,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.Semaphore;
@@ -93,7 +91,7 @@ class PlayerTest {
     @Test
     void removeFromQueue_Valid(){
         //call the method we are testing
-        player.removeFromQueue(0);
+        player.removeFromToPlace(0);
         //check that the table was called with the correct player
         assertEquals(0, player.getToPlace().size());
     }
@@ -101,7 +99,7 @@ class PlayerTest {
     @Test
     void removeFromQueue_Invalid(){
         //call the method we are testing
-        player.removeFromQueue(1);
+        player.removeFromToPlace(1);
         //check that the table was called with the correct player
         assertEquals(1, player.getToPlace().size());
     }

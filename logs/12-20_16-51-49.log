@@ -1,0 +1,1624 @@
+[16:51:49.119] [INFO   ] thread main starting.
+[16:51:49.133] [SEVERE ] cannot read configuration file config.properties trying from resources.
+[16:51:49.137] [SEVERE ] configuration file was loaded from resources directory.
+[16:51:49.831] [INFO   ] thread dealer starting.
+[16:51:49.833] [INFO   ] Thread dealer starting.
+[16:51:49.849] [INFO   ] Thread Player 0 starting.
+[16:51:49.851] [INFO   ] Thread Player 2 starting.
+[16:51:49.851] [INFO   ] Thread Player 1 starting.
+[16:51:49.893] [INFO   ] Thread computer-2 starting.
+[16:51:49.901] [INFO   ] Thread computer-1 starting.
+[16:51:49.981] [SEVERE ] placing card 31 in slot 1
+[16:51:50.091] [SEVERE ] placing card 2 in slot 8
+[16:51:50.201] [SEVERE ] placing card 55 in slot 0
+[16:51:50.326] [SEVERE ] placing card 61 in slot 6
+[16:51:50.438] [SEVERE ] placing card 3 in slot 2
+[16:51:50.547] [SEVERE ] placing card 65 in slot 4
+[16:51:50.656] [SEVERE ] placing card 66 in slot 5
+[16:51:50.767] [SEVERE ] placing card 38 in slot 10
+[16:51:50.876] [SEVERE ] placing card 0 in slot 9
+[16:51:50.987] [SEVERE ] placing card 72 in slot 11
+[16:51:51.098] [SEVERE ] placing card 20 in slot 3
+[16:51:51.206] [SEVERE ] placing card 60 in slot 7
+[16:51:51.271] [SEVERE ] player 3 placing token on slot 11
+[16:51:51.271] [SEVERE ] player 2 placing token on slot 7
+[16:51:51.282] [SEVERE ] player 2 placing token on slot 4
+[16:51:51.284] [SEVERE ] removing player 3 token from slot 11
+[16:51:51.284] [SEVERE ] updating elapsed time to 14
+[16:51:51.299] [SEVERE ] updating elapsed time to 28
+[16:51:51.322] [SEVERE ] player 3 placing token on slot 7
+[16:51:51.322] [SEVERE ] player 2 placing token on slot 1
+[16:51:51.324] [SEVERE ] updating elapsed time to 54
+[16:51:51.324] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.348] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.353] [SEVERE ] updating elapsed time to 83
+[16:51:51.362] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.378] [SEVERE ] updating elapsed time to 108
+[16:51:51.394] [SEVERE ] updating elapsed time to 124
+[16:51:51.409] [SEVERE ] updating elapsed time to 139
+[16:51:51.438] [SEVERE ] updating elapsed time to 168
+[16:51:51.452] [SEVERE ] removing player 2 token from slot 7
+[16:51:51.453] [SEVERE ] removing player 3 token from slot 7
+[16:51:51.455] [SEVERE ] updating elapsed time to 185
+[16:51:51.471] [SEVERE ] updating elapsed time to 201
+[16:51:51.486] [SEVERE ] player 3 placing token on slot 1
+[16:51:51.486] [SEVERE ] updating elapsed time to 216
+[16:51:51.496] [SEVERE ] player 2 placing token on slot 0
+[16:51:51.499] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.503] [SEVERE ] player 3 placing token on slot 11
+[16:51:51.504] [SEVERE ] updating elapsed time to 234
+[16:51:51.508] [SEVERE ] player 3 placing token on slot 8
+[16:51:51.508] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.518] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.518] [SEVERE ] updating elapsed time to 248
+[16:51:51.519] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.519] [SEVERE ] removing player 2 token from slot 4
+[16:51:51.534] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.534] [SEVERE ] updating elapsed time to 264
+[16:51:51.536] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.537] [SEVERE ] removing player 3 token from slot 11
+[16:51:51.544] [SEVERE ] player 2 placing token on slot 7
+[16:51:51.546] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.546] [SEVERE ] player 3 placing token on slot 5
+[16:51:51.547] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.550] [SEVERE ] updating elapsed time to 280
+[16:51:51.557] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.565] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.565] [SEVERE ] updating elapsed time to 295
+[16:51:51.565] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.565] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.566] [SEVERE ] removing player 3 token from slot 8
+[16:51:51.567] [SEVERE ] removing player 2 token from slot 7
+[16:51:51.569] [SEVERE ] player 3 placing token on slot 7
+[16:51:51.570] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.581] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.581] [SEVERE ] player 2 placing token on slot 11
+[16:51:51.582] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.582] [SEVERE ] updating elapsed time to 312
+[16:51:51.596] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.596] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.597] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.597] [SEVERE ] updating elapsed time to 327
+[16:51:51.597] [SEVERE ] removing player 3 token from slot 5
+[16:51:51.597] [SEVERE ] removing player 2 token from slot 11
+[16:51:51.598] [SEVERE ] removing player 2 token from slot 1
+[16:51:51.599] [SEVERE ] removing player 2 token from slot 0
+[16:51:51.605] [SEVERE ] player 2 placing token on slot 7
+[16:51:51.609] [SEVERE ] updating elapsed time to 339
+[16:51:51.617] [SEVERE ] player 2 placing token on slot 1
+[16:51:51.626] [SEVERE ] updating elapsed time to 356
+[16:51:51.627] [SEVERE ] player 3 placing token on slot 5
+[16:51:51.627] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.641] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.641] [SEVERE ] updating elapsed time to 371
+[16:51:51.655] [SEVERE ] player 2 placing token on slot 11
+[16:51:51.656] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.657] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.657] [SEVERE ] removing player 3 token from slot 1
+[16:51:51.657] [SEVERE ] updating elapsed time to 387
+[16:51:51.657] [SEVERE ] removing player 3 token from slot 5
+[16:51:51.658] [SEVERE ] removing player 3 token from slot 7
+[16:51:51.661] [SEVERE ] player 3 placing token on slot 11
+[16:51:51.662] [SEVERE ] removing player 3 token from slot 11
+[16:51:51.665] [SEVERE ] player 3 placing token on slot 7
+[16:51:51.665] [SEVERE ] player 3 placing token on slot 5
+[16:51:51.666] [SEVERE ] removing player 3 token from slot 7
+[16:51:51.668] [SEVERE ] player 3 placing token on slot 4
+[16:51:51.669] [SEVERE ] updating elapsed time to 399
+[16:51:51.669] [SEVERE ] player 3 placing token on slot 0
+[16:51:51.669] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.673] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.673] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.673] [SEVERE ] removing player 2 token from slot 11
+[16:51:51.674] [SEVERE ] player 2 placing token on slot 0
+[16:51:51.674] [SEVERE ] removing player 2 token from slot 1
+[16:51:51.677] [SEVERE ] removing player 2 token from slot 0
+[16:51:51.680] [SEVERE ] player 2 placing token on slot 1
+[16:51:51.681] [SEVERE ] removing player 2 token from slot 1
+[16:51:51.682] [SEVERE ] player 2 placing token on slot 1
+[16:51:51.685] [SEVERE ] removing player 2 token from slot 7
+[16:51:51.688] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.688] [SEVERE ] player 2 placing token on slot 8
+[16:51:51.689] [SEVERE ] updating elapsed time to 419
+[16:51:51.689] [SEVERE ] player 2 placing token on slot 7
+[16:51:51.690] [SEVERE ] removing player 2 token from slot 1
+[16:51:51.690] [SEVERE ] removing player 2 token from slot 8
+[16:51:51.693] [SEVERE ] player 2 placing token on slot 4
+[16:51:51.694] [SEVERE ] player 2 placing token on slot 0
+[16:51:51.694] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.704] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.704] [SEVERE ] updating elapsed time to 434
+[16:51:51.704] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.704] [SEVERE ] removing player 3 token from slot 5
+[16:51:51.706] [SEVERE ] player 3 placing token on slot 8
+[16:51:51.706] [SEVERE ] removing player 3 token from slot 8
+[16:51:51.706] [SEVERE ] removing player 3 token from slot 4
+[16:51:51.707] [SEVERE ] removing player 3 token from slot 0
+[16:51:51.709] [SEVERE ] player 3 placing token on slot 11
+[16:51:51.710] [SEVERE ] removing player 3 token from slot 11
+[16:51:51.713] [SEVERE ] player 3 placing token on slot 7
+[16:51:51.713] [SEVERE ] player 3 placing token on slot 11
+[16:51:51.717] [SEVERE ] removing player 3 token from slot 11
+[16:51:51.717] [SEVERE ] player 3 placing token on slot 5
+[16:51:51.719] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.719] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.719] [SEVERE ] updating elapsed time to 449
+[16:51:51.720] [SEVERE ] removing player 2 token from slot 7
+[16:51:51.722] [SEVERE ] player 3 placing token on slot 1
+[16:51:51.723] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.723] [SEVERE ] player 2 placing token on slot 7
+[16:51:51.725] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.734] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.735] [SEVERE ] updating elapsed time to 465
+[16:51:51.750] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.750] [SEVERE ] updating elapsed time to 480
+[16:51:51.750] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.750] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.750] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.750] [SEVERE ] removing player 2 token from slot 7
+[16:51:51.750] [SEVERE ] removing player 3 token from slot 1
+[16:51:51.751] [SEVERE ] player 2 placing token on slot 5
+[16:51:51.751] [SEVERE ] removing player 3 token from slot 7
+[16:51:51.752] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.754] [SEVERE ] player 3 placing token on slot 8
+[16:51:51.755] [SEVERE ] removing player 3 token from slot 5
+[16:51:51.760] [SEVERE ] player 3 placing token on slot 7
+[16:51:51.760] [SEVERE ] player 3 placing token on slot 1
+[16:51:51.761] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.761] [SEVERE ] setting player 3 score to 1
+[16:51:51.761] [SEVERE ] removing player 3 token from slot 8
+[16:51:51.762] [SEVERE ] removing player 3 token from slot 7
+[16:51:51.762] [SEVERE ] removing player 3 token from slot 1
+[16:51:51.765] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.765] [SEVERE ] setting player 2 freeze to 0
+[16:51:51.780] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.796] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.811] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.827] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.843] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.858] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.873] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.873] [SEVERE ] removing tokens from slot 8
+[16:51:51.873] [SEVERE ] removing card from slot 8
+[16:51:51.884] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.905] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.920] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.936] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.952] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.968] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.984] [SEVERE ] removing tokens from slot 7
+[16:51:51.984] [SEVERE ] setting player 3 freeze to 0
+[16:51:51.984] [SEVERE ] removing card from slot 7
+[16:51:52.000] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.015] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.031] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.046] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.061] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.077] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.092] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.092] [SEVERE ] removing tokens from slot 1
+[16:51:52.093] [SEVERE ] removing card from slot 1
+[16:51:52.103] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.123] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.139] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.155] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.171] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.187] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.203] [SEVERE ] placing card 44 in slot 1
+[16:51:52.203] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.219] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.235] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.251] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.266] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.282] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.298] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.313] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.313] [SEVERE ] placing card 68 in slot 8
+[16:51:52.329] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.345] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.361] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.377] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.393] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.409] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.425] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.425] [SEVERE ] placing card 10 in slot 7
+[16:51:52.426] [SEVERE ] updating elapsed time to 1156
+[16:51:52.426] [SEVERE ] removing player 2 token from slot 4
+[16:51:52.426] [SEVERE ] removing player 2 token from slot 0
+[16:51:52.433] [SEVERE ] player 2 placing token on slot 7
+[16:51:52.435] [SEVERE ] removing player 2 token from slot 5
+[16:51:52.436] [SEVERE ] player 2 placing token on slot 4
+[16:51:52.441] [SEVERE ] player 2 placing token on slot 5
+[16:51:52.441] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.442] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.442] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.443] [SEVERE ] player 3 placing token on slot 7
+[16:51:52.443] [SEVERE ] updating elapsed time to 1173
+[16:51:52.444] [SEVERE ] player 3 placing token on slot 4
+[16:51:52.446] [SEVERE ] player 3 placing token on slot 9
+[16:51:52.447] [SEVERE ] removing player 3 token from slot 4
+[16:51:52.453] [SEVERE ] removing player 3 token from slot 9
+[16:51:52.456] [SEVERE ] player 3 placing token on slot 11
+[16:51:52.457] [SEVERE ] updating elapsed time to 1187
+[16:51:52.457] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.457] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.458] [SEVERE ] removing player 2 token from slot 7
+[16:51:52.518] [SEVERE ] updating elapsed time to 1248
+[16:51:52.522] [SEVERE ] player 3 placing token on slot 6
+[16:51:52.523] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.524] [SEVERE ] player 2 placing token on slot 11
+[16:51:52.524] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.535] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.535] [SEVERE ] updating elapsed time to 1265
+[16:51:52.535] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.546] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.551] [SEVERE ] updating elapsed time to 1281
+[16:51:52.551] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.553] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.555] [SEVERE ] removing player 2 token from slot 11
+[16:51:52.555] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.567] [SEVERE ] updating elapsed time to 1297
+[16:51:52.566] [SEVERE ] removing player 3 token from slot 6
+[16:51:52.581] [SEVERE ] player 3 placing token on slot 1
+[16:51:52.581] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.583] [SEVERE ] updating elapsed time to 1313
+[16:51:52.583] [SEVERE ] player 2 placing token on slot 11
+[16:51:52.586] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.598] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.598] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.598] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.598] [SEVERE ] updating elapsed time to 1328
+[16:51:52.598] [SEVERE ] removing player 3 token from slot 7
+[16:51:52.599] [SEVERE ] removing player 3 token from slot 1
+[16:51:52.599] [SEVERE ] removing player 3 token from slot 11
+[16:51:52.598] [SEVERE ] removing player 2 token from slot 11
+[16:51:52.602] [SEVERE ] player 3 placing token on slot 1
+[16:51:52.604] [SEVERE ] player 2 placing token on slot 1
+[16:51:52.604] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.608] [SEVERE ] player 3 placing token on slot 9
+[16:51:52.610] [SEVERE ] updating elapsed time to 1340
+[16:51:52.610] [SEVERE ] player 3 placing token on slot 7
+[16:51:52.610] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.629] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.629] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.629] [SEVERE ] updating elapsed time to 1359
+[16:51:52.629] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.631] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.631] [SEVERE ] removing player 2 token from slot 1
+[16:51:52.639] [SEVERE ] player 2 placing token on slot 0
+[16:51:52.639] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.645] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.645] [SEVERE ] removing player 3 token from slot 9
+[16:51:52.646] [SEVERE ] removing player 3 token from slot 1
+[16:51:52.647] [SEVERE ] updating elapsed time to 1377
+[16:51:52.647] [SEVERE ] removing player 3 token from slot 7
+[16:51:52.658] [SEVERE ] updating elapsed time to 1388
+[16:51:52.660] [SEVERE ] player 3 placing token on slot 7
+[16:51:52.661] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.711] [SEVERE ] updating elapsed time to 1441
+[16:51:52.711] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.711] [SEVERE ] removing player 2 token from slot 0
+[16:51:52.724] [SEVERE ] updating elapsed time to 1454
+[16:51:52.731] [SEVERE ] player 3 placing token on slot 0
+[16:51:52.733] [SEVERE ] player 2 placing token on slot 8
+[16:51:52.733] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.735] [SEVERE ] removing player 3 token from slot 7
+[16:51:52.740] [SEVERE ] updating elapsed time to 1470
+[16:51:52.743] [SEVERE ] player 3 placing token on slot 3
+[16:51:52.747] [SEVERE ] player 3 placing token on slot 5
+[16:51:52.747] [SEVERE ] removing player 3 token from slot 3
+[16:51:52.751] [SEVERE ] removing player 3 token from slot 5
+[16:51:52.753] [SEVERE ] player 3 placing token on slot 1
+[16:51:52.753] [SEVERE ] player 3 placing token on slot 6
+[16:51:52.753] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.756] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.756] [SEVERE ] updating elapsed time to 1486
+[16:51:52.756] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.756] [SEVERE ] removing player 2 token from slot 4
+[16:51:52.758] [SEVERE ] player 2 placing token on slot 7
+[16:51:52.758] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.772] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.772] [SEVERE ] updating elapsed time to 1502
+[16:51:52.772] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.772] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.772] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.772] [SEVERE ] removing player 3 token from slot 1
+[16:51:52.776] [SEVERE ] player 3 placing token on slot 8
+[16:51:52.777] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.783] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.783] [SEVERE ] removing player 2 token from slot 5
+[16:51:52.783] [SEVERE ] removing player 2 token from slot 8
+[16:51:52.783] [SEVERE ] removing player 2 token from slot 7
+[16:51:52.786] [SEVERE ] player 2 placing token on slot 5
+[16:51:52.788] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.788] [SEVERE ] updating elapsed time to 1518
+[16:51:52.788] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.789] [SEVERE ] player 2 placing token on slot 3
+[16:51:52.790] [SEVERE ] player 2 placing token on slot 9
+[16:51:52.791] [SEVERE ] removing player 2 token from slot 5
+[16:51:52.794] [SEVERE ] player 2 placing token on slot 0
+[16:51:52.795] [SEVERE ] removing player 2 token from slot 3
+[16:51:52.796] [SEVERE ] removing player 2 token from slot 9
+[16:51:52.798] [SEVERE ] player 2 placing token on slot 7
+[16:51:52.808] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.808] [SEVERE ] updating elapsed time to 1538
+[16:51:52.808] [SEVERE ] removing player 3 token from slot 6
+[16:51:52.808] [SEVERE ] removing player 3 token from slot 0
+[16:51:52.809] [SEVERE ] removing player 3 token from slot 8
+[16:51:52.813] [SEVERE ] player 2 placing token on slot 1
+[16:51:52.813] [SEVERE ] player 3 placing token on slot 4
+[16:51:52.813] [SEVERE ] removing player 2 token from slot 0
+[16:51:52.813] [SEVERE ] player 3 placing token on slot 9
+[16:51:52.814] [SEVERE ] player 2 placing token on slot 6
+[16:51:52.814] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.816] [SEVERE ] player 3 placing token on slot 1
+[16:51:52.817] [SEVERE ] removing player 3 token from slot 4
+[16:51:52.817] [SEVERE ] removing player 3 token from slot 9
+[16:51:52.819] [SEVERE ] updating elapsed time to 1549
+[16:51:52.820] [SEVERE ] removing player 3 token from slot 1
+[16:51:52.824] [SEVERE ] player 3 placing token on slot 0
+[16:51:52.826] [SEVERE ] player 3 placing token on slot 8
+[16:51:52.831] [SEVERE ] player 3 placing token on slot 6
+[16:51:52.831] [SEVERE ] removing player 3 token from slot 6
+[16:51:52.831] [SEVERE ] removing player 3 token from slot 8
+[16:51:52.833] [SEVERE ] player 3 placing token on slot 6
+[16:51:52.834] [SEVERE ] updating elapsed time to 1564
+[16:51:52.836] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.858] [SEVERE ] updating elapsed time to 1588
+[16:51:52.858] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.858] [SEVERE ] removing player 2 token from slot 1
+[16:51:52.864] [SEVERE ] player 3 placing token on slot 3
+[16:51:52.865] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.866] [SEVERE ] player 2 placing token on slot 3
+[16:51:52.866] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.881] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.881] [SEVERE ] updating elapsed time to 1611
+[16:51:52.881] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.881] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.881] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.881] [SEVERE ] removing player 3 token from slot 6
+[16:51:52.883] [SEVERE ] player 3 placing token on slot 1
+[16:51:52.883] [SEVERE ] removing player 3 token from slot 0
+[16:51:52.888] [SEVERE ] player 3 placing token on slot 11
+[16:51:52.889] [SEVERE ] removing player 3 token from slot 3
+[16:51:52.889] [SEVERE ] removing player 3 token from slot 11
+[16:51:52.890] [SEVERE ] removing player 3 token from slot 1
+[16:51:52.892] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.893] [SEVERE ] removing player 2 token from slot 7
+[16:51:52.894] [SEVERE ] removing player 2 token from slot 3
+[16:51:52.894] [SEVERE ] removing player 2 token from slot 6
+[16:51:52.897] [SEVERE ] updating elapsed time to 1627
+[16:51:52.899] [SEVERE ] player 2 placing token on slot 6
+[16:51:52.905] [SEVERE ] player 2 placing token on slot 9
+[16:51:52.910] [SEVERE ] player 3 placing token on slot 11
+[16:51:52.912] [SEVERE ] updating elapsed time to 1642
+[16:51:52.914] [SEVERE ] player 2 placing token on slot 0
+[16:51:52.915] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.922] [SEVERE ] player 3 placing token on slot 0
+[16:51:52.928] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.928] [SEVERE ] updating elapsed time to 1658
+[16:51:52.928] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.932] [SEVERE ] player 3 placing token on slot 3
+[16:51:52.934] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.939] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.939] [SEVERE ] removing player 2 token from slot 0
+[16:51:52.939] [SEVERE ] removing player 2 token from slot 9
+[16:51:52.939] [SEVERE ] removing player 2 token from slot 6
+[16:51:52.944] [SEVERE ] updating elapsed time to 1674
+[16:51:52.960] [SEVERE ] updating elapsed time to 1690
+[16:51:52.963] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.964] [SEVERE ] setting player 3 freeze to 0
+[16:51:52.965] [SEVERE ] removing player 3 token from slot 0
+[16:51:52.969] [SEVERE ] player 2 placing token on slot 6
+[16:51:52.972] [SEVERE ] removing player 3 token from slot 11
+[16:51:52.975] [SEVERE ] updating elapsed time to 1705
+[16:51:52.977] [SEVERE ] player 2 placing token on slot 4
+[16:51:52.977] [SEVERE ] removing player 3 token from slot 3
+[16:51:52.978] [SEVERE ] player 3 placing token on slot 0
+[16:51:52.978] [SEVERE ] player 2 placing token on slot 11
+[16:51:52.978] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.985] [SEVERE ] player 3 placing token on slot 9
+[16:51:52.988] [SEVERE ] player 3 placing token on slot 4
+[16:51:52.988] [SEVERE ] removing player 3 token from slot 0
+[16:51:52.988] [SEVERE ] removing player 3 token from slot 4
+[16:51:52.990] [SEVERE ] setting player 2 freeze to 0
+[16:51:52.990] [SEVERE ] updating elapsed time to 1720
+[16:51:52.991] [SEVERE ] player 3 placing token on slot 0
+[16:51:52.992] [SEVERE ] player 3 placing token on slot 11
+[16:51:52.992] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.006] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.006] [SEVERE ] updating elapsed time to 1736
+[16:51:53.006] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.006] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.006] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.006] [SEVERE ] removing player 2 token from slot 4
+[16:51:53.006] [SEVERE ] player 2 placing token on slot 4
+[16:51:53.006] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.017] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.017] [SEVERE ] removing player 3 token from slot 0
+[16:51:53.017] [SEVERE ] updating elapsed time to 1747
+[16:51:53.018] [SEVERE ] removing player 3 token from slot 11
+[16:51:53.019] [SEVERE ] removing player 3 token from slot 9
+[16:51:53.022] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.024] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.024] [SEVERE ] removing player 2 token from slot 11
+[16:51:53.025] [SEVERE ] player 3 placing token on slot 9
+[16:51:53.027] [SEVERE ] player 3 placing token on slot 4
+[16:51:53.027] [SEVERE ] player 2 placing token on slot 3
+[16:51:53.027] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.027] [SEVERE ] player 3 placing token on slot 3
+[16:51:53.027] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.038] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.038] [SEVERE ] updating elapsed time to 1768
+[16:51:53.038] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.049] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.049] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.049] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.049] [SEVERE ] removing player 3 token from slot 3
+[16:51:53.049] [SEVERE ] removing player 3 token from slot 9
+[16:51:53.049] [SEVERE ] player 3 placing token on slot 6
+[16:51:53.050] [SEVERE ] removing player 3 token from slot 6
+[16:51:53.051] [SEVERE ] player 3 placing token on slot 7
+[16:51:53.052] [SEVERE ] player 3 placing token on slot 3
+[16:51:53.052] [SEVERE ] removing player 3 token from slot 7
+[16:51:53.052] [SEVERE ] removing player 3 token from slot 3
+[16:51:53.052] [SEVERE ] removing player 3 token from slot 4
+[16:51:53.053] [SEVERE ] player 3 placing token on slot 3
+[16:51:53.054] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.054] [SEVERE ] updating elapsed time to 1784
+[16:51:53.054] [SEVERE ] removing player 2 token from slot 6
+[16:51:53.054] [SEVERE ] removing player 2 token from slot 4
+[16:51:53.054] [SEVERE ] removing player 2 token from slot 3
+[16:51:53.055] [SEVERE ] player 2 placing token on slot 7
+[16:51:53.055] [SEVERE ] player 3 placing token on slot 11
+[16:51:53.056] [SEVERE ] player 2 placing token on slot 11
+[16:51:53.056] [SEVERE ] player 3 placing token on slot 5
+[16:51:53.059] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.063] [SEVERE ] removing player 2 token from slot 11
+[16:51:53.067] [SEVERE ] player 2 placing token on slot 8
+[16:51:53.068] [SEVERE ] updating elapsed time to 1798
+[16:51:53.075] [SEVERE ] player 2 placing token on slot 11
+[16:51:53.077] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.084] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.084] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.084] [SEVERE ] updating elapsed time to 1814
+[16:51:53.084] [SEVERE ] removing player 3 token from slot 5
+[16:51:53.099] [SEVERE ] updating elapsed time to 1829
+[16:51:53.099] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.114] [SEVERE ] updating elapsed time to 1844
+[16:51:53.130] [SEVERE ] updating elapsed time to 1860
+[16:51:53.145] [SEVERE ] updating elapsed time to 1875
+[16:51:53.161] [SEVERE ] updating elapsed time to 1891
+[16:51:53.177] [SEVERE ] updating elapsed time to 1907
+[16:51:53.193] [SEVERE ] updating elapsed time to 1923
+[16:51:53.209] [SEVERE ] updating elapsed time to 1939
+[16:51:53.225] [SEVERE ] updating elapsed time to 1955
+[16:51:53.241] [SEVERE ] updating elapsed time to 1971
+[16:51:53.257] [SEVERE ] updating elapsed time to 1987
+[16:51:53.273] [SEVERE ] updating elapsed time to 2003
+[16:51:53.283] [SEVERE ] removing player 2 token from slot 11
+[16:51:53.286] [SEVERE ] removing player 3 token from slot 11
+[16:51:53.289] [SEVERE ] updating elapsed time to 2019
+[16:51:53.305] [SEVERE ] updating elapsed time to 2035
+[16:51:53.321] [SEVERE ] updating elapsed time to 2051
+[16:51:53.324] [SEVERE ] player 3 placing token on slot 7
+[16:51:53.325] [SEVERE ] player 2 placing token on slot 6
+[16:51:53.328] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.332] [SEVERE ] removing player 3 token from slot 7
+[16:51:53.334] [SEVERE ] player 3 placing token on slot 9
+[16:51:53.336] [SEVERE ] player 3 placing token on slot 7
+[16:51:53.337] [SEVERE ] updating elapsed time to 2067
+[16:51:53.337] [SEVERE ] removing player 3 token from slot 3
+[16:51:53.339] [SEVERE ] removing player 3 token from slot 9
+[16:51:53.341] [SEVERE ] removing player 3 token from slot 7
+[16:51:53.344] [SEVERE ] player 3 placing token on slot 11
+[16:51:53.347] [SEVERE ] player 3 placing token on slot 1
+[16:51:53.349] [SEVERE ] player 3 placing token on slot 8
+[16:51:53.350] [SEVERE ] removing player 3 token from slot 8
+[16:51:53.351] [SEVERE ] removing player 3 token from slot 1
+[16:51:53.352] [SEVERE ] removing player 3 token from slot 11
+[16:51:53.353] [SEVERE ] updating elapsed time to 2083
+[16:51:53.353] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.353] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.353] [SEVERE ] removing player 2 token from slot 6
+[16:51:53.355] [SEVERE ] player 3 placing token on slot 1
+[16:51:53.361] [SEVERE ] removing player 2 token from slot 7
+[16:51:53.368] [SEVERE ] updating elapsed time to 2098
+[16:51:53.369] [SEVERE ] player 3 placing token on slot 3
+[16:51:53.369] [SEVERE ] player 2 placing token on slot 7
+[16:51:53.370] [SEVERE ] player 2 placing token on slot 5
+[16:51:53.370] [SEVERE ] player 3 placing token on slot 7
+[16:51:53.370] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.370] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.383] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.383] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.383] [SEVERE ] updating elapsed time to 2113
+[16:51:53.383] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.383] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.394] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.394] [SEVERE ] removing player 2 token from slot 7
+[16:51:53.394] [SEVERE ] removing player 2 token from slot 8
+[16:51:53.394] [SEVERE ] removing player 2 token from slot 5
+[16:51:53.398] [SEVERE ] player 2 placing token on slot 7
+[16:51:53.399] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.399] [SEVERE ] updating elapsed time to 2129
+[16:51:53.399] [SEVERE ] removing player 3 token from slot 3
+[16:51:53.399] [SEVERE ] removing player 3 token from slot 1
+[16:51:53.399] [SEVERE ] removing player 3 token from slot 7
+[16:51:53.403] [SEVERE ] player 3 placing token on slot 7
+[16:51:53.405] [SEVERE ] player 2 placing token on slot 9
+[16:51:53.406] [SEVERE ] player 2 placing token on slot 3
+[16:51:53.406] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.408] [SEVERE ] player 3 placing token on slot 4
+[16:51:53.409] [SEVERE ] removing player 3 token from slot 7
+[16:51:53.410] [SEVERE ] player 3 placing token on slot 6
+[16:51:53.414] [SEVERE ] removing player 3 token from slot 6
+[16:51:53.415] [SEVERE ] setting player 2 score to 1
+[16:51:53.415] [SEVERE ] removing player 2 token from slot 7
+[16:51:53.415] [SEVERE ] removing player 2 token from slot 9
+[16:51:53.415] [SEVERE ] removing player 2 token from slot 3
+[16:51:53.418] [SEVERE ] player 3 placing token on slot 3
+[16:51:53.418] [SEVERE ] player 3 placing token on slot 11
+[16:51:53.419] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.431] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.431] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.446] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.446] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.462] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.462] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.478] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.478] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.489] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.494] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.510] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.510] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.526] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.526] [SEVERE ] removing tokens from slot 7
+[16:51:53.526] [SEVERE ] removing card from slot 7
+[16:51:53.526] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.537] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.542] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.558] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.558] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.574] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.574] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.590] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.590] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.606] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.606] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.622] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.622] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.638] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.638] [SEVERE ] removing tokens from slot 9
+[16:51:53.638] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.638] [SEVERE ] removing card from slot 9
+[16:51:53.638] [SEVERE ] removing player 3 token from slot 3
+[16:51:53.649] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.654] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.670] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.670] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.681] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.686] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.702] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.702] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.718] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.718] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.734] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.734] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.750] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.750] [SEVERE ] removing tokens from slot 3
+[16:51:53.750] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.750] [SEVERE ] removing card from slot 3
+[16:51:53.761] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.766] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.782] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.782] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.798] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.798] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.814] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.814] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.829] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.829] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.845] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.845] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.861] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.861] [SEVERE ] placing card 69 in slot 9
+[16:51:53.861] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.872] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.877] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.893] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.893] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.909] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.909] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.925] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.925] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.941] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.941] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.956] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.956] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.972] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.972] [SEVERE ] placing card 49 in slot 7
+[16:51:53.972] [SEVERE ] setting player 3 freeze to 0
+[16:51:53.984] [SEVERE ] setting player 2 freeze to 0
+[16:51:53.987] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.003] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.003] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.018] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.018] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.034] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.034] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.050] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.050] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.065] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.065] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.081] [SEVERE ] placing card 16 in slot 3
+[16:51:54.081] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.081] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.081] [SEVERE ] updating elapsed time to 2811
+[16:51:54.096] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.096] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.096] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.096] [SEVERE ] updating elapsed time to 2826
+[16:51:54.096] [SEVERE ] player 2 placing token on slot 6
+[16:51:54.098] [SEVERE ] player 2 placing token on slot 0
+[16:51:54.099] [SEVERE ] player 2 placing token on slot 3
+[16:51:54.099] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.108] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.112] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.112] [SEVERE ] updating elapsed time to 2842
+[16:51:54.112] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.128] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.128] [SEVERE ] updating elapsed time to 2858
+[16:51:54.128] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.128] [SEVERE ] removing player 2 token from slot 3
+[16:51:54.128] [SEVERE ] removing player 2 token from slot 0
+[16:51:54.128] [SEVERE ] removing player 2 token from slot 6
+[16:51:54.131] [SEVERE ] player 2 placing token on slot 3
+[16:51:54.132] [SEVERE ] player 2 placing token on slot 2
+[16:51:54.134] [SEVERE ] player 2 placing token on slot 11
+[16:51:54.134] [SEVERE ] removing player 2 token from slot 3
+[16:51:54.134] [SEVERE ] removing player 2 token from slot 11
+[16:51:54.134] [SEVERE ] removing player 2 token from slot 2
+[16:51:54.135] [SEVERE ] player 2 placing token on slot 2
+[16:51:54.135] [SEVERE ] player 2 placing token on slot 3
+[16:51:54.136] [SEVERE ] removing player 2 token from slot 3
+[16:51:54.136] [SEVERE ] removing player 2 token from slot 2
+[16:51:54.137] [SEVERE ] player 2 placing token on slot 8
+[16:51:54.138] [SEVERE ] player 2 placing token on slot 11
+[16:51:54.138] [SEVERE ] removing player 2 token from slot 11
+[16:51:54.139] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.139] [SEVERE ] player 2 placing token on slot 6
+[16:51:54.139] [SEVERE ] player 2 placing token on slot 2
+[16:51:54.139] [SEVERE ] removing player 2 token from slot 8
+[16:51:54.139] [SEVERE ] player 2 placing token on slot 8
+[16:51:54.140] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.144] [SEVERE ] updating elapsed time to 2874
+[16:51:54.160] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.160] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.160] [SEVERE ] updating elapsed time to 2890
+[16:51:54.160] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.160] [SEVERE ] removing player 2 token from slot 2
+[16:51:54.160] [SEVERE ] player 2 placing token on slot 0
+[16:51:54.161] [SEVERE ] removing player 2 token from slot 6
+[16:51:54.161] [SEVERE ] removing player 2 token from slot 0
+[16:51:54.161] [SEVERE ] removing player 2 token from slot 8
+[16:51:54.162] [SEVERE ] player 2 placing token on slot 0
+[16:51:54.163] [SEVERE ] player 2 placing token on slot 8
+[16:51:54.164] [SEVERE ] player 2 placing token on slot 10
+[16:51:54.164] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.176] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.176] [SEVERE ] updating elapsed time to 2906
+[16:51:54.176] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.186] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.186] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.191] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.191] [SEVERE ] updating elapsed time to 2921
+[16:51:54.191] [SEVERE ] removing player 2 token from slot 8
+[16:51:54.191] [SEVERE ] removing player 2 token from slot 0
+[16:51:54.191] [SEVERE ] removing player 2 token from slot 10
+[16:51:54.191] [SEVERE ] player 2 placing token on slot 8
+[16:51:54.199] [SEVERE ] player 2 placing token on slot 9
+[16:51:54.207] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.207] [SEVERE ] updating elapsed time to 2937
+[16:51:54.208] [SEVERE ] player 2 placing token on slot 0
+[16:51:54.208] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.223] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.223] [SEVERE ] updating elapsed time to 2953
+[16:51:54.223] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.234] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.234] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.239] [SEVERE ] setting player 2 freeze to 0
+[16:51:54.239] [SEVERE ] updating elapsed time to 2969
+[16:51:54.239] [SEVERE ] removing player 2 token from slot 0
+[16:51:54.239] [SEVERE ] removing player 2 token from slot 9
+[16:51:54.239] [SEVERE ] removing player 2 token from slot 8
+[16:51:54.254] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.254] [SEVERE ] updating elapsed time to 2984
+[16:51:54.269] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.271] [SEVERE ] updating elapsed time to 3001
+[16:51:54.285] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.285] [SEVERE ] updating elapsed time to 3015
+[16:51:54.301] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.301] [SEVERE ] updating elapsed time to 3031
+[16:51:54.317] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.317] [SEVERE ] updating elapsed time to 3047
+[16:51:54.333] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.333] [SEVERE ] updating elapsed time to 3063
+[16:51:54.349] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.349] [SEVERE ] updating elapsed time to 3079
+[16:51:54.364] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.364] [SEVERE ] updating elapsed time to 3094
+[16:51:54.379] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.379] [SEVERE ] updating elapsed time to 3109
+[16:51:54.395] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.395] [SEVERE ] updating elapsed time to 3125
+[16:51:54.411] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.411] [SEVERE ] updating elapsed time to 3141
+[16:51:54.427] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.427] [SEVERE ] updating elapsed time to 3157
+[16:51:54.443] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.443] [SEVERE ] updating elapsed time to 3173
+[16:51:54.459] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.459] [SEVERE ] updating elapsed time to 3189
+[16:51:54.475] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.475] [SEVERE ] updating elapsed time to 3205
+[16:51:54.485] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.490] [SEVERE ] updating elapsed time to 3220
+[16:51:54.506] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.506] [SEVERE ] updating elapsed time to 3236
+[16:51:54.522] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.522] [SEVERE ] updating elapsed time to 3252
+[16:51:54.538] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.538] [SEVERE ] updating elapsed time to 3268
+[16:51:54.554] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.554] [SEVERE ] updating elapsed time to 3284
+[16:51:54.570] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.570] [SEVERE ] updating elapsed time to 3300
+[16:51:54.586] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.586] [SEVERE ] updating elapsed time to 3316
+[16:51:54.602] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.602] [SEVERE ] updating elapsed time to 3332
+[16:51:54.618] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.618] [SEVERE ] updating elapsed time to 3348
+[16:51:54.634] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.634] [SEVERE ] updating elapsed time to 3364
+[16:51:54.650] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.650] [SEVERE ] updating elapsed time to 3380
+[16:51:54.666] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.666] [SEVERE ] updating elapsed time to 3396
+[16:51:54.682] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.682] [SEVERE ] updating elapsed time to 3412
+[16:51:54.697] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.697] [SEVERE ] updating elapsed time to 3427
+[16:51:54.712] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.712] [SEVERE ] updating elapsed time to 3442
+[16:51:54.728] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.728] [SEVERE ] updating elapsed time to 3458
+[16:51:54.739] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.744] [SEVERE ] updating elapsed time to 3474
+[16:51:54.760] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.760] [SEVERE ] updating elapsed time to 3490
+[16:51:54.776] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.776] [SEVERE ] updating elapsed time to 3506
+[16:51:54.792] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.792] [SEVERE ] updating elapsed time to 3522
+[16:51:54.808] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.808] [SEVERE ] updating elapsed time to 3538
+[16:51:54.824] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.824] [SEVERE ] updating elapsed time to 3554
+[16:51:54.840] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.840] [SEVERE ] updating elapsed time to 3570
+[16:51:54.854] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.854] [SEVERE ] updating elapsed time to 3584
+[16:51:54.865] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.870] [SEVERE ] updating elapsed time to 3600
+[16:51:54.885] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.885] [SEVERE ] updating elapsed time to 3615
+[16:51:54.900] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.900] [SEVERE ] updating elapsed time to 3630
+[16:51:54.916] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.916] [SEVERE ] updating elapsed time to 3646
+[16:51:54.931] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.931] [SEVERE ] updating elapsed time to 3661
+[16:51:54.947] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.947] [SEVERE ] updating elapsed time to 3677
+[16:51:54.963] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.963] [SEVERE ] updating elapsed time to 3693
+[16:51:54.974] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.979] [SEVERE ] updating elapsed time to 3709
+[16:51:54.994] [SEVERE ] setting player 3 freeze to 0
+[16:51:54.994] [SEVERE ] updating elapsed time to 3724
+[16:51:55.009] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.009] [SEVERE ] updating elapsed time to 3739
+[16:51:55.025] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.025] [SEVERE ] updating elapsed time to 3755
+[16:51:55.041] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.041] [SEVERE ] updating elapsed time to 3771
+[16:51:55.057] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.057] [SEVERE ] updating elapsed time to 3787
+[16:51:55.073] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.073] [SEVERE ] updating elapsed time to 3803
+[16:51:55.089] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.089] [SEVERE ] updating elapsed time to 3819
+[16:51:55.105] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.105] [SEVERE ] updating elapsed time to 3835
+[16:51:55.121] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.121] [SEVERE ] updating elapsed time to 3851
+[16:51:55.137] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.137] [SEVERE ] updating elapsed time to 3867
+[16:51:55.153] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.153] [SEVERE ] updating elapsed time to 3883
+[16:51:55.169] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.169] [SEVERE ] updating elapsed time to 3899
+[16:51:55.185] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.185] [SEVERE ] updating elapsed time to 3915
+[16:51:55.201] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.201] [SEVERE ] updating elapsed time to 3931
+[16:51:55.217] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.217] [SEVERE ] updating elapsed time to 3947
+[16:51:55.232] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.232] [SEVERE ] updating elapsed time to 3962
+[16:51:55.248] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.248] [SEVERE ] updating elapsed time to 3978
+[16:51:55.264] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.264] [SEVERE ] updating elapsed time to 3994
+[16:51:55.280] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.280] [SEVERE ] updating elapsed time to 4010
+[16:51:55.296] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.296] [SEVERE ] updating elapsed time to 4026
+[16:51:55.312] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.312] [SEVERE ] updating elapsed time to 4042
+[16:51:55.328] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.328] [SEVERE ] updating elapsed time to 4058
+[16:51:55.344] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.344] [SEVERE ] updating elapsed time to 4074
+[16:51:55.360] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.360] [SEVERE ] updating elapsed time to 4090
+[16:51:55.376] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.376] [SEVERE ] updating elapsed time to 4106
+[16:51:55.392] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.392] [SEVERE ] updating elapsed time to 4122
+[16:51:55.408] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.408] [SEVERE ] updating elapsed time to 4138
+[16:51:55.424] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.424] [SEVERE ] updating elapsed time to 4154
+[16:51:55.440] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.440] [SEVERE ] updating elapsed time to 4170
+[16:51:55.456] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.456] [SEVERE ] updating elapsed time to 4186
+[16:51:55.472] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.472] [SEVERE ] updating elapsed time to 4202
+[16:51:55.487] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.487] [SEVERE ] updating elapsed time to 4217
+[16:51:55.502] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.502] [SEVERE ] updating elapsed time to 4232
+[16:51:55.518] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.518] [SEVERE ] updating elapsed time to 4248
+[16:51:55.534] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.534] [SEVERE ] updating elapsed time to 4264
+[16:51:55.550] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.550] [SEVERE ] updating elapsed time to 4280
+[16:51:55.566] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.566] [SEVERE ] updating elapsed time to 4296
+[16:51:55.582] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.582] [SEVERE ] updating elapsed time to 4312
+[16:51:55.598] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.598] [SEVERE ] updating elapsed time to 4328
+[16:51:55.613] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.613] [SEVERE ] updating elapsed time to 4343
+[16:51:55.629] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.629] [SEVERE ] updating elapsed time to 4359
+[16:51:55.645] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.645] [SEVERE ] updating elapsed time to 4375
+[16:51:55.661] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.661] [SEVERE ] updating elapsed time to 4391
+[16:51:55.677] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.677] [SEVERE ] updating elapsed time to 4407
+[16:51:55.693] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.693] [SEVERE ] updating elapsed time to 4423
+[16:51:55.709] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.709] [SEVERE ] updating elapsed time to 4439
+[16:51:55.725] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.725] [SEVERE ] updating elapsed time to 4455
+[16:51:55.741] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.741] [SEVERE ] updating elapsed time to 4471
+[16:51:55.757] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.757] [SEVERE ] updating elapsed time to 4487
+[16:51:55.773] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.773] [SEVERE ] updating elapsed time to 4503
+[16:51:55.789] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.789] [SEVERE ] updating elapsed time to 4519
+[16:51:55.804] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.804] [SEVERE ] updating elapsed time to 4534
+[16:51:55.820] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.820] [SEVERE ] updating elapsed time to 4550
+[16:51:55.835] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.835] [SEVERE ] updating elapsed time to 4565
+[16:51:55.850] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.850] [SEVERE ] updating elapsed time to 4580
+[16:51:55.866] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.866] [SEVERE ] updating elapsed time to 4596
+[16:51:55.881] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.881] [SEVERE ] updating elapsed time to 4611
+[16:51:55.897] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.897] [SEVERE ] updating elapsed time to 4627
+[16:51:55.913] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.913] [SEVERE ] updating elapsed time to 4643
+[16:51:55.929] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.929] [SEVERE ] updating elapsed time to 4659
+[16:51:55.945] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.945] [SEVERE ] updating elapsed time to 4675
+[16:51:55.961] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.961] [SEVERE ] updating elapsed time to 4691
+[16:51:55.976] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.976] [SEVERE ] updating elapsed time to 4706
+[16:51:55.992] [SEVERE ] setting player 3 freeze to 0
+[16:51:55.992] [SEVERE ] updating elapsed time to 4722
+[16:51:56.008] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.008] [SEVERE ] updating elapsed time to 4738
+[16:51:56.024] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.024] [SEVERE ] updating elapsed time to 4754
+[16:51:56.040] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.040] [SEVERE ] updating elapsed time to 4770
+[16:51:56.055] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.055] [SEVERE ] updating elapsed time to 4785
+[16:51:56.071] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.071] [SEVERE ] updating elapsed time to 4801
+[16:51:56.086] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.086] [SEVERE ] updating elapsed time to 4816
+[16:51:56.102] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.102] [SEVERE ] updating elapsed time to 4832
+[16:51:56.118] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.118] [SEVERE ] updating elapsed time to 4848
+[16:51:56.134] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.134] [SEVERE ] updating elapsed time to 4864
+[16:51:56.150] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.150] [SEVERE ] updating elapsed time to 4880
+[16:51:56.165] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.165] [SEVERE ] updating elapsed time to 4895
+[16:51:56.181] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.181] [SEVERE ] updating elapsed time to 4911
+[16:51:56.196] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.196] [SEVERE ] updating elapsed time to 4926
+[16:51:56.212] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.212] [SEVERE ] updating elapsed time to 4942
+[16:51:56.228] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.228] [SEVERE ] updating elapsed time to 4958
+[16:51:56.244] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.244] [SEVERE ] updating elapsed time to 4974
+[16:51:56.260] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.260] [SEVERE ] updating elapsed time to 4990
+[16:51:56.276] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.276] [SEVERE ] updating elapsed time to 5006
+[16:51:56.291] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.291] [SEVERE ] updating elapsed time to 5021
+[16:51:56.306] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.306] [SEVERE ] updating elapsed time to 5036
+[16:51:56.321] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.321] [SEVERE ] updating elapsed time to 5051
+[16:51:56.337] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.337] [SEVERE ] updating elapsed time to 5067
+[16:51:56.351] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.351] [SEVERE ] updating elapsed time to 5081
+[16:51:56.367] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.367] [SEVERE ] updating elapsed time to 5097
+[16:51:56.383] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.383] [SEVERE ] updating elapsed time to 5113
+[16:51:56.399] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.399] [SEVERE ] updating elapsed time to 5129
+[16:51:56.415] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.415] [SEVERE ] updating elapsed time to 5145
+[16:51:56.431] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.431] [SEVERE ] updating elapsed time to 5161
+[16:51:56.447] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.447] [SEVERE ] updating elapsed time to 5177
+[16:51:56.463] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.463] [SEVERE ] updating elapsed time to 5193
+[16:51:56.474] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.479] [SEVERE ] updating elapsed time to 5209
+[16:51:56.495] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.495] [SEVERE ] updating elapsed time to 5225
+[16:51:56.511] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.511] [SEVERE ] updating elapsed time to 5241
+[16:51:56.527] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.527] [SEVERE ] updating elapsed time to 5257
+[16:51:56.543] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.543] [SEVERE ] updating elapsed time to 5273
+[16:51:56.559] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.559] [SEVERE ] updating elapsed time to 5289
+[16:51:56.575] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.575] [SEVERE ] updating elapsed time to 5305
+[16:51:56.591] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.591] [SEVERE ] updating elapsed time to 5321
+[16:51:56.607] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.607] [SEVERE ] updating elapsed time to 5337
+[16:51:56.623] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.623] [SEVERE ] updating elapsed time to 5353
+[16:51:56.639] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.639] [SEVERE ] updating elapsed time to 5369
+[16:51:56.655] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.655] [SEVERE ] updating elapsed time to 5385
+[16:51:56.671] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.671] [SEVERE ] updating elapsed time to 5401
+[16:51:56.687] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.687] [SEVERE ] updating elapsed time to 5417
+[16:51:56.703] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.703] [SEVERE ] updating elapsed time to 5433
+[16:51:56.719] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.719] [SEVERE ] updating elapsed time to 5449
+[16:51:56.733] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.733] [SEVERE ] updating elapsed time to 5463
+[16:51:56.748] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.748] [SEVERE ] updating elapsed time to 5478
+[16:51:56.764] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.764] [SEVERE ] updating elapsed time to 5494
+[16:51:56.779] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.779] [SEVERE ] updating elapsed time to 5509
+[16:51:56.794] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.794] [SEVERE ] updating elapsed time to 5524
+[16:51:56.810] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.810] [SEVERE ] updating elapsed time to 5540
+[16:51:56.826] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.826] [SEVERE ] updating elapsed time to 5556
+[16:51:56.842] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.842] [SEVERE ] updating elapsed time to 5572
+[16:51:56.858] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.858] [SEVERE ] updating elapsed time to 5588
+[16:51:56.874] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.874] [SEVERE ] updating elapsed time to 5604
+[16:51:56.890] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.890] [SEVERE ] updating elapsed time to 5620
+[16:51:56.906] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.906] [SEVERE ] updating elapsed time to 5636
+[16:51:56.921] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.921] [SEVERE ] updating elapsed time to 5651
+[16:51:56.936] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.936] [SEVERE ] updating elapsed time to 5666
+[16:51:56.952] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.952] [SEVERE ] updating elapsed time to 5682
+[16:51:56.968] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.968] [SEVERE ] updating elapsed time to 5698
+[16:51:56.984] [SEVERE ] setting player 3 freeze to 0
+[16:51:56.984] [SEVERE ] updating elapsed time to 5714
+[16:51:57.000] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.000] [SEVERE ] updating elapsed time to 5730
+[16:51:57.016] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.016] [SEVERE ] updating elapsed time to 5746
+[16:51:57.032] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.032] [SEVERE ] updating elapsed time to 5762
+[16:51:57.048] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.048] [SEVERE ] updating elapsed time to 5778
+[16:51:57.064] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.064] [SEVERE ] updating elapsed time to 5794
+[16:51:57.080] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.080] [SEVERE ] updating elapsed time to 5810
+[16:51:57.096] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.096] [SEVERE ] updating elapsed time to 5826
+[16:51:57.111] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.111] [SEVERE ] updating elapsed time to 5841
+[16:51:57.127] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.127] [SEVERE ] updating elapsed time to 5857
+[16:51:57.143] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.143] [SEVERE ] updating elapsed time to 5873
+[16:51:57.159] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.159] [SEVERE ] updating elapsed time to 5889
+[16:51:57.175] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.175] [SEVERE ] updating elapsed time to 5905
+[16:51:57.191] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.191] [SEVERE ] updating elapsed time to 5921
+[16:51:57.207] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.207] [SEVERE ] updating elapsed time to 5937
+[16:51:57.222] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.222] [SEVERE ] updating elapsed time to 5952
+[16:51:57.237] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.237] [SEVERE ] updating elapsed time to 5967
+[16:51:57.253] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.253] [SEVERE ] updating elapsed time to 5983
+[16:51:57.269] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.269] [SEVERE ] updating elapsed time to 5999
+[16:51:57.285] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.285] [SEVERE ] updating elapsed time to 6015
+[16:51:57.301] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.301] [SEVERE ] updating elapsed time to 6031
+[16:51:57.317] [SEVERE ] updating elapsed time to 6047
+[16:51:57.317] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.332] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.332] [SEVERE ] updating elapsed time to 6062
+[16:51:57.347] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.347] [SEVERE ] updating elapsed time to 6077
+[16:51:57.363] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.363] [SEVERE ] updating elapsed time to 6093
+[16:51:57.379] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.379] [SEVERE ] updating elapsed time to 6109
+[16:51:57.395] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.395] [SEVERE ] updating elapsed time to 6125
+[16:51:57.411] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.411] [SEVERE ] updating elapsed time to 6141
+[16:51:57.427] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.427] [SEVERE ] updating elapsed time to 6157
+[16:51:57.443] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.443] [SEVERE ] updating elapsed time to 6173
+[16:51:57.459] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.459] [SEVERE ] updating elapsed time to 6189
+[16:51:57.474] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.474] [SEVERE ] updating elapsed time to 6204
+[16:51:57.490] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.490] [SEVERE ] updating elapsed time to 6220
+[16:51:57.506] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.506] [SEVERE ] updating elapsed time to 6236
+[16:51:57.522] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.522] [SEVERE ] updating elapsed time to 6252
+[16:51:57.537] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.537] [SEVERE ] updating elapsed time to 6267
+[16:51:57.552] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.552] [SEVERE ] updating elapsed time to 6282
+[16:51:57.568] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.568] [SEVERE ] updating elapsed time to 6298
+[16:51:57.584] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.584] [SEVERE ] updating elapsed time to 6314
+[16:51:57.600] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.600] [SEVERE ] updating elapsed time to 6330
+[16:51:57.616] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.616] [SEVERE ] updating elapsed time to 6346
+[16:51:57.632] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.632] [SEVERE ] updating elapsed time to 6362
+[16:51:57.648] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.648] [SEVERE ] updating elapsed time to 6378
+[16:51:57.664] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.664] [SEVERE ] updating elapsed time to 6394
+[16:51:57.680] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.680] [SEVERE ] updating elapsed time to 6410
+[16:51:57.696] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.696] [SEVERE ] updating elapsed time to 6426
+[16:51:57.712] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.712] [SEVERE ] updating elapsed time to 6442
+[16:51:57.728] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.728] [SEVERE ] updating elapsed time to 6458
+[16:51:57.744] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.744] [SEVERE ] updating elapsed time to 6474
+[16:51:57.760] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.760] [SEVERE ] updating elapsed time to 6490
+[16:51:57.776] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.776] [SEVERE ] updating elapsed time to 6506
+[16:51:57.792] [SEVERE ] updating elapsed time to 6522
+[16:51:57.792] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.807] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.807] [SEVERE ] updating elapsed time to 6537
+[16:51:57.822] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.822] [SEVERE ] updating elapsed time to 6552
+[16:51:57.838] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.838] [SEVERE ] updating elapsed time to 6568
+[16:51:57.853] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.853] [SEVERE ] updating elapsed time to 6583
+[16:51:57.869] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.869] [SEVERE ] updating elapsed time to 6599
+[16:51:57.885] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.885] [SEVERE ] updating elapsed time to 6615
+[16:51:57.901] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.901] [SEVERE ] updating elapsed time to 6631
+[16:51:57.917] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.917] [SEVERE ] updating elapsed time to 6647
+[16:51:57.933] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.933] [SEVERE ] updating elapsed time to 6663
+[16:51:57.948] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.948] [SEVERE ] updating elapsed time to 6678
+[16:51:57.964] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.964] [SEVERE ] updating elapsed time to 6694
+[16:51:57.980] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.980] [SEVERE ] updating elapsed time to 6710
+[16:51:57.996] [SEVERE ] setting player 3 freeze to 0
+[16:51:57.996] [SEVERE ] updating elapsed time to 6726
+[16:51:58.012] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.012] [SEVERE ] updating elapsed time to 6742
+[16:51:58.028] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.028] [SEVERE ] updating elapsed time to 6758
+[16:51:58.044] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.044] [SEVERE ] updating elapsed time to 6774
+[16:51:58.060] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.060] [SEVERE ] updating elapsed time to 6790
+[16:51:58.075] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.075] [SEVERE ] updating elapsed time to 6805
+[16:51:58.091] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.091] [SEVERE ] updating elapsed time to 6821
+[16:51:58.106] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.106] [SEVERE ] updating elapsed time to 6836
+[16:51:58.122] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.122] [SEVERE ] updating elapsed time to 6852
+[16:51:58.138] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.138] [SEVERE ] updating elapsed time to 6868
+[16:51:58.154] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.154] [SEVERE ] updating elapsed time to 6884
+[16:51:58.170] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.170] [SEVERE ] updating elapsed time to 6900
+[16:51:58.186] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.186] [SEVERE ] updating elapsed time to 6916
+[16:51:58.202] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.202] [SEVERE ] updating elapsed time to 6932
+[16:51:58.218] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.218] [SEVERE ] updating elapsed time to 6948
+[16:51:58.233] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.233] [SEVERE ] updating elapsed time to 6963
+[16:51:58.249] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.249] [SEVERE ] updating elapsed time to 6979
+[16:51:58.265] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.265] [SEVERE ] updating elapsed time to 6995
+[16:51:58.281] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.281] [SEVERE ] updating elapsed time to 7011
+[16:51:58.297] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.297] [SEVERE ] updating elapsed time to 7027
+[16:51:58.313] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.313] [SEVERE ] updating elapsed time to 7043
+[16:51:58.329] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.329] [SEVERE ] updating elapsed time to 7059
+[16:51:58.345] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.345] [SEVERE ] updating elapsed time to 7075
+[16:51:58.361] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.361] [SEVERE ] updating elapsed time to 7091
+[16:51:58.377] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.377] [SEVERE ] updating elapsed time to 7107
+[16:51:58.393] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.393] [SEVERE ] updating elapsed time to 7123
+[16:51:58.409] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.409] [SEVERE ] updating elapsed time to 7139
+[16:51:58.425] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.425] [SEVERE ] updating elapsed time to 7155
+[16:51:58.441] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.441] [SEVERE ] updating elapsed time to 7171
+[16:51:58.457] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.457] [SEVERE ] updating elapsed time to 7187
+[16:51:58.473] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.473] [SEVERE ] updating elapsed time to 7203
+[16:51:58.489] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.489] [SEVERE ] updating elapsed time to 7219
+[16:51:58.505] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.505] [SEVERE ] updating elapsed time to 7235
+[16:51:58.521] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.521] [SEVERE ] updating elapsed time to 7251
+[16:51:58.537] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.537] [SEVERE ] updating elapsed time to 7267
+[16:51:58.553] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.553] [SEVERE ] updating elapsed time to 7283
+[16:51:58.569] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.569] [SEVERE ] updating elapsed time to 7299
+[16:51:58.585] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.585] [SEVERE ] updating elapsed time to 7315
+[16:51:58.600] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.600] [SEVERE ] updating elapsed time to 7330
+[16:51:58.616] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.616] [SEVERE ] updating elapsed time to 7346
+[16:51:58.632] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.632] [SEVERE ] updating elapsed time to 7362
+[16:51:58.648] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.648] [SEVERE ] updating elapsed time to 7378
+[16:51:58.664] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.664] [SEVERE ] updating elapsed time to 7394
+[16:51:58.675] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.680] [SEVERE ] updating elapsed time to 7410
+[16:51:58.696] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.696] [SEVERE ] updating elapsed time to 7426
+[16:51:58.711] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.711] [SEVERE ] updating elapsed time to 7441
+[16:51:58.726] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.726] [SEVERE ] updating elapsed time to 7456
+[16:51:58.742] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.742] [SEVERE ] updating elapsed time to 7472
+[16:51:58.758] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.758] [SEVERE ] updating elapsed time to 7488
+[16:51:58.774] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.774] [SEVERE ] updating elapsed time to 7504
+[16:51:58.790] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.790] [SEVERE ] updating elapsed time to 7520
+[16:51:58.806] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.806] [SEVERE ] updating elapsed time to 7536
+[16:51:58.821] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.821] [SEVERE ] updating elapsed time to 7551
+[16:51:58.836] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.836] [SEVERE ] updating elapsed time to 7566
+[16:51:58.851] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.851] [SEVERE ] updating elapsed time to 7581
+[16:51:58.867] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.867] [SEVERE ] updating elapsed time to 7597
+[16:51:58.882] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.882] [SEVERE ] updating elapsed time to 7612
+[16:51:58.898] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.898] [SEVERE ] updating elapsed time to 7628
+[16:51:58.914] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.914] [SEVERE ] updating elapsed time to 7644
+[16:51:58.930] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.930] [SEVERE ] updating elapsed time to 7660
+[16:51:58.946] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.946] [SEVERE ] updating elapsed time to 7676
+[16:51:58.957] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.963] [SEVERE ] updating elapsed time to 7693
+[16:51:58.977] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.977] [SEVERE ] updating elapsed time to 7707
+[16:51:58.993] [SEVERE ] setting player 3 freeze to 0
+[16:51:58.993] [SEVERE ] updating elapsed time to 7723
+[16:51:59.009] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.009] [SEVERE ] updating elapsed time to 7739
+[16:51:59.020] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.025] [SEVERE ] updating elapsed time to 7755
+[16:51:59.041] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.041] [SEVERE ] updating elapsed time to 7771
+[16:51:59.057] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.057] [SEVERE ] updating elapsed time to 7787
+[16:51:59.073] [SEVERE ] updating elapsed time to 7803
+[16:51:59.073] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.089] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.089] [SEVERE ] updating elapsed time to 7819
+[16:51:59.105] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.105] [SEVERE ] updating elapsed time to 7835
+[16:51:59.121] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.121] [SEVERE ] updating elapsed time to 7851
+[16:51:59.137] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.137] [SEVERE ] updating elapsed time to 7867
+[16:51:59.153] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.153] [SEVERE ] updating elapsed time to 7883
+[16:51:59.169] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.169] [SEVERE ] updating elapsed time to 7899
+[16:51:59.185] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.185] [SEVERE ] updating elapsed time to 7915
+[16:51:59.201] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.201] [SEVERE ] updating elapsed time to 7931
+[16:51:59.217] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.217] [SEVERE ] updating elapsed time to 7947
+[16:51:59.233] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.233] [SEVERE ] updating elapsed time to 7963
+[16:51:59.248] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.248] [SEVERE ] updating elapsed time to 7978
+[16:51:59.264] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.264] [SEVERE ] updating elapsed time to 7994
+[16:51:59.279] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.279] [SEVERE ] updating elapsed time to 8009
+[16:51:59.290] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.295] [SEVERE ] updating elapsed time to 8025
+[16:51:59.311] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.311] [SEVERE ] updating elapsed time to 8041
+[16:51:59.327] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.327] [SEVERE ] updating elapsed time to 8057
+[16:51:59.342] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.342] [SEVERE ] updating elapsed time to 8072
+[16:51:59.370] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.370] [SEVERE ] updating elapsed time to 8100
+[16:51:59.385] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.388] [SEVERE ] updating elapsed time to 8118
+[16:51:59.403] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.403] [SEVERE ] updating elapsed time to 8133
+[16:51:59.419] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.419] [SEVERE ] updating elapsed time to 8149
+[16:51:59.434] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.434] [SEVERE ] updating elapsed time to 8164
+[16:51:59.450] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.450] [SEVERE ] updating elapsed time to 8180
+[16:51:59.466] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.466] [SEVERE ] updating elapsed time to 8196
+[16:51:59.482] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.482] [SEVERE ] updating elapsed time to 8212
+[16:51:59.498] [SEVERE ] updating elapsed time to 8228
+[16:51:59.498] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.514] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.514] [SEVERE ] updating elapsed time to 8244
+[16:51:59.530] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.530] [SEVERE ] updating elapsed time to 8260
+[16:51:59.546] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.546] [SEVERE ] updating elapsed time to 8276
+[16:51:59.557] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.562] [SEVERE ] updating elapsed time to 8292
+[16:51:59.578] [SEVERE ] updating elapsed time to 8308
+[16:51:59.578] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.594] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.594] [SEVERE ] updating elapsed time to 8324
+[16:51:59.605] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.610] [SEVERE ] updating elapsed time to 8340
+[16:51:59.626] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.626] [SEVERE ] updating elapsed time to 8356
+[16:51:59.642] [SEVERE ] updating elapsed time to 8372
+[16:51:59.642] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.684] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.685] [SEVERE ] updating elapsed time to 8415
+[16:51:59.777] [SEVERE ] updating elapsed time to 8507
+[16:51:59.777] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.801] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.801] [SEVERE ] updating elapsed time to 8531
+[16:51:59.813] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.813] [SEVERE ] updating elapsed time to 8543
+[16:51:59.829] [SEVERE ] updating elapsed time to 8559
+[16:51:59.829] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.844] [SEVERE ] setting player 3 freeze to 0
+[16:51:59.844] [SEVERE ] updating elapsed time to 8574
+[16:52:00.088] [SEVERE ] updating elapsed time to 8818
+[16:52:00.089] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.151] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.154] [SEVERE ] updating elapsed time to 8884
+[16:52:00.242] [SEVERE ] updating elapsed time to 8972
+[16:52:00.243] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.310] [SEVERE ] updating elapsed time to 9040
+[16:52:00.512] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.533] [SEVERE ] updating elapsed time to 9263
+[16:52:00.668] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.669] [SEVERE ] updating elapsed time to 9399
+[16:52:00.693] [SEVERE ] updating elapsed time to 9423
+[16:52:00.693] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.705] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.710] [SEVERE ] updating elapsed time to 9440
+[16:52:00.721] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.724] [SEVERE ] updating elapsed time to 9454
+[16:52:00.737] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.739] [SEVERE ] updating elapsed time to 9469
+[16:52:00.753] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.753] [SEVERE ] updating elapsed time to 9483
+[16:52:00.769] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.782] [SEVERE ] updating elapsed time to 9512
+[16:52:00.785] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.801] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.801] [SEVERE ] updating elapsed time to 9531
+[16:52:00.817] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.817] [SEVERE ] updating elapsed time to 9547
+[16:52:00.838] [SEVERE ] updating elapsed time to 9568
+[16:52:00.838] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.864] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.865] [SEVERE ] updating elapsed time to 9595
+[16:52:00.879] [SEVERE ] updating elapsed time to 9609
+[16:52:00.879] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.898] [SEVERE ] updating elapsed time to 9628
+[16:52:00.898] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.910] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.910] [SEVERE ] updating elapsed time to 9640
+[16:52:00.926] [SEVERE ] updating elapsed time to 9656
+[16:52:00.926] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.942] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.943] [SEVERE ] updating elapsed time to 9673
+[16:52:00.956] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.956] [SEVERE ] updating elapsed time to 9686
+[16:52:00.972] [SEVERE ] setting player 3 freeze to 0
+[16:52:00.972] [SEVERE ] updating elapsed time to 9702
+[16:52:00.987] [SEVERE ] updating elapsed time to 9717
+[16:52:00.987] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.002] [SEVERE ] updating elapsed time to 9732
+[16:52:01.002] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.018] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.018] [SEVERE ] updating elapsed time to 9748
+[16:52:01.034] [SEVERE ] updating elapsed time to 9764
+[16:52:01.034] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.050] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.050] [SEVERE ] updating elapsed time to 9780
+[16:52:01.066] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.066] [SEVERE ] updating elapsed time to 9796
+[16:52:01.082] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.082] [SEVERE ] updating elapsed time to 9812
+[16:52:01.098] [SEVERE ] updating elapsed time to 9828
+[16:52:01.098] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.114] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.114] [SEVERE ] updating elapsed time to 9844
+[16:52:01.130] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.130] [SEVERE ] updating elapsed time to 9860
+[16:52:01.146] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.147] [SEVERE ] updating elapsed time to 9877
+[16:52:01.162] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.162] [SEVERE ] updating elapsed time to 9892
+[16:52:01.178] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.178] [SEVERE ] updating elapsed time to 9908
+[16:52:01.194] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.194] [SEVERE ] updating elapsed time to 9924
+[16:52:01.210] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.210] [SEVERE ] updating elapsed time to 9940
+[16:52:01.225] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.225] [SEVERE ] updating elapsed time to 9955
+[16:52:01.241] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.241] [SEVERE ] updating elapsed time to 9971
+[16:52:01.257] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.257] [SEVERE ] updating elapsed time to 9987
+[16:52:01.273] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.273] [SEVERE ] updating elapsed time to 10003
+[16:52:01.289] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.289] [SEVERE ] updating elapsed time to 10019
+[16:52:01.305] [SEVERE ] updating elapsed time to 10035
+[16:52:01.305] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.321] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.321] [SEVERE ] updating elapsed time to 10051
+[16:52:01.337] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.337] [SEVERE ] updating elapsed time to 10067
+[16:52:01.353] [SEVERE ] updating elapsed time to 10083
+[16:52:01.353] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.369] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.369] [SEVERE ] updating elapsed time to 10099
+[16:52:01.385] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.385] [SEVERE ] updating elapsed time to 10115
+[16:52:01.401] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.401] [SEVERE ] updating elapsed time to 10131
+[16:52:01.412] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.417] [SEVERE ] updating elapsed time to 10147
+[16:52:01.433] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.433] [SEVERE ] updating elapsed time to 10163
+[16:52:01.449] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.449] [SEVERE ] updating elapsed time to 10179
+[16:52:01.465] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.465] [SEVERE ] updating elapsed time to 10195
+[16:52:01.481] [SEVERE ] updating elapsed time to 10211
+[16:52:01.481] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.497] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.497] [SEVERE ] updating elapsed time to 10227
+[16:52:01.513] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.513] [SEVERE ] updating elapsed time to 10243
+[16:52:01.524] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.529] [SEVERE ] updating elapsed time to 10259
+[16:52:01.545] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.545] [SEVERE ] updating elapsed time to 10275
+[16:52:01.561] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.561] [SEVERE ] updating elapsed time to 10291
+[16:52:01.577] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.577] [SEVERE ] updating elapsed time to 10307
+[16:52:01.591] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.591] [SEVERE ] updating elapsed time to 10321
+[16:52:01.607] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.607] [SEVERE ] updating elapsed time to 10337
+[16:52:01.622] [SEVERE ] updating elapsed time to 10352
+[16:52:01.622] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.637] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.637] [SEVERE ] updating elapsed time to 10367
+[16:52:01.653] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.653] [SEVERE ] updating elapsed time to 10383
+[16:52:01.668] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.668] [SEVERE ] updating elapsed time to 10398
+[16:52:01.683] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.683] [SEVERE ] updating elapsed time to 10413
+[16:52:01.699] [SEVERE ] updating elapsed time to 10429
+[16:52:01.699] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.714] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.714] [SEVERE ] updating elapsed time to 10444
+[16:52:01.730] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.730] [SEVERE ] updating elapsed time to 10460
+[16:52:01.746] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.746] [SEVERE ] updating elapsed time to 10476
+[16:52:01.762] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.762] [SEVERE ] updating elapsed time to 10492
+[16:52:01.773] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.778] [SEVERE ] updating elapsed time to 10508
+[16:52:01.794] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.794] [SEVERE ] updating elapsed time to 10524
+[16:52:01.810] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.810] [SEVERE ] updating elapsed time to 10540
+[16:52:01.826] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.826] [SEVERE ] updating elapsed time to 10556
+[16:52:01.842] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.842] [SEVERE ] updating elapsed time to 10572
+[16:52:01.858] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.858] [SEVERE ] updating elapsed time to 10588
+[16:52:01.874] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.874] [SEVERE ] updating elapsed time to 10604
+[16:52:01.890] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.890] [SEVERE ] updating elapsed time to 10620
+[16:52:01.906] [SEVERE ] updating elapsed time to 10636
+[16:52:01.906] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.922] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.922] [SEVERE ] updating elapsed time to 10652
+[16:52:01.938] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.938] [SEVERE ] updating elapsed time to 10668
+[16:52:01.954] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.954] [SEVERE ] updating elapsed time to 10684
+[16:52:01.969] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.969] [SEVERE ] updating elapsed time to 10699
+[16:52:01.985] [SEVERE ] setting player 3 freeze to 0
+[16:52:01.985] [SEVERE ] updating elapsed time to 10715
+[16:52:02.001] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.001] [SEVERE ] updating elapsed time to 10731
+[16:52:02.017] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.017] [SEVERE ] updating elapsed time to 10747
+[16:52:02.033] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.033] [SEVERE ] updating elapsed time to 10763
+[16:52:02.049] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.049] [SEVERE ] updating elapsed time to 10779
+[16:52:02.064] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.064] [SEVERE ] updating elapsed time to 10794
+[16:52:02.079] [SEVERE ] updating elapsed time to 10809
+[16:52:02.079] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.095] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.095] [SEVERE ] updating elapsed time to 10825
+[16:52:02.111] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.111] [SEVERE ] updating elapsed time to 10841
+[16:52:02.127] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.127] [SEVERE ] updating elapsed time to 10857
+[16:52:02.143] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.143] [SEVERE ] updating elapsed time to 10873
+[16:52:02.159] [SEVERE ] setting player 3 freeze to 0
+[16:52:02.159] [SEVERE ] updating elapsed time to 10889
