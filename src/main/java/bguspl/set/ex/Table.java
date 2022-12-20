@@ -78,6 +78,7 @@ public class Table {
             e.printStackTrace();
         }
         List<Integer> deck = Arrays.stream(slotToCard).filter(Objects::nonNull).collect(Collectors.toList());
+
         env.util.findSets(deck, Integer.MAX_VALUE).forEach(set -> {
             StringBuilder sb = new StringBuilder().append("Hint: Set found: ");
             List<Integer> slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).sorted().collect(Collectors.toList());
@@ -87,6 +88,26 @@ public class Table {
 
         semaphore.release();
 
+    }
+
+    public List<Integer> hintsAI() {
+//        try {
+//            semaphore.acquire();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        List<Integer> deck = Arrays.stream(slotToCard).filter(Objects::nonNull).collect(Collectors.toList());
+        List<int[]> sets = env.util.findSets(deck, Integer.MAX_VALUE);
+        List<Integer> slots = new ArrayList<Integer>();
+        System.out.println("sets1: " + sets);
+        if(sets.size() > 0){
+            int[] set = sets.get(0);
+            System.out.println("sets2: " + sets);
+            slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).sorted().collect(Collectors.toList());
+        }
+
+//        semaphore.release();
+        return slots;
     }
 
     /**
@@ -142,12 +163,20 @@ public class Table {
                 t.remove(Integer.valueOf(slot));
             }
         }
-        int c = slotToCard[slot];
-        slotToCard[slot] = null;
-        cardToSlot[c] = null;
-        usedSlots.remove(Integer.valueOf(slot));
-        env.ui.removeTokens(slot);
-        env.ui.removeCard(slot);
+        if(slotToCard[slot] != null){
+            int c = slotToCard[slot];
+            cardToSlot[c] = null;
+            slotToCard[slot] = null;
+            usedSlots.remove(Integer.valueOf(slot));
+            env.ui.removeTokens(slot);
+            env.ui.removeCard(slot);
+        }
+//        int c = slotToCard[slot];
+//        slotToCard[slot] = null;
+//        cardToSlot[c] = null;
+//        usedSlots.remove(Integer.valueOf(slot));
+//        env.ui.removeTokens(slot);
+//        env.ui.removeCard(slot);
     }
 
     /**
@@ -166,7 +195,7 @@ public class Table {
             env.ui.placeToken(player, slot);
             System.out.println(player + " placed token at " + slot);
         }
-        return tokens.get(player).size() == 3;
+        return tokens.get(player).size() == env.config.featureSize;
     }
 
     /**

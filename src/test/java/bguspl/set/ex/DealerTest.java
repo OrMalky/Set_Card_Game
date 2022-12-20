@@ -35,6 +35,8 @@ public class DealerTest {
     private Table table;
     @Mock
     private Logger logger;
+    @Mock
+    private Player player;
     private Player[] players;
     private Integer[] slotToCard;
     private Integer[] cardToSlot;

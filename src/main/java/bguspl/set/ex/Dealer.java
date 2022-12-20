@@ -104,7 +104,9 @@ public class Dealer implements Runnable {
             sleepUntilWokenOrTimeout();
             acquireSemaphore();
             while(!toCheck.isEmpty()){
-                checkSet(toCheck.poll());
+                int id = toCheck.poll();
+                checkSet(id);
+//                players[id].wake();
             }
             removeCardsFromTable();
             placeCardsOnTable();
@@ -154,7 +156,7 @@ public class Dealer implements Runnable {
         List<Integer> set = table.getPlayerTokens(player);
 
         //Turn set to Array for checking
-        int[] cards = new int[3];
+        int[] cards = new int[env.config.featureSize];
         int p = 0;
         for (Integer i : set) {
             cards[p] = table.getSlotToCard()[i];
@@ -166,14 +168,16 @@ public class Dealer implements Runnable {
             players[player].point();
             toRemove.addAll(set);
             table.removePlayerTokens(player);
+            players[player].wake();
             if(env.config.hints){
                 table.hints();
             }
             table.semaphore.release();
             return true;
-        } else { //if the set is not valid penalize the player
+       } else { //if the set is not valid penalize the player
 //            table.removePlayerTokens(player);
             table.semaphore.release();
+            players[player].wake();
             players[player].penalty();
             return false;
         }
@@ -207,7 +211,14 @@ public class Dealer implements Runnable {
         while(!toRemove.isEmpty()){
             int slot = toRemove.poll();
             for (Player player : players) {
+//                if(player.isWait()){
+//                    player.wake();
+//                }
                 player.removeFromQueue(slot);
+                if(table.getPlayerTokens(player.getId()).contains(slot)){
+                    this.toCheck.remove(player.getId());
+                    table.removeToken(player.getId(), slot);
+                }
             }
             table.removeCard(slot);
         }

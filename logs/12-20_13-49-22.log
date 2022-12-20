@@ -1,0 +1,79 @@
+[13:49:22.128] [INFO   ] thread main starting.
+[13:49:22.140] [SEVERE ] cannot read configuration file config.properties trying from resources.
+[13:49:22.144] [SEVERE ] configuration file was loaded from resources directory.
+[13:49:22.862] [INFO   ] thread dealer starting.
+[13:49:22.863] [INFO   ] Thread dealer starting.
+[13:49:22.870] [INFO   ] Thread Player 0 starting.
+[13:49:22.870] [INFO   ] Thread Player 1 starting.
+[13:49:22.872] [INFO   ] Thread Player 2 starting.
+[13:49:22.874] [INFO   ] Thread Player 3 starting.
+[13:49:22.890] [INFO   ] Thread computer-1 starting.
+[13:49:22.894] [INFO   ] Thread computer-2 starting.
+[13:49:22.895] [INFO   ] Thread computer-3 starting.
+[13:49:22.990] [SEVERE ] placing card 53 in slot 1
+[13:49:23.101] [SEVERE ] placing card 11 in slot 4
+[13:49:23.209] [SEVERE ] placing card 76 in slot 11
+[13:49:23.319] [SEVERE ] placing card 41 in slot 5
+[13:49:23.429] [SEVERE ] placing card 31 in slot 8
+[13:49:23.538] [SEVERE ] placing card 72 in slot 10
+[13:49:23.647] [SEVERE ] placing card 63 in slot 9
+[13:49:23.757] [SEVERE ] placing card 75 in slot 0
+[13:49:23.864] [SEVERE ] placing card 78 in slot 3
+[13:49:23.972] [SEVERE ] placing card 12 in slot 7
+[13:49:24.081] [SEVERE ] placing card 21 in slot 2
+[13:49:24.190] [SEVERE ] placing card 24 in slot 6
+[13:49:24.216] [SEVERE ] player 4 placing token on slot 3
+[13:49:24.216] [SEVERE ] player 3 placing token on slot 0
+[13:49:24.217] [SEVERE ] player 2 placing token on slot 0
+[13:49:24.227] [SEVERE ] updating countdown to 59988
+[13:49:24.239] [SEVERE ] updating countdown to 59976
+[13:49:24.251] [SEVERE ] updating countdown to 59964
+[13:49:24.262] [SEVERE ] updating countdown to 59953
+[13:49:24.273] [SEVERE ] updating countdown to 59942
+[13:49:24.309] [SEVERE ] updating countdown to 59906
+[13:49:24.361] [SEVERE ] updating countdown to 59854
+[13:49:24.373] [SEVERE ] updating countdown to 59842
+[13:49:24.384] [SEVERE ] updating countdown to 59831
+[13:49:24.395] [SEVERE ] updating countdown to 59820
+[13:49:24.406] [SEVERE ] updating countdown to 59809
+[13:49:24.417] [SEVERE ] updating countdown to 59798
+[13:49:24.428] [SEVERE ] updating countdown to 59787
+[13:49:24.439] [SEVERE ] updating countdown to 59776
+[13:49:24.450] [SEVERE ] updating countdown to 59765
+[13:49:24.461] [SEVERE ] updating countdown to 59754
+[13:49:24.472] [SEVERE ] updating countdown to 59743
+[13:49:24.483] [SEVERE ] updating countdown to 59732
+[13:49:24.493] [SEVERE ] player 2 placing token on slot 3
+[13:49:24.494] [SEVERE ] updating countdown to 59721
+[13:49:24.497] [SEVERE ] player 3 placing token on slot 10
+[13:49:24.505] [SEVERE ] updating countdown to 59710
+[13:49:24.516] [SEVERE ] updating countdown to 59699
+[13:49:24.519] [SEVERE ] player 4 placing token on slot 10
+[13:49:24.527] [SEVERE ] updating countdown to 59688
+[13:49:24.537] [SEVERE ] updating countdown to 59678
+[13:49:24.548] [SEVERE ] updating countdown to 59667
+[13:49:24.559] [SEVERE ] updating countdown to 59656
+[13:49:24.570] [SEVERE ] updating countdown to 59645
+[13:49:24.581] [SEVERE ] updating countdown to 59634
+[13:49:24.592] [SEVERE ] updating countdown to 59623
+[13:49:24.603] [SEVERE ] updating countdown to 59612
+[13:49:24.614] [SEVERE ] updating countdown to 59601
+[13:49:24.614] [SEVERE ] exit button pressed
+[13:49:24.625] [SEVERE ] updating countdown to 59590
+[13:49:24.625] [SEVERE ] updating countdown to 60000
+[13:49:24.625] [SEVERE ] updating countdown to 60000
+[13:49:24.627] [SEVERE ] announcing winner(s): player 1, player 2, player 3, player 4
+[13:49:24.629] [INFO   ] Thread dealer terminated.
+[13:49:24.629] [INFO   ] thread dealer terminated.
+[13:49:24.629] [SEVERE ] thanks for playing... it was fun!
+[13:49:24.629] [INFO   ] thread main terminated.
+[13:49:24.781] [SEVERE ] removing player 2 token from slot 3
+[13:49:24.784] [SEVERE ] removing player 3 token from slot 0
+[13:49:24.787] [INFO   ] Thread computer-3 terminated.
+[13:49:24.787] [INFO   ] Thread Player 3 terminated.
+[13:49:25.068] [SEVERE ] removing player 2 token from slot 0
+[13:49:25.070] [INFO   ] Thread computer-2 terminated.
+[13:49:25.070] [INFO   ] Thread Player 2 terminated.
+[13:49:25.354] [INFO   ] Thread computer-1 terminated.
+[13:49:25.354] [INFO   ] Thread Player 1 terminated.
+[13:49:25.474] [INFO   ] Thread Player 0 terminated.

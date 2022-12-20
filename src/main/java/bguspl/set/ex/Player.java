@@ -2,11 +2,9 @@ package bguspl.set.ex;
 
 import bguspl.set.Env;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.stream.Collectors;
 
 import static java.lang.Thread.sleep;
 
@@ -65,7 +63,7 @@ public class Player implements Runnable {
     private long sleepEnd;
     private boolean wait = false;
 
-    private long aiDelay = 286;
+    private long aiDelay = 0;
 
     /**
      * The class constructor.
@@ -145,16 +143,24 @@ public class Player implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        
-        List<Integer> options = table.getUsedSlots();
-        if(options.size() > 0){
-            if(table.getPlayerTokens(id).size() == 3){
-                options = table.getPlayerTokens(id);
-            }
-            Random random = new Random();
-            int choice = options.get(random.nextInt(options.size()));
-            keyPressed(choice);
+
+        List<Integer> options = new ArrayList<>();
+
+        if(table.getPlayerTokens(id).size() == env.config.featureSize){
+            options = table.getPlayerTokens(id);
         }
+        else if(env.config.hints && table.hintsAI().size()>0){
+            options = table.hintsAI();
+        }
+        else{
+            options = table.getUsedSlots();
+        }
+        if(options.size() > 0){
+        Random random = new Random();
+        int choice = options.get(random.nextInt(options.size()));
+        keyPressed(choice);
+        }
+
         table.semaphore.release();
     }
 
@@ -179,17 +185,18 @@ public class Player implements Runnable {
      * @param slot - the slot corresponding to the key pressed.
      */
     public void keyPressed(int slot) {
-        if(!human && Thread.currentThread() != aiThread) return; // ignore keybpard input when its a computer player
-        if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
-        if(table.getPlayerTokens(id).size () < 3){
-            if(toPlace.size() < 3)
+        if (!human && Thread.currentThread() != aiThread) return; // ignore keyboard input when it's a computer player
+        if (sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
+        if (table.getPlayerTokens(id).size() < env.config.featureSize) {
+            if (toPlace.size() < env.config.featureSize) {
                 toPlace.add(slot);
-        } else {
-            if (table.getPlayerTokens(id).contains(slot)){
-                toPlace.add(slot);
+            }}
+        else {
+                if (table.getPlayerTokens(id).contains(slot)) {
+                    toPlace.add(slot);
+                }
             }
         }
-    }
 
     /**
      * Award a point to a player and perform other related actions.
@@ -236,7 +243,7 @@ public class Player implements Runnable {
     /**
      * Call the Sleep method from the Thread class and sets that up in the UI
      */
-    private void sleep(){
+    void sleep(){
         try {
 
             Thread.sleep(10);
@@ -290,6 +297,8 @@ public class Player implements Runnable {
         if(isSet){
             synchronized(dealer){
                 dealer.toCheck.add(id);
+                this.sleepUntilWoken();
+
             }
         }
     }
@@ -311,5 +320,9 @@ public class Player implements Runnable {
 
     public void setToPlace(Queue<Integer> toPlace){
         this.toPlace = toPlace;
+    }
+
+    public boolean isWait(){
+        return this.wait;
     }
 }

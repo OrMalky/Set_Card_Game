@@ -1,0 +1,13 @@
+[00:15:45.427] [INFO   ] thread main starting.
+[00:15:45.437] [SEVERE ] cannot read configuration file config.properties trying from resources.
+[00:15:45.440] [SEVERE ] configuration file was loaded from resources directory.
+[00:15:46.117] [INFO   ] thread dealer starting.
+[00:15:46.119] [INFO   ] Thread dealer starting.
+[00:15:46.121] [INFO   ] Thread Player 1 starting.
+[00:15:46.121] [INFO   ] Thread Player 0 starting.
+[00:15:46.128] [INFO   ] Thread Player 2 starting.
+[00:15:46.130] [INFO   ] Thread Player 3 starting.
+[00:15:46.131] [INFO   ] Thread computer-3 starting.
+[00:15:46.132] [INFO   ] Thread computer-2 starting.
+[00:15:46.132] [INFO   ] Thread computer-0 starting.
+[00:15:46.132] [INFO   ] Thread computer-1 starting.
