@@ -79,7 +79,7 @@ public class Player implements Runnable {
         this.id = id;
         this.human = human;
         this.dealer = dealer;
-        toPlace = new ConcurrentLinkedQueue<Integer>();
+        toPlace = new ConcurrentLinkedQueue<>();
     }
 
     /**
@@ -122,11 +122,8 @@ public class Player implements Runnable {
                     try {
                         if(!wait)
                             Thread.sleep(aiDelay);
-                    } catch (InterruptedException e) {}
+                    } catch (InterruptedException ignored) {}
                 }
-//                try {
-//                    synchronized (this) { wait(); }
-//                } catch (InterruptedException ignored) {}
             }
             env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
         }, "computer-" + id);
@@ -153,8 +150,10 @@ public class Player implements Runnable {
 
         //Call keypresses
         for (Integer p : presses){
-            System.out.println("AI " + id + " pressing " + p);
-            keyPressed(p);
+            if(p !=null){
+                System.out.println("AI " + id + " pressing " + p);
+                keyPressed(p);
+            }
         }
         
         table.semaphore.release();
@@ -170,7 +169,7 @@ public class Player implements Runnable {
             if(aiThread.getState() == Thread.State.TIMED_WAITING)
                 try {
                     Thread.sleep(10);
-                } catch (InterruptedException e) {}
+                } catch (InterruptedException ignored) {}
             aiThread.interrupt();
         }
         playerThread.interrupt();
@@ -261,9 +260,7 @@ public class Player implements Runnable {
      * @param slot - the slot the card in
      */
     public void removeFromToPlace(int slot){
-        if(toPlace.contains(slot)){
-            toPlace.remove(Integer.valueOf(slot));
-        }
+        toPlace.remove(slot);
     }
 
     /**

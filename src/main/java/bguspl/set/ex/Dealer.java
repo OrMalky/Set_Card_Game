@@ -59,8 +59,7 @@ public class Dealer implements Runnable {
         this.players = players;
         deck = IntStream.range(0, env.config.deckSize).boxed().collect(Collectors.toList());
         this.toRemove = new ConcurrentLinkedQueue<Integer>();
-        this.toCheck = new ArrayBlockingQueue<Integer>(4);
-
+        this.toCheck = new ArrayBlockingQueue<Integer>(env.config.players);
         this.reshuffleTime = env.config.turnTimeoutMillis;
         this.warningTime = env.config.turnTimeoutWarningMillis;
         this.timerMode = reshuffleTime == 0;
@@ -218,6 +217,7 @@ public class Dealer implements Runnable {
                     if(toCheck.remove(player.getId()))
                         player.wake();
                     table.removeToken(player.getId(), slot);
+                    player.wake();
                 }
             }
             table.removeCard(slot);

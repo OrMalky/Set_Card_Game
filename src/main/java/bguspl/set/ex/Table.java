@@ -99,7 +99,10 @@ public class Table {
         List<Integer> slots = new ArrayList<Integer>();
         if(sets.size() > 0){
             int[] set = sets.get(random.nextInt(sets.size()));
-            slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).sorted().collect(Collectors.toList());
+            for(int i = 0; i < set.length; i++){
+                slots.add(cardToSlot[set[i]]);
+            }
+            slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).filter(Objects::nonNull).sorted().collect(Collectors.toList());
         }
 
 //        semaphore.release();
