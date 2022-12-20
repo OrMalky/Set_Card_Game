@@ -118,7 +118,7 @@ public class Player implements Runnable {
                 if(wait || sleepEnd > System.currentTimeMillis()) {
                     sleep();
                 } else {
-                    generateKeyPress();
+                    generateSmartKeyPresses();
                     try {
                         if(!wait)
                             Thread.sleep(aiDelay);
@@ -133,42 +133,34 @@ public class Player implements Runnable {
         aiThread.start();
     }
 
-    /**
-     * Generates a key press (a random number between 0 and 12).
-     */
-    private void generateKeyPress(){
+    private void generateSmartKeyPresses(){
         try {
             table.semaphore.acquire();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        List<Integer> options = new ArrayList<>();
-        List<Integer> tokensP = table.getPlayerTokens(id);
-        while(tokensP.contains(null)){
-            tokensP.remove(null);
-        }
-        if(tokensP.size() == env.config.featureSize) {
-            options.addAll(tokensP);
-            System.out.println("options1: " + options);
-        }
-        else if(env.config.hints && table.hintsAI().size()>0){
-            options.addAll(table.hintsAI());
-        }
-        else{
-            options.addAll(table.getUsedSlots());
-        }
-        if(options.size() > 0){
-            Random random = new Random();
-            int choice = options.get(random.nextInt(options.size()));
-            if(!toPlace.contains(choice))
-                keyPressed(choice);
+        List<Integer> presses = new ArrayList<Integer>();
+        List<Integer> currentTokens = new ArrayList<Integer>(table.getPlayerTokens(id));
 
+        //If there are 3 tokens on the table - remove them (must have been a missed set)
+        //Otherwise, get a random set and place its tokens
+        if(currentTokens.size() == 3){
+            presses = currentTokens;
+        } else{
+            presses = table.hintsAI();
         }
 
+        //Call keypresses
+        for (Integer p : presses){
+            System.out.println("AI " + id + " pressing " + p);
+            keyPressed(p);
+        }
+        
         table.semaphore.release();
     }
 
+    
     /**
      * Called when the game should be terminated.
      */
@@ -177,7 +169,7 @@ public class Player implements Runnable {
         if(!human) {
             if(aiThread.getState() == Thread.State.TIMED_WAITING)
                 try {
-                    Thread.sleep(aiDelay);
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {}
             aiThread.interrupt();
         }
@@ -195,7 +187,8 @@ public class Player implements Runnable {
         if (table.getPlayerTokens(id).size() < env.config.featureSize) {
             if (toPlace.size() < env.config.featureSize) {
                 toPlace.add(slot);
-            }}
+            }
+        }
         else {
                 if (table.getPlayerTokens(id).contains(slot)) {
                     toPlace.add(slot);
@@ -250,7 +243,6 @@ public class Player implements Runnable {
      */
     void sleep(){
         try {
-
             Thread.sleep(10);
             if(!wait){
                 if(System.currentTimeMillis() >= sleepEnd){
@@ -303,7 +295,6 @@ public class Player implements Runnable {
             synchronized(dealer){
                 dealer.toCheck.add(id);
                 this.sleepUntilWoken();
-
             }
         }
     }

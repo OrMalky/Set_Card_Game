@@ -185,11 +185,11 @@ public class Table {
     public boolean placeToken(int player, int slot) {
         if(tokens.get(player).contains(slot)){
             removeToken(player, slot);
-            System.out.println(player + " removed token at " + slot);
+            //System.out.println(player + " removed token at " + slot);
         } else {
             tokens.get(player).add(slot);
             env.ui.placeToken(player, slot);
-            System.out.println(player + " placed token at " + slot);
+            //System.out.println(player + " placed token at " + slot);
         }
         return tokens.get(player).size() == env.config.featureSize;
     }
@@ -246,7 +246,6 @@ public class Table {
         int p = tokens.get(player).indexOf(slot);
         if(p > -1){
             tokens.get(player).remove(p);
-            System.out.println("tokens" + tokens.get(player));
             env.ui.removeToken(player, slot);
             return true;
         }
@@ -268,7 +267,6 @@ public class Table {
         }
 
         //checks if there is at least one set on the table
-        System.out.println("Cards: " + cards);
         return env.util.findSets(cards, 1).size() > 0;
     }
 

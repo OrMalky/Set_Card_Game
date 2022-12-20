@@ -107,7 +107,7 @@ public class Dealer implements Runnable {
                 int id = toCheck.poll();
                 checkSet(id);
             }
-            while((!displayTimer || timerMode) && !table.checkForSets()){
+            while((!displayTimer || timerMode) && !table.checkForSets() && !shouldFinish()){
                 removeAllCardsFromTable();
                 placeCardsOnTable();
             }
@@ -164,22 +164,22 @@ public class Dealer implements Runnable {
 
         //If set is valid add a point to the player and remove the cards
         if(env.util.testSet(cards)){
-            players[player].point();
             toRemove.addAll(set);
             table.removePlayerTokens(player);
             removeCardsFromTable();
             placeCardsOnTable();
             players[player].wake();
+            players[player].point();
             if(env.config.hints){
                 table.hints();
             }
             table.semaphore.release();
             return true;
        } else { //if the set is not valid penalize the player
-//            table.removePlayerTokens(player);
-            table.semaphore.release();
+            //table.removePlayerTokens(player);
             players[player].wake();
             players[player].penalty();
+            table.semaphore.release();
             return false;
         }
     }
@@ -190,6 +190,7 @@ public class Dealer implements Runnable {
         terminate = true;
         acquireSemaphore();
         for (int i = players.length - 1; i >= 0; i--) {
+            //players[i].wake();
             players[i].terminate();
         }
         table.semaphore.release();
@@ -214,7 +215,8 @@ public class Dealer implements Runnable {
             for (Player player : players) {
                 player.removeFromToPlace(slot);
                 if(table.getPlayerTokens(player.getId()).contains(slot)){
-                    this.toCheck.remove(player.getId());
+                    if(toCheck.remove(player.getId()))
+                        player.wake();
                     table.removeToken(player.getId(), slot);
                 }
             }
@@ -238,7 +240,7 @@ public class Dealer implements Runnable {
             if(table.getCard(validSlots.get(slot)) == null){
                 int card = deck.remove(0);
                 table.placeCard(card, validSlots.get(slot));
-                System.out.println(deck.size() + " Cards left in deck");
+                //System.out.println(deck.size() + " Cards left in deck");
 
             }
             validSlots.remove(slot);
@@ -282,16 +284,18 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         //Remove cards from table to the deck
-        ArrayList<Integer> cards = new ArrayList<>();
-        for (int i = 0; i < table.countCards(); i++) {
-            cards.add(i);
+        ArrayList<Integer> slots = new ArrayList<>();
+        for (int i = 0; i < tableSize; i++) {
+            if(table.getCard(i) != null){
+                slots.add(i);
+            }
         }
         while (table.countCards() > 0) {
-            Collections.shuffle(cards);
-            Integer c = table.getCard(cards.get(0));
-            table.removeCard(cards.get(0));
+            Collections.shuffle(slots);
+            int slotToRemove = slots.remove(0);
+            Integer c = table.getCard(slotToRemove);
+            table.removeCard(slotToRemove);
             deck.add(c);
-            cards.remove(0);
         }
         Collections.shuffle(deck);  //Shuffle the deck
     }
@@ -321,6 +325,7 @@ public class Dealer implements Runnable {
 
         int[] winners = winnerList.stream().mapToInt(Integer::intValue).toArray();
         env.ui.announceWinner(winners);
+        terminate();
     }
 
     public Player[] getPlayers(){
