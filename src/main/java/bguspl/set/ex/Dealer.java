@@ -52,6 +52,8 @@ public class Dealer implements Runnable {
     private Queue<Integer> toRemove;
     public Queue<Integer> toCheck;
 
+    public final long UI_TIME_OFFSET = 999;
+
 
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
@@ -135,6 +137,13 @@ public class Dealer implements Runnable {
             table.semaphore.release();
         }
         else{
+            acquireSemaphore();
+            removeAllTokensFromTable();
+            removeAllCardsFromTable();
+            for (int i = players.length - 1; i >= 0; i--) {
+                players[i].terminate();
+                players[i].wake();
+            }
             announceWinners();
         }
     }
@@ -199,15 +208,10 @@ public class Dealer implements Runnable {
      */
     public void terminate() {
         terminate = true;
-        acquireSemaphore();
-        removeAllTokensFromTable();
-        removeAllCardsFromTable();
-        for (int i = players.length - 1; i >= 0; i--) {
-            players[i].terminate();
-            players[i].wake();
+        for (Player player : players){
+            player.sleepUntilWoken();
         }
-        System.out.println(Thread.currentThread().getName() + " terminated");
-        //table.semaphore.release();
+        acquireSemaphore();
     }
 
     /**
@@ -263,9 +267,8 @@ public class Dealer implements Runnable {
             usedSlots++;
         }
 
-        //Release table's semaphore and update timer dispaly
+        //Release table's semaphore
         table.semaphore.release();
-        //updateTimerDisplay(false);
     }
 
     /**
@@ -291,7 +294,7 @@ public class Dealer implements Runnable {
         if(timerMode){
             env.ui.setElapsed(System.currentTimeMillis() - startTime);
         } else {
-            env.ui.setCountdown(t, t <= warningTime);
+            env.ui.setCountdown(t + UI_TIME_OFFSET, t <= warningTime);
         }
     }
 

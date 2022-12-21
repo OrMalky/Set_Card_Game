@@ -94,7 +94,7 @@ public class Player implements Runnable {
         while (!terminate) {
             if(wait || sleepEnd > System.currentTimeMillis()) {
                 if(!wait)
-                    env.ui.setFreeze(id, sleepEnd - System.currentTimeMillis());
+                    env.ui.setFreeze(id, sleepEnd - System.currentTimeMillis() + dealer.UI_TIME_OFFSET);
                 else
                     env.ui.setFreeze(id, 0);
                 sleep();
@@ -102,7 +102,7 @@ public class Player implements Runnable {
                 placeTokens();
             }
         }
-        System.out.println("Player " + id + "terminated");
+        System.out.println("Player " + id + " terminated");
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
     }
