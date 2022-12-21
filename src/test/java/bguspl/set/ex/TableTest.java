@@ -16,7 +16,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+//import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class TableTest {

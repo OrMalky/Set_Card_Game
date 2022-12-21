@@ -5,8 +5,6 @@ import bguspl.set.Env;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import static java.lang.Thread.sleep;
-
 /**
  * This class manages the players' threads and data
  *
@@ -226,7 +224,7 @@ public class Player implements Runnable {
      * @post - the player's score is updated in the ui.
      */
     public void point() {
-        int ignored = table.countCards(); // this part is just for demonstration in the unit tests
+        //int ignored = table.countCards(); // this part is just for demonstration in the unit tests
         env.ui.setScore(id, ++score);
         sleep(env.config.pointFreezeMillis);
     }
