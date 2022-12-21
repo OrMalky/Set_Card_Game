@@ -32,6 +32,8 @@ public class Table {
 
     private List<Integer> usedSlots;
 
+    public final int SET_SIZE = 3;
+
     public Semaphore semaphore;
 
 

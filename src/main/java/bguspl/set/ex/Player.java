@@ -62,7 +62,7 @@ public class Player implements Runnable {
     private long sleepEnd;
     private boolean wait = false;
 
-    private long aiDelay = 0;
+    private final long TIME_TICK = 10;
 
     /**
      * The class constructor.
@@ -102,6 +102,7 @@ public class Player implements Runnable {
                 placeTokens();
             }
         }
+        System.out.println("Player " + id + "terminated");
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
         env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
     }
@@ -118,18 +119,26 @@ public class Player implements Runnable {
                 if(wait || sleepEnd > System.currentTimeMillis()) {
                     sleep();
                 } else {
-                    generateSmartKeyPresses();
+                    if(env.config.hints){
+                        generateSmartKeyPresses();
+                    } else {
+                        generateRandomKeyPress();
+                    }
                     try {
                         if(!wait)
-                            Thread.sleep(aiDelay);
+                            Thread.sleep(TIME_TICK);
                     } catch (InterruptedException ignored) {}
                 }
             }
+            System.out.println("AI " + id + "terminated");
             env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
         }, "computer-" + id);
         aiThread.start();
     }
 
+    /**
+     * Generates key presses based on the hints from the table.
+     */
     private void generateSmartKeyPresses(){
         try {
             table.semaphore.acquire();
@@ -142,7 +151,7 @@ public class Player implements Runnable {
 
         //If there are 3 tokens on the table - remove them (must have been a missed set)
         //Otherwise, get a random set and place its tokens
-        if(currentTokens.size() == 3){
+        if(currentTokens.size() == table.SET_SIZE){
             presses = currentTokens;
         } else{
             presses = table.hintsAI();
@@ -150,11 +159,28 @@ public class Player implements Runnable {
 
         //Call keypresses
         for (Integer p : presses){
-            if(p !=null){
-                System.out.println("AI " + id + " pressing " + p);
+            //System.out.println("AI " + id + " pressing " + p);
+            if(p != null)
                 keyPressed(p);
-            }
         }
+        
+        table.semaphore.release();
+    }
+
+    /**
+     * Generates random key presses.
+     */
+    private void generateRandomKeyPress(){
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        List<Integer> options = new ArrayList<Integer>(table.getUsedSlots());
+        Collections.shuffle(options);
+        //System.out.println("AI " + id + " pressing " + options.get(0));
+        keyPressed(options.get(0));
         
         table.semaphore.release();
     }
@@ -165,14 +191,12 @@ public class Player implements Runnable {
      */
     public void terminate() {
         terminate = true;
-        if(!human) {
-            if(aiThread.getState() == Thread.State.TIMED_WAITING)
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException ignored) {}
-            aiThread.interrupt();
+        try {
+            playerThread.join();
+            System.out.println(Thread.currentThread().getName() + " joined " + playerThread.getName());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        playerThread.interrupt();
     }
 
     /**
@@ -227,7 +251,7 @@ public class Player implements Runnable {
      */
     public void sleepUntilWoken(){
         wait = true;
-        sleep(10);
+        sleep(TIME_TICK);
     }
 
     /**
@@ -242,13 +266,13 @@ public class Player implements Runnable {
      */
     void sleep(){
         try {
-            Thread.sleep(10);
+            Thread.sleep(TIME_TICK);
             if(!wait){
                 if(System.currentTimeMillis() >= sleepEnd){
                     env.ui.setFreeze(id, 0);
                 }
             } else {
-                sleep(10);
+                sleep(TIME_TICK);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
