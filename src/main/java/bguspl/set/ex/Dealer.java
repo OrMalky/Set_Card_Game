@@ -41,13 +41,13 @@ public class Dealer implements Runnable {
      * The time when the dealer needs to reshuffle the deck due to turn timeout.
      */
     private long reshuffleTime = Long.MAX_VALUE;
-    private long warningTime;
+    private final long warningTime;
     private long startTime;
     private long currentTime;
-    private boolean timerMode;
-    private boolean displayTimer;
+    private final boolean timerMode;
+    private final boolean displayTimer;
 
-    private int tableSize;
+    private final int tableSize;
 
     private Queue<Integer> toRemove;
     public Queue<Integer> toCheck;
