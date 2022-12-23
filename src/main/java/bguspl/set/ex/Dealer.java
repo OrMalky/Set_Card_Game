@@ -38,21 +38,30 @@ public class Dealer implements Runnable {
     private volatile boolean terminate;
 
     /**
-     * The time when the dealer needs to reshuffle the deck due to turn timeout.
+     * Game Settings (from config file)
      */
-    private long reshuffleTime = Long.MAX_VALUE;
-    private final long warningTime;
-    private long startTime;
+    private long reshuffleTime;         //Total round time, time between reshuffles
+    private final long warningTime;     //Time where the timer UI changes to red
+    private long startTime;             //Current round start time
+    private final boolean timerMode;    //Wheter the timer UI will be in countdown mode or elapsed (timer) mode
+    private final boolean displayTimer; //Wheter the timer UI should be display or not
+    private final int tableSize;        //Total number of card slots on the table
+
+    /**
+     * Current turn time. Needed for timer.
+     */
     private long currentTime;
-    private final boolean timerMode;
-    private final boolean displayTimer;
 
-    private final int tableSize;
-
-    private Queue<Integer> toRemove;
-    public Queue<Integer> toCheck;
-
+    /**
+     * UI time offset. For visual comfort only.
+     */
     public final long UI_TIME_OFFSET = 999;
+
+    /**
+     * Game management queues
+     */
+    private Queue<Integer> toRemove;    //Cards waiting to be removed from the table by the dealer
+    public Queue<Integer> toCheck;      //Players waiting for their sets to be checked by the dealer
 
 
     public Dealer(Env env, Table table, Player[] players) {
@@ -67,7 +76,6 @@ public class Dealer implements Runnable {
         this.timerMode = reshuffleTime == 0;
         this.displayTimer = reshuffleTime >= 0;
         this.tableSize = env.config.tableSize;
-
     }
 
     /**
@@ -76,13 +84,18 @@ public class Dealer implements Runnable {
     @Override
     public void run() {
         env.logger.info("Thread " + Thread.currentThread().getName() + " starting.");
+
+        //Create player threads and start them. Send them to sleep until first cards are dealt.
         for (Player player : players) {
             player.sleepUntilWoken();
             Thread playerThread = new Thread(player, "Player " + player.id);
             playerThread.start();
         }
+
         Collections.shuffle(deck);
         startTime = System.currentTimeMillis();
+
+        //Main game loop
         while (!shouldFinish()) {
             acquireSemaphore();
             placeCardsOnTable();
@@ -96,8 +109,15 @@ public class Dealer implements Runnable {
             }
             timerLoop();
             updateTimerDisplay(false);
-            //removeAllCardsFromTable();
         }
+        //GAME END
+        removeAllTokensFromTable();
+        removeAllCardsFromTable();
+        for (int i = players.length - 1; i >= 0; i--) {
+            players[i].terminate();
+            players[i].wake();
+        }
+
         announceWinners();
         env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
     }
@@ -106,13 +126,18 @@ public class Dealer implements Runnable {
      * The inner loop of the dealer thread that runs as long as the countdown did not time out.
      */
     private void timerLoop() {
+        //While game is not finished and it's not time to reshuffle yet
         while (!shouldFinish() && (currentTime < reshuffleTime || reshuffleTime <= 0)) {
             sleepUntilWokenOrTimeout();
+
+            //Check sets in queue for checking
             acquireSemaphore();
             while(!toCheck.isEmpty()){
                 int id = toCheck.poll();
                 checkSet(id);
             }
+
+            //[Elapsed mode or No Timer mode] Makes sure there are legal sets on table after removing checked sets
             while((!displayTimer || timerMode) && !table.checkForSets() && !shouldFinish()){
                 removeAllCardsFromTable();
                 placeCardsOnTable();
@@ -120,34 +145,36 @@ public class Dealer implements Runnable {
             table.semaphore.release();
             updateTimerDisplay(false);
         }
+
+        //If game wasn't finished but reached reshuffle time
         updateTimerDisplay(true);
         if (!shouldFinish()) {
             acquireSemaphore();
+
+            //All players go to sleep until reshuffle ends
             for (Player player : players) {
                 player.sleepUntilWoken();
             }
+
+            //Reshuffle the cards. If in Ealpsed or No Timer modes, repeat until there is a legal set on the table
             do{
                 removeAllTokensFromTable();
                 removeAllCardsFromTable();
                 placeCardsOnTable();
             } while((!displayTimer || timerMode) && !table.checkForSets());
+
+            //Wake all players
             for (Player player : players) {
                 player.wake();
             }
             table.semaphore.release();
         }
-        else{
-            acquireSemaphore();
-            removeAllTokensFromTable();
-            removeAllCardsFromTable();
-            for (int i = players.length - 1; i >= 0; i--) {
-                players[i].terminate();
-                players[i].wake();
-            }
-            announceWinners();
-        }
     }
-    //Acquire table's semaphore permit
+
+
+    /**
+     * Acquire the table's smaphore permit
+     */
     private void acquireSemaphore(){
         try {
             table.semaphore.acquire();
@@ -156,16 +183,18 @@ public class Dealer implements Runnable {
         }
     }
 
+    /**
+     * Checks if a given player has a valid set
+     * 
+     * @param player - Id of a player to check.
+     * @return true iff the given player has placed tokens on a valid set.
+     */
     boolean checkSet(int player){
-        //Acquire tables semaphre permit
-        try {
-            table.semaphore.acquire();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        //Get the player's set from the table
+        acquireSemaphore();
+        
+        //Get the player's set from the table and make sure it's the right size
         List<Integer> set = table.getPlayerTokens(player);
+        if(set.size() < table.SET_SIZE) return false;
 
         //Turn set to Array for checking
         int[] cards = new int[env.config.featureSize];
@@ -195,23 +224,26 @@ public class Dealer implements Runnable {
             }
             table.semaphore.release();
             return true;
-       } else { //if the set is not valid penalize the player
-            //table.removePlayerTokens(player);
+
+        //if the set is not valid penalize the player
+        } else { 
             players[player].wake();
             players[player].penalty();
             table.semaphore.release();
             return false;
         }
     }
+
     /**
      * Called when the game should be terminated.
      */
     public void terminate() {
-        terminate = true;
+        acquireSemaphore();
         for (Player player : players){
             player.sleepUntilWoken();
         }
-        acquireSemaphore();
+        table.semaphore.release();
+        terminate = true;
     }
 
     /**
@@ -225,14 +257,18 @@ public class Dealer implements Runnable {
     }
 
     /**
-     * Checks cards should be removed from the table and removes them.
+     * Checks if cards should be removed from the table and removes them if they do.
      */
     private void removeCardsFromTable() {
+        //Go over the queue of cards to remove
         while(!toRemove.isEmpty()){
             int slot = toRemove.poll();
+
+            //Make sure no other player is using this cards (placed tokens or going to place tokens there)
             for (Player player : players) {
                 player.removeFromToPlace(slot);
                 if(table.getPlayerTokens(player.getId()).contains(slot)){
+                    //If we removed a token from a player waiting for a set check, wake him up (he no longer has a set)
                     if(toCheck.remove(player.getId()))
                         player.wake();
                     table.removeToken(player.getId(), slot);
@@ -284,13 +320,16 @@ public class Dealer implements Runnable {
      * Reset and/or update the countdown and the countdown display.
      */
     private void updateTimerDisplay(boolean reset) {
+
         if(!displayTimer) return;
         if (reset) {
             currentTime = 0;
             startTime = System.currentTimeMillis();
         }
+
         currentTime = System.currentTimeMillis() - startTime;
         long t = reshuffleTime - currentTime;
+
         if(timerMode){
             env.ui.setElapsed(System.currentTimeMillis() - startTime);
         } else {
@@ -302,21 +341,25 @@ public class Dealer implements Runnable {
      * Returns all the cards from the table to the deck.
      */
     private void removeAllCardsFromTable() {
-        //Remove cards from table to the deck
+        //Generate full slots list [for visual effect]
         ArrayList<Integer> slots = new ArrayList<>();
         for (int i = 0; i < tableSize; i++) {
             if(table.getCard(i) != null){
                 slots.add(i);
             }
         }
+
+        //Remove cards from table to the deck
         while (table.countCards() > 0) {
-            Collections.shuffle(slots);
+            Collections.shuffle(slots); //Take from a random slot each time [for visuals only]
             int slotToRemove = slots.remove(0);
             Integer c = table.getCard(slotToRemove);
             table.removeCard(slotToRemove);
             deck.add(c);
         }
-        Collections.shuffle(deck);  //Shuffle the deck
+
+        //Shuffle the deck
+        Collections.shuffle(deck);
         updateTimerDisplay(true);
     }
 
@@ -326,6 +369,7 @@ public class Dealer implements Runnable {
     public void removeAllTokensFromTable() {
         table.resetAllTokens();
     }
+
     /**
      * Check who is/are the winner/s and displays them.
      */

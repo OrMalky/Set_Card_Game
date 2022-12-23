@@ -28,12 +28,24 @@ public class Table {
      */
     protected final Integer[] cardToSlot; // slot per card (if any)
 
+    /**
+     * Current tokens placed by each player.
+     */
     private volatile List<List<Integer>> tokens;
 
+    /**
+     * List of filled (used) card slots on table.
+     */
     private List<Integer> usedSlots;
 
+    /**
+     * The size of a valid set
+     */
     public final int SET_SIZE = 3;
 
+    /**
+     * Table's semaphore.
+     */
     public Semaphore semaphore;
 
 
@@ -89,12 +101,12 @@ public class Table {
 
     }
 
+    /**
+     * Generates hints for the AI to play smart.
+     *
+     * @return - List of size 3, representing a random valid set on the table.
+     */
     public List<Integer> hintsAI() {
-//        try {
-//            semaphore.acquire();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
         Random random = new Random();
         List<Integer> deck = Arrays.stream(slotToCard).filter(Objects::nonNull).collect(Collectors.toList());
         List<int[]> sets = env.util.findSets(deck, Integer.MAX_VALUE);
@@ -106,8 +118,6 @@ public class Table {
             }
             slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).filter(Objects::nonNull).sorted().collect(Collectors.toList());
         }
-
-//        semaphore.release();
         return slots;
     }
 
@@ -123,6 +133,7 @@ public class Table {
                 ++cards;
         return cards;
     }
+
     /**
      * Find the cards currently on the table.
      *
@@ -131,6 +142,7 @@ public class Table {
     public List<Integer> getUsedSlots(){
         return usedSlots;
     }
+
     /**
      * Places a card on the table in a grid slot.
      * @param card - the card id to place in the slot.
@@ -155,15 +167,19 @@ public class Table {
      * @param slot - the slot from which to remove the card.
      */
     public void removeCard(int slot) {
+        //Table delay
         try {
             Thread.sleep(env.config.tableDelayMillis);
         } catch (InterruptedException ignored) {}
 
+        //Remove player tokens from the removed card
         for (List<Integer> t : tokens) {
             if(t.contains(slot)){
                 t.remove(Integer.valueOf(slot));
             }
         }
+
+        //Remove card and (update UI and usedSlots)
         if(slotToCard[slot] != null){
             int c = slotToCard[slot];
             cardToSlot[c] = null;
@@ -172,12 +188,6 @@ public class Table {
             env.ui.removeTokens(slot);
             env.ui.removeCard(slot);
         }
-//        int c = slotToCard[slot];
-//        slotToCard[slot] = null;
-//        cardToSlot[c] = null;
-//        usedSlots.remove(Integer.valueOf(slot));
-//        env.ui.removeTokens(slot);
-//        env.ui.removeCard(slot);
     }
 
     /**
@@ -185,26 +195,29 @@ public class Table {
      *
      * @param player - the player the token belongs to.
      * @param slot   - the slot on which to place the token.
-     * @return
+     * @return       - true iff the player has enough tokens placed for a vlalid set.
      */
     public boolean placeToken(int player, int slot) {
+        //If there is already a token of this player at this slot, remove it
         if(tokens.get(player).contains(slot)){
             removeToken(player, slot);
             //System.out.println(player + " removed token at " + slot);
+
+        //If there is NOT a token of this player at this slot, place once
         } else {
             tokens.get(player).add(slot);
             env.ui.placeToken(player, slot);
             //System.out.println(player + " placed token at " + slot);
         }
-        return tokens.get(player).size() == env.config.featureSize;
+        return tokens.get(player).size() == SET_SIZE;
     }
 
     /**
      * Returns the given player placed tokens.
      *
-     * @param player - the player the tokens belong to.
+     * @param player - a player to get the tokens of.
      *
-     * @return - a list of integers represnting the slots on the table the player has tokens on.
+     * @return - a List of Integers represnting the slots on the table the player has tokens on.
      */
     public List<Integer> getPlayerTokens(int player){
         return tokens.get(player);
@@ -213,7 +226,9 @@ public class Table {
 
     /**
      * Getter for the card in a slot.
+     * 
      * @param slot the place I want to check
+     * 
      * @return the card in the slot as the integer represent it
      */
     public Integer getCard(int slot) {
@@ -223,7 +238,6 @@ public class Table {
     /**
      * removes all the tokens from the table
      */
-
     public void resetAllTokens() {
         for(List<Integer> t : tokens){
             t.clear();
@@ -233,6 +247,7 @@ public class Table {
 
     /**
      * Removes all player tokens from a grid slot.
+     * 
      * @param player - the player the token belongs to.
      */
     public void removePlayerTokens(int player){
@@ -243,8 +258,10 @@ public class Table {
     }
     /**
      * Removes a token of a player from a grid slot.
+     * 
      * @param player - the player the token belongs to.
      * @param slot   - the slot from which to remove the token.
+     * 
      * @return       - true iff a token was successfully removed.
      */
     public boolean removeToken(int player, int slot) {
@@ -271,7 +288,7 @@ public class Table {
             }
         }
 
-        //checks if there is at least one set on the table
+        //checks if there is at least one valid set on the table
         return env.util.findSets(cards, 1).size() > 0;
     }
 

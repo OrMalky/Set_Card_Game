@@ -9,27 +9,33 @@
             "type": "java",
             "request": "launch",
             "stopOnEntry": true,
-            "jdkPath": "${env:JAVA_HOME}/bin",
+            "mainClass": "bguspl.set.Main",
+            //"jdkPath": "${env:JAVA_HOME}/bin",
             "cwd": "${fileDirname}",
-            "startupClass": "${fileBasenameNoExtension}",
+            //"startupClass": "${fileBasenameNoExtension}",
+            /*
             "classpath": [
                 ".",
                 "${fileDirname}"
             ]
+            */
         },
         {
             "name": "Java Console App",
             "type": "java",
             "request": "launch",
             "stopOnEntry": true,
-            "jdkPath": "${env:JAVA_HOME}/bin",
+            "mainClass": "bguspl.set.Main",
+            //"jdkPath": "${env:JAVA_HOME}/bin",
             "cwd": "${fileDirname}",
-            "startupClass": "${fileBasenameNoExtension}",
+            //"startupClass": "${fileBasenameNoExtension}",
+            /*
             "classpath": [
                 ".",
                 "${fileDirname}"
             ],
             "externalConsole": true
+            */
         }
     ]
 }
