@@ -110,6 +110,7 @@ public class Dealer implements Runnable {
             timerLoop();
             updateTimerDisplay(false);
         }
+        
         //GAME END
         removeAllTokensFromTable();
         removeAllCardsFromTable();

@@ -104,7 +104,7 @@ public class Table {
     /**
      * Generates hints for the AI to play smart.
      *
-     * @return - List of size 3, representing a random valid set on the table.
+     * @return - a List representing a random valid set on the table.
      */
     public List<Integer> hintsAI() {
         Random random = new Random();

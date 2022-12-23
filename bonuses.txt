@@ -1,0 +1,53 @@
+BONUS CHALLENGE FORM
+--------------------
+
+For each bonus challenge you have implemented, please replace the sentence "We are not entitled to this bonus."
+with a short description of:
+
+1. How it was implemented in your code
+2. Where it was used (in which class methods).
+3. How you tested that it is working correctly.
+
+--------------------
+
+1. Fully supporting all configuration fields and avoiding the use of magic numbers
+
+We used the env.config class fields as settings if the config file had a relevant setting, and added
+a new final field in the relevant class if not.
+
+We used it all over the code, but two examples are:
+a) In the Player class, both for Point and Penalty methods, we used pointFreezeMillis and penaltyFreezeMillis, which are fields generated from the config file.
+b) In the Dealer class, in the updateTimerDisplay method, we used UI_TIME_OFFSET which is a final field we added.
+
+We made sure there are no random magic numbers apearing in any of the methods of our classes (Player, Dealer, Table).
+--------------------
+
+2. Terminating all threads (that you created) gracefully and in reverse order to the order they were created in.
+
+We made sure that on termination AI threads are joined by their respective Player threads, and that all the Player threads are joined by the Dealer thread.
+This made sure that on termination we always terminate AI thread before player Thread, and only after all Player (and AI) threads are terminated, the Dealer Thread is terminated last.
+
+We used this in the Player class terminate method, and in the end of the run method of the Dealer class.
+
+We made sure all threads are terminating gracefully in the correct order by printing debugs and using the logs to see when does each thread terminate.
+--------------------
+
+3. Handling the config.turnTimeoutMillis value as follows:
+config.turnTimeoutMillis < 0: display nothing.
+config.turnTimeoutMillis = 0: display a timer since the last action (reshuffle or set collected).
+Note: in modes without a countdown timer the dealer must ensure there is always at least one legal set on the table.
+
+We had two booleans, displayTimer and timerMode, representing should the timer be displayed at all and should the timer be in standart or elapsed mode, respectively.
+When creating the dealer we read the relevant field from the env.config class and set the booleans accordingly.
+
+We used this in the Dealer class in the updateTimerDisplay method to update to UI according to the settings, and in the timerLoop method in order
+to keep reshuffling the cards if there are no valid sets on the table in the relevant modes.
+
+We tested this by running the game with different settings combinations and made sure they work as excpected.
+--------------------
+
+4. Making sure that the threads do not wake up unless some actual job needs to be done (e.g., a value needs to be
+changed on the display, key input needs to be handled, etc.) and the only threads created by you are:
+1 thread per player + 1 additional thread for non-human players.
+
+We are not entitled to this bonus.

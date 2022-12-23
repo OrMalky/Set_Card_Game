@@ -4,7 +4,6 @@ import bguspl.set.Env;
 
 import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * This class manages the players' threads and data
