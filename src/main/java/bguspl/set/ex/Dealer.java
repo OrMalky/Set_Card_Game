@@ -55,7 +55,7 @@ public class Dealer implements Runnable {
     /**
      * UI time offset. For visual comfort only.
      */
-    public final long UI_TIME_OFFSET = 999;
+    public final long UI_TIME_OFFSET = 0;
 
     /**
      * Game management queues
@@ -63,6 +63,7 @@ public class Dealer implements Runnable {
     private Queue<Integer> toRemove;    //Cards waiting to be removed from the table by the dealer
     public Queue<Integer> toCheck;      //Players waiting for their sets to be checked by the dealer
 
+    private boolean isReshuffle = false;
 
     public Dealer(Env env, Table table, Player[] players) {
         this.env = env;
@@ -130,12 +131,14 @@ public class Dealer implements Runnable {
         //While game is not finished and it's not time to reshuffle yet
         while (!shouldFinish() && (currentTime < reshuffleTime || reshuffleTime <= 0)) {
             sleepUntilWokenOrTimeout();
+            updateTimerDisplay(false);
 
             //Check sets in queue for checking
             acquireSemaphore();
             while(!toCheck.isEmpty() && currentTime < reshuffleTime){
                 int id = toCheck.poll();
                 checkSet(id);
+                updateTimerDisplay(false);
             }
 
             //[Elapsed mode or No Timer mode] Makes sure there are legal sets on table after removing checked sets
@@ -149,7 +152,7 @@ public class Dealer implements Runnable {
         }
 
         //If game wasn't finished but reached reshuffle time
-        updateTimerDisplay(true);
+        updateTimerDisplay(false);
         if (!shouldFinish()) {
             acquireSemaphore();
 
@@ -171,7 +174,9 @@ public class Dealer implements Runnable {
                 player.wake();
             }
             table.semaphore.release();
+            updateTimerDisplay(false);
         }
+        updateTimerDisplay(false);
     }
 
 
@@ -271,6 +276,7 @@ public class Dealer implements Runnable {
 
             //Make sure no other player is using this cards (placed tokens or going to place tokens there)
             for (Player player : players) {
+                updateTimerDisplay(false);
                 player.removeFromToPlace(slot);
                 if(table.getPlayerTokens(player.getId()).contains(slot)){
                     //If we removed a token from a player waiting for a set check, wake him up (he no longer has a set)
@@ -283,15 +289,19 @@ public class Dealer implements Runnable {
             table.removeCard(slot);
         }
         long deltaT = System.currentTimeMillis() - t;
-        startTime += deltaT;
+        //startTime += deltaT;
+        updateTimerDisplay(false);
     }
 
     /**
      * Check if any cards can be removed from the deck and placed on the table.
      */
     private void placeCardsOnTable() {
-        //Place cards from the deck on the table
+        //Handle time loss
+        updateTimerDisplay(false);
         long t = System.currentTimeMillis();
+        
+        //Place cards from the deck on the table
         int slot = 0;
         ArrayList<Integer> validSlots = new ArrayList<Integer>();
         for (int i = 0; i < tableSize; i++) {
@@ -300,6 +310,8 @@ public class Dealer implements Runnable {
         int usedSlots = 0;
         Collections.shuffle(validSlots);
         while (usedSlots < tableSize && !deck.isEmpty()) {
+            if(!isReshuffle)
+                updateTimerDisplay(false);
             if(table.getCard(validSlots.get(slot)) == null){
                 int card = deck.remove(0);
                 table.placeCard(card, validSlots.get(slot));
@@ -314,8 +326,12 @@ public class Dealer implements Runnable {
         table.semaphore.release();
 
         //Handle time loss
-        long deltaT = System.currentTimeMillis() - t;
-        startTime += deltaT;
+        if(isReshuffle){
+            long deltaT = System.currentTimeMillis() - t;
+            startTime += deltaT;
+            isReshuffle = false;
+        }
+        updateTimerDisplay(false);
     }
 
     /**
@@ -323,7 +339,7 @@ public class Dealer implements Runnable {
      */
     private void sleepUntilWokenOrTimeout() {
         try {
-            Thread.sleep(10);
+            Thread.sleep(1);
         } catch (InterruptedException ignored) {};
     }
 
@@ -375,6 +391,7 @@ public class Dealer implements Runnable {
 
         //Shuffle the deck
         Collections.shuffle(deck);
+        isReshuffle = true;
         updateTimerDisplay(true);
     }
 
