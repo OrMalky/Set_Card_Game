@@ -133,7 +133,7 @@ public class Dealer implements Runnable {
 
             //Check sets in queue for checking
             acquireSemaphore();
-            while(!toCheck.isEmpty()){
+            while(!toCheck.isEmpty() && currentTime < reshuffleTime){
                 int id = toCheck.poll();
                 checkSet(id);
             }
@@ -142,6 +142,7 @@ public class Dealer implements Runnable {
             while((!displayTimer || timerMode) && !table.checkForSets() && !shouldFinish()){
                 removeAllCardsFromTable();
                 placeCardsOnTable();
+                updateTimerDisplay(true);
             }
             table.semaphore.release();
             updateTimerDisplay(false);
@@ -162,6 +163,7 @@ public class Dealer implements Runnable {
                 removeAllTokensFromTable();
                 removeAllCardsFromTable();
                 placeCardsOnTable();
+                updateTimerDisplay(true);
             } while((!displayTimer || timerMode) && !table.checkForSets());
 
             //Wake all players
@@ -262,6 +264,8 @@ public class Dealer implements Runnable {
      */
     private void removeCardsFromTable() {
         //Go over the queue of cards to remove
+        updateTimerDisplay(false);
+        long t = System.currentTimeMillis();
         while(!toRemove.isEmpty()){
             int slot = toRemove.poll();
 
@@ -277,8 +281,9 @@ public class Dealer implements Runnable {
                 }
             }
             table.removeCard(slot);
-            updateTimerDisplay(false);
         }
+        long deltaT = System.currentTimeMillis() - t;
+        startTime += deltaT;
     }
 
     /**
@@ -286,6 +291,7 @@ public class Dealer implements Runnable {
      */
     private void placeCardsOnTable() {
         //Place cards from the deck on the table
+        long t = System.currentTimeMillis();
         int slot = 0;
         ArrayList<Integer> validSlots = new ArrayList<Integer>();
         for (int i = 0; i < tableSize; i++) {
@@ -306,6 +312,10 @@ public class Dealer implements Runnable {
 
         //Release table's semaphore
         table.semaphore.release();
+
+        //Handle time loss
+        long deltaT = System.currentTimeMillis() - t;
+        startTime += deltaT;
     }
 
     /**
@@ -331,6 +341,9 @@ public class Dealer implements Runnable {
         currentTime = System.currentTimeMillis() - startTime;
         long t = reshuffleTime - currentTime;
 
+        if(t + UI_TIME_OFFSET < 0)
+            t = -UI_TIME_OFFSET;
+
         if(timerMode){
             env.ui.setElapsed(System.currentTimeMillis() - startTime);
         } else {
@@ -343,6 +356,7 @@ public class Dealer implements Runnable {
      */
     private void removeAllCardsFromTable() {
         //Generate full slots list [for visual effect]
+        updateTimerDisplay(false);
         ArrayList<Integer> slots = new ArrayList<>();
         for (int i = 0; i < tableSize; i++) {
             if(table.getCard(i) != null){
