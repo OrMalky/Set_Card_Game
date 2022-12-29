@@ -135,7 +135,7 @@ public class Dealer implements Runnable {
 
             //Check sets in queue for checking
             acquireSemaphore();
-            while(!toCheck.isEmpty() && currentTime < reshuffleTime){
+            while(!toCheck.isEmpty() && (currentTime < reshuffleTime || timerMode)){
                 int id = toCheck.poll();
                 checkSet(id);
                 updateTimerDisplay(false);
