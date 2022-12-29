@@ -63,7 +63,7 @@ class PlayerTest {
     void point() {
 
         // force table.countCards to return 3
-        when(table.countCards()).thenReturn(3); // this part is just for demonstration
+        //when(table.countCards()).thenReturn(3); // this part is just for demonstration
 
         // calculate the expected score for later
         int expectedScore = player.score() + 1;
