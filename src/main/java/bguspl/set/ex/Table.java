@@ -48,13 +48,14 @@ public class Table {
      */
     public Semaphore semaphore;
 
-
     /**
      * Constructor for testing.
      *
      * @param env        - the game environment objects.
-     * @param slotToCard - mapping between a slot and the card placed in it (null if none).
-     * @param cardToSlot - mapping between a card and the slot it is in (null if none).
+     * @param slotToCard - mapping between a slot and the card placed in it (null if
+     *                   none).
+     * @param cardToSlot - mapping between a card and the slot it is in (null if
+     *                   none).
      */
     public Table(Env env, Integer[] slotToCard, Integer[] cardToSlot) {
 
@@ -64,7 +65,7 @@ public class Table {
         this.semaphore = new Semaphore(1, true);
         this.usedSlots = new ArrayList<Integer>();
         this.tokens = new ArrayList<List<Integer>>();
-        for(int i = 0; i < env.config.players; i++){
+        for (int i = 0; i < env.config.players; i++) {
             tokens.add(new ArrayList<Integer>());
         }
     }
@@ -80,7 +81,8 @@ public class Table {
     }
 
     /**
-     * This method prints all possible legal sets of cards that are currently on the table.
+     * This method prints all possible legal sets of cards that are currently on the
+     * table.
      */
     public void hints() {
         try {
@@ -92,9 +94,11 @@ public class Table {
 
         env.util.findSets(deck, Integer.MAX_VALUE).forEach(set -> {
             StringBuilder sb = new StringBuilder().append("Hint: Set found: ");
-            List<Integer> slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).sorted().collect(Collectors.toList());
+            List<Integer> slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).sorted()
+                    .collect(Collectors.toList());
             int[][] features = env.util.cardsToFeatures(set);
-            System.out.println(sb.append("slots: ").append(slots).append(" features: ").append(Arrays.deepToString(features)));
+            System.out.println(
+                    sb.append("slots: ").append(slots).append(" features: ").append(Arrays.deepToString(features)));
         });
 
         semaphore.release();
@@ -111,12 +115,13 @@ public class Table {
         List<Integer> deck = Arrays.stream(slotToCard).filter(Objects::nonNull).collect(Collectors.toList());
         List<int[]> sets = env.util.findSets(deck, Integer.MAX_VALUE);
         List<Integer> slots = new ArrayList<Integer>();
-        if(sets.size() > 0){
+        if (sets.size() > 0) {
             int[] set = sets.get(random.nextInt(sets.size()));
-            for(int i = 0; i < set.length; i++){
+            for (int i = 0; i < set.length; i++) {
                 slots.add(cardToSlot[set[i]]);
             }
-            slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).filter(Objects::nonNull).sorted().collect(Collectors.toList());
+            slots = Arrays.stream(set).mapToObj(card -> cardToSlot[card]).filter(Objects::nonNull).sorted()
+                    .collect(Collectors.toList());
         }
         return slots;
     }
@@ -139,12 +144,13 @@ public class Table {
      *
      * @return - the places of cards on the table.
      */
-    public List<Integer> getUsedSlots(){
+    public List<Integer> getUsedSlots() {
         return usedSlots;
     }
 
     /**
      * Places a card on the table in a grid slot.
+     * 
      * @param card - the card id to place in the slot.
      * @param slot - the slot in which the card should be placed.
      *
@@ -153,7 +159,8 @@ public class Table {
     public void placeCard(int card, int slot) {
         try {
             Thread.sleep(env.config.tableDelayMillis);
-        } catch (InterruptedException ignored) {}
+        } catch (InterruptedException ignored) {
+        }
 
         cardToSlot[card] = slot;
         slotToCard[slot] = card;
@@ -164,23 +171,25 @@ public class Table {
 
     /**
      * Removes a card from a grid slot on the table.
+     * 
      * @param slot - the slot from which to remove the card.
      */
     public void removeCard(int slot) {
-        //Table delay
+        // Table delay
         try {
             Thread.sleep(env.config.tableDelayMillis);
-        } catch (InterruptedException ignored) {}
+        } catch (InterruptedException ignored) {
+        }
 
-        //Remove player tokens from the removed card
+        // Remove player tokens from the removed card
         for (List<Integer> t : tokens) {
-            if(t.contains(slot)){
+            if (t.contains(slot)) {
                 t.remove(Integer.valueOf(slot));
             }
         }
 
-        //Remove card and (update UI and usedSlots)
-        if(slotToCard[slot] != null){
+        // Remove card and (update UI and usedSlots)
+        if (slotToCard[slot] != null) {
             int c = slotToCard[slot];
             cardToSlot[c] = null;
             slotToCard[slot] = null;
@@ -195,19 +204,19 @@ public class Table {
      *
      * @param player - the player the token belongs to.
      * @param slot   - the slot on which to place the token.
-     * @return       - true iff the player has enough tokens placed for a vlalid set.
+     * @return - true iff the player has enough tokens placed for a vlalid set.
      */
     public boolean placeToken(int player, int slot) {
-        //If there is already a token of this player at this slot, remove it
-        if(tokens.get(player).contains(slot)){
+        // If there is already a token of this player at this slot, remove it
+        if (tokens.get(player).contains(slot)) {
             removeToken(player, slot);
-            //System.out.println(player + " removed token at " + slot);
+            // System.out.println(player + " removed token at " + slot);
 
-        //If there is NOT a token of this player at this slot, place once
+            // If there is NOT a token of this player at this slot, place once
         } else {
             tokens.get(player).add(slot);
             env.ui.placeToken(player, slot);
-            //System.out.println(player + " placed token at " + slot);
+            // System.out.println(player + " placed token at " + slot);
         }
         return tokens.get(player).size() == SET_SIZE;
     }
@@ -217,12 +226,12 @@ public class Table {
      *
      * @param player - a player to get the tokens of.
      *
-     * @return - a List of Integers represnting the slots on the table the player has tokens on.
+     * @return - a List of Integers represnting the slots on the table the player
+     *         has tokens on.
      */
-    public List<Integer> getPlayerTokens(int player){
+    public List<Integer> getPlayerTokens(int player) {
         return tokens.get(player);
     }
-
 
     /**
      * Getter for the card in a slot.
@@ -239,7 +248,7 @@ public class Table {
      * removes all the tokens from the table
      */
     public void resetAllTokens() {
-        for(List<Integer> t : tokens){
+        for (List<Integer> t : tokens) {
             t.clear();
         }
         env.ui.removeTokens();
@@ -250,23 +259,24 @@ public class Table {
      * 
      * @param player - the player the token belongs to.
      */
-    public void removePlayerTokens(int player){
+    public void removePlayerTokens(int player) {
         for (Integer token : tokens.get(player)) {
             env.ui.removeToken(player, token);
         }
         tokens.get(player).clear();
     }
+
     /**
      * Removes a token of a player from a grid slot.
      * 
      * @param player - the player the token belongs to.
      * @param slot   - the slot from which to remove the token.
      * 
-     * @return       - true iff a token was successfully removed.
+     * @return - true iff a token was successfully removed.
      */
     public boolean removeToken(int player, int slot) {
         int p = tokens.get(player).indexOf(slot);
-        if(p > -1){
+        if (p > -1) {
             tokens.get(player).remove(p);
             env.ui.removeToken(player, slot);
             return true;
@@ -279,16 +289,16 @@ public class Table {
      *
      * @return - true iff there is at least one valid set on the table.
      */
-    public boolean checkForSets(){
-        //Generate a list of cards on table
+    public boolean checkForSets() {
+        // Generate a list of cards on table
         List<Integer> cards = new ArrayList<Integer>();
         for (Integer i : slotToCard) {
-            if(i != null){
+            if (i != null) {
                 cards.add(i);
             }
         }
 
-        //checks if there is at least one valid set on the table
+        // checks if there is at least one valid set on the table
         return env.util.findSets(cards, 1).size() > 0;
     }
 

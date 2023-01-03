@@ -1,0 +1,97 @@
+[14:37:23.194] [INFO   ] thread main starting.
+[14:37:23.213] [SEVERE ] cannot read configuration file config.properties trying from resources.
+[14:37:23.218] [SEVERE ] configuration file was loaded from resources directory.
+[14:38:22.505] [INFO   ] thread dealer starting.
+[14:38:22.507] [INFO   ] Thread dealer starting.
+[14:38:22.513] [INFO   ] Thread Player 0 starting.
+[14:38:22.514] [INFO   ] Thread Player 1 starting.
+[14:38:22.520] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.524] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.527] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.538] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.541] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.546] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.548] [INFO   ] Thread computer-1 starting.
+[14:38:22.549] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.551] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.552] [INFO   ] Thread computer-0 starting.
+[14:38:22.554] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.553] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.556] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.559] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.560] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.560] [SEVERE ] placing card 2 in slot 7
+[14:38:22.568] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.572] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.581] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.581] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.583] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.583] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.585] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.587] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.589] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.589] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.591] [SEVERE ] placing card 39 in slot 10
+[14:38:22.592] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.595] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.595] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.596] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.596] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.597] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.598] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.598] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.599] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.599] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.599] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.600] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.600] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.600] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.601] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.601] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.601] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.602] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.602] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.602] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.603] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.603] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.604] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.605] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.605] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.606] [SEVERE ] placing card 54 in slot 9
+[14:38:22.606] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.606] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.607] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.608] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.608] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.608] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.609] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.609] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.609] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.610] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.610] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.610] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.610] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.611] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.611] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.611] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.611] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.612] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.612] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.612] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.612] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.613] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.613] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.613] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.614] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.614] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.614] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.614] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.615] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.615] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.615] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.616] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.617] [SEVERE ] placing card 6 in slot 11
+[14:38:22.617] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.618] [SEVERE ] setting player 1 freeze to 0
+[14:38:22.619] [SEVERE ] setting player 2 freeze to 0
+[14:38:22.621] [SEVERE ] setting player 1 freeze to 0
