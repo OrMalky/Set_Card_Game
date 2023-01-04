@@ -1,16 +1,9 @@
 package bguspl.set.ex;
 
-import java.lang.Thread.State;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Queue;
-import java.util.Random;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.Semaphore;
-import java.util.logging.Level;
-
 import bguspl.set.Env;
+
+import java.util.*;
+import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * This class manages the players' threads and data
@@ -51,7 +44,7 @@ public class Player implements Runnable {
     private final boolean human;
 
     /**
-     * True iff game should be terminated due to an external event.
+     * True iff game should be terminated.
      */
     private volatile boolean terminate;
 
@@ -60,14 +53,21 @@ public class Player implements Runnable {
      */
     private int score;
 
+    /**
+     * A reference to the dealer.
+     */
     private final Dealer dealer;
 
+    /**
+     * A queue of slots to place tokens to.
+     */
     private Queue<Integer> toPlace;
 
-    private long sleepEnd;
-    private boolean wait = false;
-
-    private long aiDelay = 286;
+    /**
+     * Thread management
+     */
+    private long sleepEnd;              //Time where the Thread should wake up [Used for timed sleep].
+    private boolean wait = false;       //Wheter the Thread sleep should be timed or until woken.
 
     /**
      * The class constructor.
@@ -80,11 +80,11 @@ public class Player implements Runnable {
      */
     public Player(Env env, Dealer dealer, Table table, int id, boolean human) {
         this.env = env;
-        this.dealer = dealer;
         this.table = table;
         this.id = id;
         this.human = human;
-        toPlace = new ConcurrentLinkedQueue<Integer>();
+        this.dealer = dealer;
+        toPlace = new ArrayBlockingQueue<Integer>(table.SET_SIZE);
     }
 
     /**
@@ -93,22 +93,25 @@ public class Player implements Runnable {
     @Override
     public void run() {
         playerThread = Thread.currentThread();
-        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + "starting.");
+        env.logger.info("Thread " + Thread.currentThread().getName() + " starting.");
         if (!human) createArtificialIntelligence();
 
         while (!terminate) {
+            //If Timed/Untimed sleeping
             if(wait || sleepEnd > System.currentTimeMillis()) {
+                //Update UI accordingly
                 if(!wait)
-                    env.ui.setFreeze(id, sleepEnd - System.currentTimeMillis());
+                    env.ui.setFreeze(id, sleepEnd - System.currentTimeMillis() + dealer.UI_TIME_OFFSET);
                 else
                     env.ui.setFreeze(id, 0);
-                sleep();
+                sleep();    //Send the Thread to sleep
             } else {
                 placeTokens();
             }
         }
+        //System.out.println("Player " + id + " terminated");
         if (!human) try { aiThread.join(); } catch (InterruptedException ignored) {}
-        env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
+        env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
     }
 
     /**
@@ -116,49 +119,94 @@ public class Player implements Runnable {
      * key presses. If the queue of key presses is full, the thread waits until it is not full.
      */
     private void createArtificialIntelligence() {
-        // note: this is a very very smart AI (!)
+        // note: this is a very, very smart AI (!)
         aiThread = new Thread(() -> {
-            env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " starting.");
+            env.logger.info("Thread " + Thread.currentThread().getName() + " starting.");
             while (!terminate) {
-                generateKeyPress();
-                try {
-                    if(!wait)
-                        Thread.sleep(aiDelay);
-                } catch (InterruptedException e) {}
+                if(wait || sleepEnd > System.currentTimeMillis()) {
+                    sleep();
+                
+                //Generate Smart/Random key presses based on settings in config (print hints)
+                } else {
+                    if(env.config.hints){
+                        generateSmartKeyPresses();
+                    } else {
+                        generateRandomKeyPress();
+                    }
+
+                    //Sleep for a Tick for game fluidity and visuals
+                    try {
+                        if(!wait)
+                            Thread.sleep(dealer.TIME_TICK);
+                    } catch (InterruptedException ignored) {}
+                }
             }
-            env.logger.log(Level.INFO, "Thread " + Thread.currentThread().getName() + " terminated.");
+            //System.out.println("AI " + id + " terminated");
+            env.logger.info("Thread " + Thread.currentThread().getName() + " terminated.");
         }, "computer-" + id);
         aiThread.start();
     }
 
-    //Generate random key presses (for AI)
-    private void generateKeyPress(){
-            try {
-                table.semaphore.acquire();
-            } catch (InterruptedException e) {}
-            
-            List<Integer> options = table.getUsedSlots();
-            if(options.size() > 0){
-                Random random = new Random();
-                int choice = options.get(random.nextInt(options.size()));
-                keyPressed(choice);
-            }
-            table.semaphore.release();
+    /**
+     * Generates key presses based on the hints from the table.
+     */
+    private void generateSmartKeyPresses(){
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        List<Integer> presses = new ArrayList<Integer>();
+        List<Integer> currentTokens = new ArrayList<Integer>(table.getPlayerTokens(id));
+
+        //If there are 3 tokens on the table - remove them (must have been a missed set)
+        //Otherwise, get a random set and place its tokens
+        if(currentTokens.size() == table.SET_SIZE){
+            presses = currentTokens;
+        } else{
+            presses = table.hintsAI();
+        }
+
+        //Call keypresses
+        for (Integer p : presses){
+            //System.out.println("AI " + id + " pressing " + p);
+            if(p != null)
+                keyPressed(p);
+        }
+        
+        table.semaphore.release();
     }
 
     /**
-     * Called when the game should be terminated due to an external event.
+     * Generates random key presses.
+     */
+    private void generateRandomKeyPress(){
+        try {
+            table.semaphore.acquire();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        List<Integer> options = new ArrayList<Integer>(table.getUsedSlots());
+        Collections.shuffle(options);
+        //System.out.println("AI " + id + " pressing " + options.get(0));
+        keyPressed(options.get(0));
+        
+        table.semaphore.release();
+    }
+
+    
+    /**
+     * Called when the game should be terminated.
      */
     public void terminate() {
         terminate = true;
-        if(!human) {
-            if(aiThread.getState() == State.TIMED_WAITING)
-                try {
-                    Thread.sleep(aiDelay);
-                } catch (InterruptedException e) {}
-            aiThread.interrupt();
+        try {
+            playerThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        playerThread.interrupt();
     }
 
     /**
@@ -167,10 +215,15 @@ public class Player implements Runnable {
      * @param slot - the slot corresponding to the key pressed.
      */
     public void keyPressed(int slot) {
-        if(!human && Thread.currentThread() != aiThread) return; // ignore keybpard input when its a computer player
-        if(sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
-        if(toPlace.size() < 3)
-            toPlace.add(slot);
+        if (!human && Thread.currentThread() != aiThread) return; // ignore keyboard input when it's a computer player
+        if (sleepEnd > System.currentTimeMillis() || wait) return; // if the player is frozen, do nothing
+
+        //Add token to place queue if the player doesn't have more than the valid set size, or if it's a remove
+        if (table.getPlayerTokens(id).size() < table.SET_SIZE || table.getPlayerTokens(id).contains(slot)) {
+            if (toPlace.size() < table.SET_SIZE) {
+                toPlace.add(slot);
+            }
+        }
     }
 
     /**
@@ -180,7 +233,7 @@ public class Player implements Runnable {
      * @post - the player's score is updated in the ui.
      */
     public void point() {
-        int ignored = table.countCards(); // this part is just for demonstration in the unit tests
+        //int ignored = table.countCards(); // this part is just for demonstration in the unit tests
         env.ui.setScore(id, ++score);
         sleep(env.config.pointFreezeMillis);
     }
@@ -190,44 +243,62 @@ public class Player implements Runnable {
      */
     public void penalty() {
         sleep(env.config.penaltyFreezeMillis);
+        env.ui.setFreeze(id, env.config.penaltyFreezeMillis);
     }
 
+    /**
+     * send the player to sleep for a given amount of time
+     * @param millies
+     */
     public void sleep(long millies){
         sleepEnd = System.currentTimeMillis() + millies;
     }
 
+    /**
+     * Send the player to sleep forever, or untill someone wakes him up
+     */
     public void sleepUntilWoken(){
         wait = true;
-        sleep(10);
+        sleep(dealer.TIME_TICK);
     }
 
+    /**
+     * Wake the player up
+     */
     public void wake(){
         wait = false;
     }
 
-    private void sleep(){
+    /**
+     * Call the Sleep method from the Thread class according to the current settings. Reset the UI if sleep is over.
+     */
+    void sleep(){
         try {
-            Thread.sleep(10);
+            Thread.sleep(dealer.TIME_TICK);
             if(!wait){
                 if(System.currentTimeMillis() >= sleepEnd){
                     env.ui.setFreeze(id, 0);
                 }
             } else {
-                sleep(10);
+                sleep(dealer.TIME_TICK);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public void removeFromQueue(int slot){
-        if(toPlace.contains(slot)){
-            toPlace.remove(Integer.valueOf(slot));
-        }
+    /**
+     * remove the top card from the deck and place it on the table
+     * @param slot - the slot the card in
+     */
+    public void removeFromToPlace(int slot){
+        toPlace.remove(slot);
     }
 
-    //this should be synced to table - i think fair semaphore is a good solution
-    private void placeTokens(){
+    /**
+     * Place the tokens on the table
+     */
+    void placeTokens(){
         //Acquire the table's semaphore permit to play to table
         try {
             table.semaphore.acquire();
@@ -236,28 +307,46 @@ public class Player implements Runnable {
             e.printStackTrace();
         }
 
-        //Place tokens on table
+        //Place all tokens from the queue on the table
         boolean isSet = false;
-        while(!toPlace.isEmpty() && table.getPlayerTokens(id).size() < 3){
+        while(!toPlace.isEmpty()){
             int slot = toPlace.poll();
             if(table.getCard(slot) != null)
                 isSet = table.placeToken(id, slot);
         }
-        
+
         //Release table's semaphore
         table.semaphore.release();
 
-        //If 3 tokens placed check for valid set and remove tokens
+        //If enough tokens placed add set to dealer's check queue and go to sleep
         if(isSet){
-            dealer.checkSet(id);
+            synchronized(dealer){
+                dealer.toCheck.add(id);
+                this.sleepUntilWoken();
+            }
         }
     }
 
-    public int getScore() {
+    /**
+     * @return - the player's score.
+     */
+    public int score() {
         return score;
     }
 
-    public boolean isHuman() {
-        return this.human;
+    public int getId() {
+        return id;
+    }
+
+    public Queue<Integer> getToPlace(){
+        return toPlace;
+    }
+
+    public void setToPlace(Queue<Integer> toPlace){
+        this.toPlace = toPlace;
+    }
+
+    public boolean isWait(){
+        return this.wait;
     }
 }
