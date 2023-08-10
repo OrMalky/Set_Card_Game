@@ -1,5 +1,5 @@
 # Multi-Threaded Set Card Game
-Welcome to the Multi-Threaded Set Card Game repository! This project is an implementation of the popular card game "Set" in Java, utilizing multi-threading to add an exciting twist to the gameplay. if you are interested in multi-threading concepts, this project offers an enjoyable and educational experience.
+Welcome to the Multi-Threaded Set Card Game repository! This project is an implementation of the popular card game "Set" in Java, utilizing multi-threading to add an exciting twist to the gameplay. if you are interested in multi-threading concepts, this project offers an enjoyable and educational experience.  
 ![](https://ds055uzetaobb.cloudfront.net/brioche/uploads/BvTYFRoFIy-possibleset.png?width=1200)
 
 ## Table of Contetns
